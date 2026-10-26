@@ -1,0 +1,32 @@
+{
+  "name": "warm-paths",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3100 -H 127.0.0.1",
+    "build": "next build",
+    "start": "next start -p 3100 -H 127.0.0.1",
+    "test": "node --test --experimental-strip-types tests/*.test.ts",
+    "reset": "node scripts/reset.mjs",
+    "skill:zip": "mkdir -p dist && rm -f dist/warm-paths-skill.zip && cd claude && zip -qrX ../dist/warm-paths-skill.zip warm-paths -x '*/.*' && cd .. && unzip -l dist/warm-paths-skill.zip",
+    "tunnel": "scripts/tunnel.sh",
+    "linkedin:sync": "node --experimental-strip-types --env-file-if-exists=.env.local scripts/linkedin-sync.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.3.0",
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "geist": "^1.8.2",
+    "next": "15.5.28",
+    "papaparse": "^5.4.1",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/papaparse": "^5.3.14",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5.9"
+  }
+}

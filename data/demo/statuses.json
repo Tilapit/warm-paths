@@ -1,0 +1,19 @@
+{
+  "note": "The demo team's own records, as if clicked in the app. Invented, like everyone in the demo: one message sent with no reply yet (a follow-up is due), and a meeting at a company where the team knows others (they rank lower for 30 days).",
+  "statuses": [
+    {
+      "id": "d7c6ddc2fe",
+      "name": "Lasse Järvinen",
+      "history": [{ "status": "sent", "at": "2026-10-14T09:12:00.000Z", "by": "You" }]
+    },
+    {
+      "id": "dcff6ba1aa",
+      "name": "Arttu Lehto",
+      "history": [
+        { "status": "sent", "at": "2026-10-06T08:40:00.000Z", "by": "Co-founder" },
+        { "status": "replied", "at": "2026-10-09T13:05:00.000Z", "by": "Co-founder" },
+        { "status": "meeting", "at": "2026-10-20T10:00:00.000Z", "by": "Co-founder", "note": "Call about production planning" }
+      ]
+    }
+  ]
+}

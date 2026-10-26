@@ -1,0 +1,19 @@
+{
+  "paging": {
+    "start": 1,
+    "count": 10,
+    "links": [
+      { "type": "application/json", "rel": "prev", "href": "/rest/memberSnapshotData?q=criteria&domain=CONNECTIONS&start=0" },
+      { "type": "application/json", "rel": "next", "href": "/rest/memberSnapshotData?q=criteria&domain=CONNECTIONS&start=2" }
+    ],
+    "total": 2
+  },
+  "elements": [
+    {
+      "snapshotDomain": "CONNECTIONS",
+      "snapshotData": [
+        { "First Name": "Kari", "Last Name": "Rinne", "URL": "https://www.linkedin.com/in/kari-rinne-dma3", "Company": "Malliteollisuus Ab", "Position": "COO", "Connected On": "28 Nov 2025", "Note": "" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "paging": {
+    "start": 0,
+    "count": 10,
+    "links": [{ "type": "application/json", "rel": "next", "href": "/rest/memberSnapshotData?q=criteria&domain=CONNECTIONS&start=1" }],
+    "total": 2
+  },
+  "elements": [
+    {
+      "snapshotDomain": "CONNECTIONS",
+      "snapshotData": [
+        { "First Name": "Aino", "Last Name": "Kallio", "URL": "https://www.linkedin.com/in/aino-kallio-dma1", "Email Address": "aino.kallio@example.com", "Company": "Esimerkki Konepaja Oy", "Position": "Tuotantojohtaja", "Connected On": "12 Apr 2024" },
+        { "First Name": "Ville", "Last Name": "Mäki", "URL": "https://www.linkedin.com/in/ville-maki-dma2", "Email Address": "", "Company": "Testilogistiikka Oy, Vantaa", "Position": "Head of Logistics, \"Lean\"", "Connected On": "3 Jan 2023" },
+        { "First Name": "Sara", "Last Name": "Holm", "URL": "", "Email Address": "", "Company": "", "Position": "Engineer", "Connected On": "" }
+      ]
+    }
+  ]
+}

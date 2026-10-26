@@ -1,0 +1,7 @@
+﻿Notes:
+"When exporting your connection data, you may notice that some of the email addresses are missing. You will only see email addresses for connections who have allowed their connections to see or download their email address using this setting https://www.linkedin.com/psettings/privacy/email. You can learn more here https://www.linkedin.com/help/linkedin/answer/261"
+
+First Name,Last Name,URL,Email Address,Company,Position,Connected On
+Aino,Kallio,https://www.linkedin.com/in/aino-kallio-3f2a,,Esimerkki Konepaja Oy,Tuotantojohtaja,12 Apr 2024
+Ville,Rantanen,https://www.linkedin.com/in/ville-rantanen,ville@example.com,Testilogistiikka Oy,COO,03 Jan 2023
+Elina,Saari,https://www.linkedin.com/in/elina-saari-77,,Malliteollisuus Ab,Head of Operations,28 Nov 2025

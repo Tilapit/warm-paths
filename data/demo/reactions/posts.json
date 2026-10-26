@@ -1,0 +1,14 @@
+[
+  {
+    "file": "post-1.txt",
+    "label": "Three lessons from a production planning pilot",
+    "date": "2026-10-14",
+    "author": "you"
+  },
+  {
+    "file": "post-2.txt",
+    "label": "What we learned building a planning tool in a weekend",
+    "date": "2026-10-21",
+    "author": "cofounder"
+  }
+]

@@ -1,0 +1,864 @@
+Notes:
+"When exporting your connection data, you may notice that some of the email addresses are missing. You will only see email addresses for connections who have allowed their connections to see or download their email address using this setting https://www.linkedin.com/psettings/privacy/email. You can learn more here https://www.linkedin.com/help/linkedin/answer/261"
+
+First Name,Last Name,URL,Email Address,Company,Position,Connected On
+Lucas,Ferreira,https://www.linkedin.com/in/lucas-ferreira,,Tampere University,Kauppatieteiden opiskelija | AI | Industry 4.0,24 Oct 2026
+Janne,Jokilahti,https://www.linkedin.com/in/janne-jokilahti-8894dc0e,,Wärtsilä,Development Manager 🚀,22 Oct 2026
+Anna,Uotila,https://www.linkedin.com/in/anna-uotila-35aca4ec,,Sargo Oy Ab,Project Manager,19 Oct 2026
+Mikko,Hämäläinen,https://www.linkedin.com/in/mikko-hamalainen,,Zoan,Data Scientist,19 Oct 2026
+Esa,Rajasaari,https://www.linkedin.com/in/esa-rajasaari,,Slush,,16 Oct 2026
+Hanna,Siltanen,https://www.linkedin.com/in/hanna-siltanen,,King,Designer,13 Oct 2026
+Rebecka,Lindström,https://www.linkedin.com/in/rebecka-lindstrom,,Zoined,Software Engineer,13 Oct 2026
+Hilla,Vartiainen,https://www.linkedin.com/in/hilla-vartiainen-ec50c334,,Kauko,Controller,11 Oct 2026
+Camilla,Forsman,https://www.linkedin.com/in/camilla-forsman-bd2b8335,,CGI Suomi Oy,Software Developer,10 Oct 2026
+Petri,Lehtinen,https://www.linkedin.com/in/petri-lehtinen-d9e08942,,Pfeifer Nordics Oy,Tuotantojohtaja,09 Oct 2026
+Ville,Oksanen,https://www.linkedin.com/in/ville-oksanen-dd524abb,,Hanken School of Economics,University Lecturer,06 Oct 2026
+Kristian,Ekholm,https://www.linkedin.com/in/kristian-ekholm-ec03f2f4,,Metropolia Ammattikorkeakoulu,Väitöskirjatutkija,03 Oct 2026
+Emilia,Karppinen,https://www.linkedin.com/in/emilia-karppinen,,Kauppahuone Harju Oy,IT-päällikkö,01 Oct 2026
+Juha,Väisänen,https://www.linkedin.com/in/juha-vaisanen,,Slush,Program Manager,01 Oct 2026
+Siddharth,Mehta,https://www.linkedin.com/in/siddharth-mehta-cb410990,,Solar Foods,Operations Manager | Automation | Data | Helping industrial companies get more out of their data,30 Sep 2026
+Elias,Lehto,https://www.linkedin.com/in/elias-lehto,,Siili Solutions,Myyntipäällikkö,29 Sep 2026
+Lea,Schmidt,https://www.linkedin.com/in/lea-schmidt-cfddc248,,Leadfeeder,Staff Engineer,29 Sep 2026
+Krista,Ahokoski,https://www.linkedin.com/in/krista-ahokoski-a1f931d7,,HUS,Elinkeinojohtaja,28 Sep 2026
+Seppo,Koskilahti,https://www.linkedin.com/in/seppo-koskilahti,,Neste,Asiantuntija,23 Sep 2026
+Suvi,Kettunen,https://www.linkedin.com/in/suvi-kettunen-34c3484e,,IQM Quantum Computers,Account Executive,22 Sep 2026
+Huong,Pham,https://www.linkedin.com/in/huongpham,,Bolt,Software Engineer,18 Sep 2026
+Milla,Viitanen,https://www.linkedin.com/in/milla-viitanen-1be6dd53,,Leadfeeder,Full Stack Developer,11 Sep 2026
+Lorenzo,Rossi (Hakala),https://www.linkedin.com/in/lorenzo-rossi-193eae52,,Ericsson AB,Software Engineer,04 Sep 2026
+Jukka,Uusitalo,https://www.linkedin.com/in/jukka-uusitalo-0c35f3eb,,Nitor,Sales Director,02 Sep 2026
+Marko,Mäkinen,https://www.linkedin.com/in/marko-makinen-30edd5fa,,Celonis,Head of Nordics,02 Sep 2026
+Markus,Haapakangas,https://www.linkedin.com/in/markus-haapakangas-5cb5f9df,,Kivikylän Kotipalvaamo Oy,CTO,02 Sep 2026
+Mika,Paananen,https://www.linkedin.com/in/mika-paananen-65b986e7,,Knowit,Myyntipäällikkö,29 Aug 2026
+Lauri,Mäntyniemi,https://www.linkedin.com/in/lauri-mantyniemi-8f83747b,,RELEX Solutions,Backend Engineer,28 Aug 2026
+Tomasz,Wiśniewski,https://www.linkedin.com/in/tomasz-wisniewski-ce962c9d,,Freska Oy,Business Development Manager | SAP | MES | Helping industrial companies get more out of their data,27 Aug 2026
+Lauri,Lehtonen,https://www.linkedin.com/in/laurilehtonen,,Reaktor Innovations Oy,Liiketoimintajohtaja,18 Aug 2026
+Sami,Lampinen,https://www.linkedin.com/in/sami-lampinen,,Business Finland,Investment Manager,17 Aug 2026
+Mari,Tuominen,https://www.linkedin.com/in/mari-tuominen-b629ee17,,Distance Technologies,Product Manager,11 Aug 2026
+Toni,Jokijärvi,https://www.linkedin.com/in/tonijokijarvi,,Sofigate,Head of Data & AI,10 Aug 2026
+Ivan,Popova,https://www.linkedin.com/in/ivan-popova-4eff12df,,Klevu,FRONTEND DEVELOPER,08 Aug 2026
+Tero,Luukkonen,https://www.linkedin.com/in/tero-luukkonen-667ed7a9,,Tesi,Startup Advisor,08 Aug 2026
+Heidi,Hirvikangas,https://www.linkedin.com/in/heidi-hirvikangas-ab456d60,,Elinkeinoelämän keskusliitto EK,Projektikoordinaattori,07 Aug 2026
+Marjo,Kuusiniemi,https://www.linkedin.com/in/marjo-kuusiniemi,marjokuusiniemi@example.com,Lillbacka Powerco,Tuotantopäällikkö,07 Aug 2026
+Ari,Kärki,https://www.linkedin.com/in/ari-karki-hki,,Hanken,Student,17 Jul 2026
+Sergei,Shevchenko,https://www.linkedin.com/in/sergei-shevchenko-b42eb3c3,,Oura Health,Director of Engineering,09 Jul 2026
+Cecilia,Mäkinen,https://www.linkedin.com/in/cecilia-makinen-8aad1510,,twoday,Data Engineer | ERP | Python,03 Jul 2026
+Lasse,Järvinen,https://www.linkedin.com/in/lasse-jarvinen-4d583dde,,Tevo,Operations Director,03 Jul 2026
+Leo,Mustonen,https://www.linkedin.com/in/leo-mustonen-99aba1f0,,Loihde,Principal Consultant,28 Jun 2026
+Matti,Mäntyvuori,https://www.linkedin.com/in/matti-mantyvuori,,Junction,Investment Manager,27 Jun 2026
+Santeri,Kuusijärvi,https://www.linkedin.com/in/kuusijarvisanteri,,Fortum,Head of AI,25 Jun 2026
+Tuomas,Aho,https://www.linkedin.com/in/tuomas-aho-0c0a0d89,,Sanoma,Legal Counsel,22 Jun 2026
+Ulla,Perälä,https://www.linkedin.com/in/ulla-perala,,Visma Solutions Oy,Software Developer,10 Jun 2026
+Arttu,Lehto,https://www.linkedin.com/in/arttu-lehto-42a69e60,,TP Silva Oy,Logistiikkajohtaja,09 Jun 2026
+Pekka,Eskola,https://www.linkedin.com/in/pekka-eskola-bf953d7a,,Meriara,PROJEKTIPÄÄLLIKKÖ,31 May 2026
+Esa,Pirinen,https://www.linkedin.com/in/esa-pirinen-4204be6c,,Knowit,Software Developer | B2B | Power BI,30 May 2026
+Laura,Schmidt,https://www.linkedin.com/in/laura-schmidt-b60697ba,,Wunder,Test Automation Engineer | Supply chain | Industry 4.0,30 May 2026
+Kaisa,Kettunen,https://www.linkedin.com/in/kaisa-kettunen-ea27e146,,Framery,UX Designer,28 May 2026
+Toni,Anttonen,https://www.linkedin.com/in/toni-anttonen-43c5c4cd,,Framery Oy,Software Engineer,28 May 2026
+Matti,Miettinen,https://www.linkedin.com/in/matti-miettinen-4305b12e,,Tesi,Associate,26 May 2026
+Henrik,Jensen,https://www.linkedin.com/in/henrik-jensen-f55946d2,,King,Senior Software Engineer,23 May 2026
+Päivi,Suominen,https://www.linkedin.com/in/paivi-suominen-2a0e93d0,,Aiven Oy,Community Manager,22 May 2026
+Heikki,Korpisaari,https://www.linkedin.com/in/heikki-korpisaari-3bc6950e,,Tampere University,,17 May 2026
+Oona,Leinonen,https://www.linkedin.com/in/oona-leinonen,,Wärtsilä,Solution Architect,17 May 2026
+Lauri,Pihlaniemi,https://www.linkedin.com/in/lauripihlaniemi,,ESL Shipping Oy,Projektipäällikkö,15 May 2026
+Riikka,Kangas,https://www.linkedin.com/in/rkangas,,Aalto University School of Science,Opiskelija,14 May 2026
+Salla,Heino,https://www.linkedin.com/in/salla-heino-4c2d1261,,Startup Foundation,Partnerships Manager,09 May 2026
+Henri,Kinnunen,https://www.linkedin.com/in/henrikinnunen,,Solita,Ohjelmistokehittäjä,06 May 2026
+Onni,Koskiaho,https://www.linkedin.com/in/onni-koskiaho,,Oy Lival Ab,ERP Specialist,06 May 2026
+Tiina,Vesala,https://www.linkedin.com/in/tiina-vesala-b96be462,,Delivery Hero,Software Engineer,05 May 2026
+Ari,"Jokivuori, CFA",https://www.linkedin.com/in/ari-jokivuori-85b68582,,VIESER,Mekaniikkasuunnittelija,02 May 2026
+Otto,Pietilä,https://www.linkedin.com/in/otto-pietila,,Hoxhunt Oy,Android Developer,02 May 2026
+Anna,Söderholm,https://www.linkedin.com/in/anna-soderholm,,Google,"Senior Director, Engineering",29 Apr 2026
+Chris,Johnson,https://www.linkedin.com/in/chris-johnson-9dc4f0a2,,Vaadin Ltd,Key Account Manager,25 Apr 2026
+Kari,Rissanen,https://www.linkedin.com/in/kari-rissanen-e348a655,,Gofore,Ratkaisuarkkitehti,21 Apr 2026
+Saara,Karhuniemi,https://www.linkedin.com/in/saara-karhuniemi,,Sulapac,Community Manager,18 Apr 2026
+Jesse,Heiskanen,https://www.linkedin.com/in/jesse-heiskanen-1fc86ce9,jesseheiskanen@example.com,Tampereen yliopisto,Research Scientist,14 Apr 2026
+Petri,Korpikangas,https://www.linkedin.com/in/petri-korpikangas,,Taiste,Data Scientist,13 Apr 2026
+Lauri,Tolonen,https://www.linkedin.com/in/lauri-tolonen,,Viking Malt Oy,Production Director,12 Apr 2026
+Teemu,Kuusikangas,https://www.linkedin.com/in/tkuusikangas,,Dealfront,Head of Product,12 Apr 2026
+Liisa,Hyvönen,https://www.linkedin.com/in/liisa-hyvonen-1899b7bc,,Helsingin yliopisto,Student,10 Apr 2026
+Timo,Kuusimäki,https://www.linkedin.com/in/timo-kuusimaki-1acc687c,,Elisa,Process Engineer,04 Apr 2026
+Niko,Laaksojärvi,https://www.linkedin.com/in/niko-laaksojarvi,,RELEX Solutions,Talent Acquisition Partner,01 Apr 2026
+Ming,Xu,https://www.linkedin.com/in/ming-xu-7261123f,,Wolt Enterprises Oy,Account Executive | Lean | B2B,30 Mar 2026
+Heikki,Lahtinen,https://www.linkedin.com/in/heikki-lahtinen-248f73c8,,Sanoma,Head of AI,29 Mar 2026
+Tommi,Vilén,https://www.linkedin.com/in/tommi-vilen-755de53e,,Reaktor,Tech Lead,26 Mar 2026
+Matti,Kettunen,https://www.linkedin.com/in/matti-kettunen-9e1fd657,,UUDENKAUPUNGIN TYÖVENE,Naval Architect,25 Mar 2026
+Sara,Parviainen,https://www.linkedin.com/in/sara-parviainen,sara.parviainen@example.com,Freelance,Yrittäjä,22 Mar 2026
+Tuomas,Ahola,https://www.linkedin.com/in/tuomas-ahola,,Finnair,,16 Mar 2026
+Sara,Rantasalo,https://www.linkedin.com/in/sara-rantasalo-d5b23d82,,IQM Quantum Computers,Head of Product,14 Mar 2026
+Tommi,Väisänen,https://www.linkedin.com/in/tommi-vaisanen,,Futurice Oy,DATA ENGINEER,14 Mar 2026
+Teemu,Kurki,https://www.linkedin.com/in/teemu-kurki-hki,teemukurki@example.com,Starship Technologies,Research Scientist,12 Mar 2026
+Camilla,Fagerström,https://www.linkedin.com/in/camilla-fagerstrom-e6862ed6,,Nokia,Business Controller,09 Mar 2026
+Sofia,Järviniemi,https://www.linkedin.com/in/sofia-jarviniemi-1f08bc27,,Alfons Håkans Oy,Tuotekehitysjohtaja,06 Mar 2026
+Elias,Niemi,https://www.linkedin.com/in/elias-niemi,,S Group,Key Account Manager,05 Mar 2026
+Pekka,Mäkinen,https://www.linkedin.com/in/pekka-makinen-a195b0d9,,Aalto University,,04 Mar 2026
+Mika,Kallioniemi,https://www.linkedin.com/in/mika-kallioniemi,,Houston Inc.,Konsultti,01 Mar 2026
+Juha,Lahtikangas,https://www.linkedin.com/in/juhalahtikangas,,Hoxhunt,HARDWARE ENGINEER,16 Feb 2026
+Markus,Lehtinen,https://www.linkedin.com/in/markus-lehtinen,,Bitfactor,Key Account Manager,13 Feb 2026
+Reetta,Koivuaho,https://www.linkedin.com/in/reetta-koivuaho-44ccba16,,Ministry of Economic Affairs and Employment,Ohjelmapäällikkö,10 Feb 2026
+Juho,Pihlalahti,https://www.linkedin.com/in/juho-pihlalahti,,Plasthill,Inköpare,06 Feb 2026
+Ivan,Melnyk,https://www.linkedin.com/in/ivan-melnyk-429e9e5b,,Reaktor,HEAD OF DATA & AI,04 Feb 2026
+Mika,Jokijärvi,https://www.linkedin.com/in/mika-jokijarvi-7da8a5ee,,Verohallinto,Johtava asiantuntija,29 Jan 2026
+Johanna,Toivonen,https://www.linkedin.com/in/johanna-toivonen-317bbb82,,RELEX Solutions,Product Designer,24 Jan 2026
+Anni,Pihlaniemi,https://www.linkedin.com/in/apihlaniemi,,Building the future of work,Founder,21 Jan 2026
+Mikko,Hartikainen,https://www.linkedin.com/in/mikko-hartikainen,,KASTELLI-TALOT,Key Account Manager,19 Jan 2026
+Anni,Laaksolahti,https://www.linkedin.com/in/anni-laaksolahti,,HUS,Business Advisor,13 Jan 2026
+Ole,Nielsen,https://www.linkedin.com/in/ole-nielsen-147a76fa,,Skaala FN,Myyntijohtaja,07 Jan 2026
+Ananya,Nair,https://www.linkedin.com/in/ananya-nair-27f93fed,,Slush,Customer Manager,06 Jan 2026
+Eetu,Turunen,https://www.linkedin.com/in/eturunen,,Wolt (DoorDash),Business Development Manager,04 Jan 2026
+Aleksi,Lehtinen,https://www.linkedin.com/in/aleksi-lehtinen-dbd851ee,,Aaltoes,,02 Jan 2026
+Juha,Laine,https://www.linkedin.com/in/jlaine,,Elinkeinoelämän keskusliitto EK,Ohjelmapäällikkö,31 Dec 2025
+Johanna,Ojanen,https://www.linkedin.com/in/johanna-ojanen-495b6fe3,,Bella-Veneet,Quality Engineer,26 Dec 2025
+Tuomas,Honkasalo,https://www.linkedin.com/in/tuomas-honkasalo,,Loihde,Lead Consultant,18 Dec 2025
+Juha,Voutilainen,https://www.linkedin.com/in/juha-voutilainen,,Halti Oy,Export Director,17 Dec 2025
+Santeri,Lahtinen,https://www.linkedin.com/in/santeri-lahtinen-b2b14ce1,,Osuuskunta Maitokolmio,Tuotantoinsinööri,16 Dec 2025
+Kari,Räsänen,https://www.linkedin.com/in/kari-rasanen,,Digia,Key Account Manager,12 Dec 2025
+Heikki,Pitkäkoski,https://www.linkedin.com/in/heikki-pitkakoski-661685b5,,Kesla,Vientijohtaja,07 Dec 2025
+Raj,Iyer,https://www.linkedin.com/in/raj-iyer-1d210f47,,Upright,HEAD OF PRODUCT,06 Dec 2025
+Lauri,Heikkilä,https://www.linkedin.com/in/lauri-heikkila-0d89fe6e,,,Taking a break 🌱,05 Dec 2025
+Miro,Hiltunen,https://www.linkedin.com/in/miro-hiltunen-ebfa57bd,,Fortum Power and Heat Oy,Supply Chain Manager,04 Dec 2025
+Piotr,Kamiński,https://www.linkedin.com/in/piotr-kaminski,,Iceye,Principal Engineer,03 Dec 2025
+Oskari,Halonen,https://www.linkedin.com/in/oskari-halonen-ed96d6d3,,Futurice Oy,Junior Developer,02 Dec 2025
+Kalle,Jokinen,https://www.linkedin.com/in/kalle-jokinen,,Startup Foundation,Associate,01 Dec 2025
+Mika,Mononen,https://www.linkedin.com/in/mika-mononen,,IQM Quantum Computers,Backend Engineer,01 Dec 2025
+Daniel,Holmström,https://www.linkedin.com/in/daniel-holmstrom-e03c351d,,Netlight,Agile Coach,26 Nov 2025
+Minna,Koivujärvi,https://www.linkedin.com/in/minna-koivujarvi,,Stealth,Co-founder & CEO,26 Nov 2025
+Omar,Hassan,https://www.linkedin.com/in/omar-hassan-ccd8e550,,Codento,Myyntijohtaja,26 Nov 2025
+Susanna,Lahtisalo,https://www.linkedin.com/in/susanna-lahtisalo,,Delivery Hero,Software Engineer,25 Nov 2025
+Heikki,Laaksonen,https://www.linkedin.com/in/heikkilaaksonen,,Nokian Panimo Oyj,Logistics Manager,24 Nov 2025
+Mika,Hartikainen,https://www.linkedin.com/in/mika-hartikainen,,Sievo,Hardware Engineer,24 Nov 2025
+Antti,Puustinen,https://www.linkedin.com/in/antti-puustinen,anttipuustinen@example.com,Reaktor,Software Developer,23 Nov 2025
+Magnus,Olsen,https://www.linkedin.com/in/magnus-olsen-dbbb9204,,Skeleton Technologies,Engineering Manager,23 Nov 2025
+Päivi,Harjuniemi,https://www.linkedin.com/in/paiviharjuniemi,,Kemira Oyj,Project Engineer,22 Nov 2025
+Sanna,Mäntylä,https://www.linkedin.com/in/sanna-mantyla,sannamantyla@example.com,Accenture,Full-stack developer | React | Node,22 Nov 2025
+Teemu,Lehtisalo,https://www.linkedin.com/in/teemulehtisalo,,Inventure,Asiakkuuspäällikkö,20 Nov 2025
+Esa,Tirkkonen,https://www.linkedin.com/in/esa-tirkkonen,,Novatron Oy,Ostaja,18 Nov 2025
+Lauri,Ylinen,https://www.linkedin.com/in/lauri-ylinen-240b0f7f,,Wolt,Software Engineer,17 Nov 2025
+Eetu,Haapavuori,https://www.linkedin.com/in/eetu-haapavuori,,Swappie Oy,Full Stack Developer,16 Nov 2025
+Julia,Järviaho,https://www.linkedin.com/in/jjarviaho,,KONE,Service Manager,16 Nov 2025
+Marko,Nykänen,https://www.linkedin.com/in/marko-nykanen-06b9ed90,,Ericsson,Software Engineer,15 Nov 2025
+Jun,Zhou,https://www.linkedin.com/in/jun-zhou-a0c5a836,,LUT-yliopisto,Väitöskirjatutkija,13 Nov 2025
+Tuuli,Toivonen,https://www.linkedin.com/in/tuuli-toivonen-c405883f,,Hanken Entrepreneurship Society,Board Member,13 Nov 2025
+Petri,Sillanpää,https://www.linkedin.com/in/petri-sillanpaa,,Supercell,Head of Hardware,11 Nov 2025
+Terhi,Ylitalo,https://www.linkedin.com/in/terhi-ylitalo-0deff1bf,,Stealth Startup,Founder & CEO,04 Nov 2025
+Sofia,Ahosalo,https://www.linkedin.com/in/sofiaahosalo,,Metropolia Ammattikorkeakoulu,Teaching Assistant,01 Nov 2025
+Mikael,Kauppinen,https://www.linkedin.com/in/mikaelkauppinen,,Silo AI,Backend Engineer,29 Oct 2025
+Petra,Strandberg,https://www.linkedin.com/in/petra-strandberg-84afcf9f,,Basemark,Frontend Developer,27 Oct 2025
+Sara,Grönroos,https://www.linkedin.com/in/sara-gronroos,,Fortum,,22 Oct 2025
+Mikko,Alanen,https://www.linkedin.com/in/mikko-alanen-af0b8144,,Valmet Automation,Senior Engineer,21 Oct 2025
+Ville,Rantavuori,https://www.linkedin.com/in/vrantavuori,,Solita Oy,Head of Data & AI,21 Oct 2025
+Elias,Seppälä,https://www.linkedin.com/in/elias-seppala,,Reaktor,Software Developer,07 Oct 2025
+Christoffer,Söderholm,https://www.linkedin.com/in/christoffer-soderholm,,Reaktor,Account Director,30 Sep 2025
+Rohit,Rao,https://www.linkedin.com/in/rohit-rao,,IQM Quantum Computers,Senior Software Engineer,30 Sep 2025
+Kirsi,Partanen,https://www.linkedin.com/in/kirsi-partanen-12b4fbe5,,Siili,Key Account Manager,29 Sep 2025
+Eero,Mustonen,https://www.linkedin.com/in/eero-mustonen-7f44c313,,Specim,Laatujohtaja,27 Sep 2025
+Divya,Reddy,https://www.linkedin.com/in/divya-reddy-d43c3ccf,,Steday Energy,Software Engineer,21 Sep 2025
+Lasse,Kuusimäki,https://www.linkedin.com/in/lasse-kuusimaki-ed550ad7,,IQM,Engineering Manager,21 Sep 2025
+Sara,Ylinen,https://www.linkedin.com/in/sara-ylinen,saraylinen@example.com,Vincit,Agile Coach,21 Sep 2025
+Inka,Rantakoski,https://www.linkedin.com/in/inka-rantakoski-7dc2d575,,Prodeko,Board Member,19 Sep 2025
+Hanna,Heikkilä,https://www.linkedin.com/in/hanna-heikkila,,RELEX Solutions,Staff Engineer,18 Sep 2025
+Esa,Reinikainen,https://www.linkedin.com/in/esa-reinikainen-b7e90d29,,Smartly.io,Product Designer,14 Sep 2025
+Pierre,Dubois,https://www.linkedin.com/in/pierre-dubois-f33b606b,,Varjo Technologies Oy,Head of People,11 Sep 2025
+Tuukka,Karjalainen,https://www.linkedin.com/in/tuukka-karjalainen,,Logset,Production Planner,09 Sep 2025
+Sanna,Leppäjärvi,https://www.linkedin.com/in/sanna-leppajarvi,,Elisa,Senior Specialist,08 Sep 2025
+Tero,Seppälä,https://www.linkedin.com/in/tero-seppala-7406dcb8,,Meta,Product Manager,07 Sep 2025
+Teemu,Kinnunen,https://www.linkedin.com/in/teemu-kinnunen,,Supercell,Senior Software Engineer,05 Sep 2025
+Pooja,Patel,https://www.linkedin.com/in/pooja-patel,,Technology Industries of Finland,,02 Sep 2025
+Jenni,Harjukangas,https://www.linkedin.com/in/jenni-harjukangas-6295ace1,,University of Helsinki,Doctoral Researcher,28 Aug 2025
+Tuuli,Saarikangas,https://www.linkedin.com/in/tuuli-saarikangas-835c57f9,,Valmet Automation,Product Owner,28 Aug 2025
+Tuomas,Rantavuori,https://www.linkedin.com/in/tuomas-rantavuori-38943bcd,,Startup Foundation,Event Producer,15 Aug 2025
+Rasmus,Aaltonen,https://www.linkedin.com/in/rasmus-aaltonen-a7547d3f,,Helsingin yliopisto,University Lecturer,14 Aug 2025
+Kimmo,Kolehmainen,https://www.linkedin.com/in/kimmo-kolehmainen-3017cda6,,Turku Repair Yard,Design Engineer,13 Aug 2025
+Jussi,Koivuniemi,https://www.linkedin.com/in/jussi-koivuniemi-c0e6b366,,Biovian,Talousjohtaja,09 Aug 2025
+Oskari,Korpisaari,https://www.linkedin.com/in/oskarikorpisaari,,Aiven,Head of Product,01 Aug 2025
+Iiro,Harjusalo,https://www.linkedin.com/in/iiro-harjusalo-a8eb0041,,Qvantel,,30 Jun 2025
+Sami,Anttila,https://www.linkedin.com/in/samianttila,,Finnair,Program Manager,27 Jun 2025
+Suvi,Rajajärvi,https://www.linkedin.com/in/suvi-rajajarvi,,Saalasti Biomass Oy,Product Manager | Industry 4.0 | AI,23 Jun 2025
+Mika,Pihlaja,https://www.linkedin.com/in/mika-pihlaja,,Aalto University,Student | SAP | SaaS,21 Jun 2025
+Lasse,Alajärvi,https://www.linkedin.com/in/lassealajarvi,,Sinituote Oy,Logistiikkajohtaja | SaaS | Power BI,16 Jun 2025
+Anne,Mäntysalo,https://www.linkedin.com/in/annemantysalo,,Tampere University,Student,15 Jun 2025
+Suvi,Virtanen,https://www.linkedin.com/in/suvi-virtanen,,Futurice,Head of Data & AI,15 Jun 2025
+Ville,Salminen,https://www.linkedin.com/in/ville-salminen-a558f819,,Upright Project,Data Scientist,11 Jun 2025
+Toni,Virtanen,https://www.linkedin.com/in/toni-virtanen-9e56bc07,,Futurice,Tech Lead,29 May 2025
+Jukka,Honkasalo,https://www.linkedin.com/in/jukka-honkasalo,,Athene ry,Hallituksen jäsen 🚀,27 May 2025
+Matti,Halonen,https://www.linkedin.com/in/matti-halonen-c09fced2,,Wunder,Principal Consultant,24 May 2025
+Niko,Heikkinen,https://www.linkedin.com/in/niko-heikkinen-90834df7,,Nanso Group Oy,Projektipäällikkö,22 May 2025
+Kaisa,Mattila,https://www.linkedin.com/in/kaisamattila,,Aalto University,Student,21 May 2025
+Magnus,Lundqvist,https://www.linkedin.com/in/magnuslundqvist,,Lemonsoft Oyj,Konsultti,21 May 2025
+Mari,Korpimäki,https://www.linkedin.com/in/mari-korpimaki-9c5b071d,,ResQ Club,Senior Product Manager,17 May 2025
+Daniel,Miller,https://www.linkedin.com/in/daniel-miller-0db02078,,Klarna,Data Scientist,15 May 2025
+Lei,Wu,https://www.linkedin.com/in/lei-wu-adc98e72,,Rakennusliike Evälahti,Operatiivinen johtaja,14 May 2025
+Ari,Karhuniemi,https://www.linkedin.com/in/ari-karhuniemi-541d1a0b,,LapWall,Suunnitteluinsinööri,13 May 2025
+Teemu,Pajunen,https://www.linkedin.com/in/teemu-pajunen-f296864c,,Oulun Kaukokiito,Ajojärjestelijä | Power BI | AI | Helping industrial companies get more out of their people,09 May 2025
+Heikki,Heino,https://www.linkedin.com/in/heikki-heino-bea15bc2,,Hoxhunt,Hardware Engineer,08 May 2025
+Anna,Ojala,https://www.linkedin.com/in/annao,,Oura,Customer Success Manager,06 May 2025
+Javier,Martínez,https://www.linkedin.com/in/javiermartinez,,Stripe,Mechanical Engineer,04 May 2025
+Pasi,Jokisaari,https://www.linkedin.com/in/pasi-jokisaari-8c0745a1,,Business Finland,,04 May 2025
+Teemu,Orava,https://www.linkedin.com/in/teemu-orava-036086fa,,Supercell,Product Designer,03 May 2025
+Janne,Valtonen,https://www.linkedin.com/in/jannevaltonen,,TEM,Senior Specialist,27 Apr 2025
+Elina,Lehtinen,https://www.linkedin.com/in/elinalehtinen,,Spotify,BUSINESS DEVELOPMENT MANAGER,24 Apr 2025
+Timo,Kivilahti,https://www.linkedin.com/in/timo-kivilahti-6c5109da,,Langh Ship,Quality Manager,21 Apr 2025
+Ivan,Tkachenko,https://www.linkedin.com/in/ivan-tkachenko-cfa57fc9,,Solar Foods,City Launcher,14 Apr 2025
+Mika,Kallunki,https://www.linkedin.com/in/mkallunki,,Making industry smarter,Co-founder & CEO,14 Apr 2025
+Anastasia,Popova,https://www.linkedin.com/in/anastasia-popova-19096260,,Between jobs,Open to work,12 Apr 2025
+Sara,Salmi,https://www.linkedin.com/in/sarasalmi,,AMD Silo AI,Head of Partnerships,08 Apr 2025
+Joonas,Kemppainen,https://www.linkedin.com/in/joonas-kemppainen,,Reaktor Innovations Oy,Senior Software Architect,06 Apr 2025
+Johan,Heinström,https://www.linkedin.com/in/johan-heinstrom-096e35df,,Slush,Ecosystem Lead,05 Apr 2025
+Katja,Ojala,https://www.linkedin.com/in/katja-ojala-1fe2ed2a,,Microsoft,Senior Software Engineer,28 Mar 2025
+Laura,Laine,https://www.linkedin.com/in/laura-laine-4bf7df45,,Junttan,Project Manager,28 Mar 2025
+Valtteri,Hakkarainen,https://www.linkedin.com/in/valtteri-hakkarainen-4bebccfc,,Nokia Networks,"Senior Director, Digital",26 Mar 2025
+Sara,Koivisto,https://www.linkedin.com/in/sara-koivisto-3b883bba,,Tampere University,"M.Sc. Student, Industrial Engineering and Management",23 Mar 2025
+Jouni,Leppälahti,https://www.linkedin.com/in/jouni-leppalahti-3314cce9,,Codento,Business Director,19 Mar 2025
+Satu,Mäkinen,https://www.linkedin.com/in/satu-makinen,,Kuljetusrinki,,19 Mar 2025
+Kari,Lahtiaho,https://www.linkedin.com/in/kari-lahtiaho,,University of Helsinki,Assistant Professor,13 Mar 2025
+Janne,Ahola,https://www.linkedin.com/in/janne-ahola-feac9241,,Qvantel,Marketing Specialist,11 Mar 2025
+Teemu,Orava,https://www.linkedin.com/in/teemu-orava,,Efecte Oyj,Machine Learning Engineer,11 Mar 2025
+Emilia,Turkki,https://www.linkedin.com/in/emilia-turkki,,Konecranes,Kehitysjohtaja,08 Mar 2025
+Matti,Harjujärvi,https://www.linkedin.com/in/mattih,,Maki.vc,Senior Advisor,06 Mar 2025
+Juho,Mäki,https://www.linkedin.com/in/juho-maki-7cd1fc27,,Marine Alutech Oy Ab,Ship Superintendent,04 Mar 2025
+Teemu,Pesonen,https://www.linkedin.com/in/teemu-pesonen,,Oura Health,Android Developer,01 Mar 2025
+Matti,Jokela,https://www.linkedin.com/in/matti-jokela-52a5a46c,,Wolt,Customer Success Manager,20 Feb 2025
+Joni,Rantasaari,https://www.linkedin.com/in/joni-rantasaari,,Stealth Startup,Founder,18 Feb 2025
+Lauri,Anttila,https://www.linkedin.com/in/lauri-anttila-bfe8b137,,Puustelli Group | Since 1972,Kunnossapitopäällikkö,18 Feb 2025
+Oskari,,https://www.linkedin.com/in/oskari-lappalainen,,Kaukora Oy,,15 Feb 2025
+Johanna,Tuominen,https://www.linkedin.com/in/johanna-tuominen-3e468d7f,,Ouman Oy,Hankintajohtaja,09 Feb 2025
+Riikka,Koskikangas,https://www.linkedin.com/in/riikka-koskikangas-86ee91ad,,Slush,Customer Manager,08 Feb 2025
+Mikko,Isoniemi,https://www.linkedin.com/in/mikko-isoniemi,,ŌURA,,07 Feb 2025
+Antti,Lappalainen,https://www.linkedin.com/in/antti-lappalainen,,Rakennusliike Evälahti,Projektinjohtaja,05 Feb 2025
+Matti,Kuusikangas,https://www.linkedin.com/in/matti-kuusikangas-1a3025be,,TP Silva,Commercial Director,04 Feb 2025
+Aki,Vartiainen,https://www.linkedin.com/in/aki-vartiainen-b782bb58,,YIT,Head of Procurement,31 Jan 2025
+Eetu,Leinonen,https://www.linkedin.com/in/eetu-leinonen-a476b695,,UPM,Asiantuntija,29 Jan 2025
+Heikki,Nykänen,https://www.linkedin.com/in/heikki-nykanen-d4bf4532,,Nokia,Development Manager,23 Jan 2025
+Ari,Korpijärvi,https://www.linkedin.com/in/ari-korpijarvi,,Hanken School of Economics,Opiskelija | Automation | AI,20 Jan 2025
+Elina,Mäntyaho,https://www.linkedin.com/in/elinamantyaho,,Marioff Corporation Oy,Markkinointijohtaja,17 Jan 2025
+Timo,Laitinen,https://www.linkedin.com/in/timo-laitinen-ccf7b3e8,,Pemamek Oy,Tuotannonsuunnittelija,13 Jan 2025
+Joni,Hirvonen,https://www.linkedin.com/in/jonihirvonen,,Wärtsilä,Kesätyöntekijä,02 Jan 2025
+Pauliina,Kosonen,https://www.linkedin.com/in/pauliina-kosonen-2908db56,,IQM Quantum Computers,Head of Partnerships,31 Dec 2024
+Arttu,Nieminen,https://www.linkedin.com/in/arttu-nieminen-49ddffe4,,Aalto University School of Science,Postdoctoral Researcher,29 Dec 2024
+Esa,Suhonen,https://www.linkedin.com/in/esasuhonen,,Enervent Zehnder,COO,27 Dec 2024
+Heidi,Kosonen,https://www.linkedin.com/in/hkosonen,,AYY,Head of Corporate Relations,27 Dec 2024
+Henri,Jokilahti,https://www.linkedin.com/in/henri-jokilahti,,Tampere University,Tekniikan ylioppilas,25 Dec 2024
+Ayşe,Ahmadi,https://www.linkedin.com/in/ayse-ahmadi-b94806a2,,Spotify,Solutions Architect,23 Dec 2024
+Markus,Marttila,https://www.linkedin.com/in/markus-marttila-d7da71fe,,Alfons Håkans,Naval Architect,19 Dec 2024
+Niko,Mäkinen,https://www.linkedin.com/in/niko-makinen,,Klevu,Customer Success Manager | AI | SaaS,16 Dec 2024
+Kristian,Lindberg,https://www.linkedin.com/in/kristian-lindberg,,Porokylän Leipomo,Laatuvastaava,15 Dec 2024
+Santeri,Pitkävuori,https://www.linkedin.com/in/santeri-pitkavuori-a29927aa,,ABB,Senior Software Engineer,14 Dec 2024
+Johanna,Lappalainen,https://www.linkedin.com/in/johanna-lappalainen-69c30c83,,Aalto University,Väitöskirjatutkija,13 Dec 2024
+Aada,Saarivuori,https://www.linkedin.com/in/aada-saarivuori,,Solita,Software Developer,10 Dec 2024
+Jussi,Vehviläinen,https://www.linkedin.com/in/jussi-vehvilainen-78f1ba2c,,IQM Finland Oy,Head of Product,09 Dec 2024
+Sanna,Luoma,https://www.linkedin.com/in/sanna-luoma-7943cb41,,Kinnusen Mylly,Head of Supply Chain,07 Dec 2024
+Teemu,Korpikangas,https://www.linkedin.com/in/teemu-korpikangas-84a34602,,Wärtsilä Finland Oy,"Vice President, Service Business",07 Dec 2024
+Emil,Karjalainen,https://www.linkedin.com/in/emil-karjalainen-7089122a,,Lifeline Ventures,Head of Events | Continuous improvement | Industry 4.0 | Helping industrial companies get more out of their data,06 Dec 2024
+Valtteri,Partanen,https://www.linkedin.com/in/valtteri-partanen-a19abe20,,Pipelife,Logistiikkajohtaja,05 Dec 2024
+Timo,Leppäkoski,https://www.linkedin.com/in/timoleppakoski,,Junction,Head of Corporate Relations,04 Dec 2024
+Heidi,Kivisaari,https://www.linkedin.com/in/heidi-kivisaari-c50e4244,,Prevex,Produktionschef,02 Dec 2024
+Jessica,Brown,https://www.linkedin.com/in/jessica-brown-d796d173,,Stripe,Software Engineer,01 Dec 2024
+Sara,Laaksonen,https://www.linkedin.com/in/sara-laaksonen,,,Open to work,01 Dec 2024
+Aino,Saarikoski,https://www.linkedin.com/in/aino-saarikoski-fe36244b,,Columbia Road,,30 Nov 2024
+Hanna,Takala,https://www.linkedin.com/in/hanna-takala,,Finnvera,Customer Manager,30 Nov 2024
+Timo,Leppäsalo,https://www.linkedin.com/in/timo-leppasalo,,Hanken,Master's student,30 Nov 2024
+Eetu,Kivinen,https://www.linkedin.com/in/eetu-kivinen-711030a5,,Swappie,Product Marketing Manager,27 Nov 2024
+Petri,Rajasalo,https://www.linkedin.com/in/petrirajasalo,,University of Helsinki,Teaching Assistant,26 Nov 2024
+Jari,Kolehmainen,https://www.linkedin.com/in/jari-kolehmainen-8f119a8c,,Loihde,Partner,25 Nov 2024
+Jukka,Partanen,https://www.linkedin.com/in/jukka-partanen-528a0a24,,ResQ Club,Senior Software Engineer,24 Nov 2024
+Markus,Ruohonen,https://www.linkedin.com/in/markus-ruohonen,,Posti,Business Controller,24 Nov 2024
+Salla,Mäkelä,https://www.linkedin.com/in/salla-makela-a3d85731,,Satel,Tuotekehitysjohtaja,24 Nov 2024
+Marko,Hartikainen,https://www.linkedin.com/in/marko-hartikainen-530855d6,,Metso,Data Engineer,23 Nov 2024
+Riikka,Isolahti,https://www.linkedin.com/in/riikka-isolahti,,Oy Lival Ab,Logistics Manager,22 Nov 2024
+Anni,Mäenpää,https://www.linkedin.com/in/anni-maenpaa-160f89ed,,Lemonsoft,Head of Design,21 Nov 2024
+Axel,Häggblom,https://www.linkedin.com/in/axel-haggblom,,Slush,Funding Advisor,21 Nov 2024
+Anna-Kaisa,Heikkilä,https://www.linkedin.com/in/annakaisaheikkila,,Helping SMEs grow with data,Interim Manager,20 Nov 2024
+Tapio,Vehviläinen,https://www.linkedin.com/in/tapio-vehvilainen-6d0bfdd0,,Sitra,Senior Advisor,20 Nov 2024
+Johanna,Kalliovuori,https://www.linkedin.com/in/johanna-kalliovuori,,Rani Plast,Tuotekehitysjohtaja,19 Nov 2024
+Kaisa,Anttonen,https://www.linkedin.com/in/kaisa-anttonen-ea45370a,,Lappset Group | Since 1972,,19 Nov 2024
+Anna-Maria,Koskisalo,https://www.linkedin.com/in/anna-maria-koskisalo-dca4236d,,Spinnova Oyj,Product Marketing Manager,18 Nov 2024
+Salla,Alakangas,https://www.linkedin.com/in/sallaalakangas,,Wärtsilä,Product Owner,18 Nov 2024
+Sergei,Tkachenko,https://www.linkedin.com/in/sergei-tkachenko-61fad5ca,,Houston Inc.,Senior Consultant,17 Nov 2024
+Maria,Rantanen,https://www.linkedin.com/in/maria-rantanen-87,,Wärtsilä,Ostopäällikkö,16 Nov 2024
+Minna,Moilanen,https://www.linkedin.com/in/minna-moilanen,,Columbia Road,Service Designer,16 Nov 2024
+Oskari,Honkakangas,https://www.linkedin.com/in/oskari-honkakangas-29e62cd5,,Kaukra,Myyntiinsinööri,16 Nov 2024
+Sophie,Müller,https://www.linkedin.com/in/sophie-muller-d5081caf,,Ericsson,Senior Software Engineer,16 Nov 2024
+Ville,Alasalo,https://www.linkedin.com/in/ville-alasalo,,HYY,Hallituksen jäsen,12 Nov 2024
+Camilla,Blomqvist,https://www.linkedin.com/in/camilla-blomqvist-0762c64f,,VTT,Student,07 Nov 2024
+Jing,Zhao,https://www.linkedin.com/in/jing-zhao-36e84e8e,,LUT University,Master's student,06 Nov 2024
+Larissa,Santos,https://www.linkedin.com/in/larissa-santos-2fb15f47,,ABB,SENIOR SOFTWARE ENGINEER,04 Nov 2024
+Kate,Morgan,https://www.linkedin.com/in/kmorgan,,Wolt,UX Designer,03 Nov 2024
+Jari,Miettinen,https://www.linkedin.com/in/jari-miettinen-5,,Wolt,Site Reliability Engineer,28 Oct 2024
+Juha,Niemi,https://www.linkedin.com/in/juha-niemi,,Carbo Culture,Account Executive,24 Oct 2024
+Anna,Mäntylahti,https://www.linkedin.com/in/anna-mantylahti-4a26673a,,UPM,,20 Oct 2024
+Mari,Nevalainen,https://www.linkedin.com/in/mari-nevalainen,,OSUUSKUNTA MAITOKOLMIO,Marketing Manager,18 Oct 2024
+Heidi,Voutilainen,https://www.linkedin.com/in/heidi-voutilainen,,Exploring what's next,Freelance Designer,13 Oct 2024
+Mikko,Ruotsalainen,https://www.linkedin.com/in/mikko-ruotsalainen,,Vincit Oyj,Agile Coach,12 Oct 2024
+Ari,Korhonen,https://www.linkedin.com/in/ari-korhonen-b2ccaff2,,Sitra,Asiakkuuspäällikkö,09 Oct 2024
+Krista,Haapalahti,https://www.linkedin.com/in/kristahaapalahti,,Aiven,Engineering Manager,09 Oct 2024
+Rasmus,Heiskanen,https://www.linkedin.com/in/rasmus-heiskanen-3ab3192c,,Lumenkeep Oy,Software Engineer,01 Oct 2024
+Antti,Niemelä,https://www.linkedin.com/in/antti-niemela-ce637996,,Business Finland,Ecosystem Lead | ERP | SAP,27 Sep 2024
+Antti,Tanskanen,https://www.linkedin.com/in/antti-tanskanen-d352fa58,,Posti Group Oyj,Production Supervisor,27 Sep 2024
+Pasi,Rantakangas,https://www.linkedin.com/in/pasi-rantakangas,,VTT Technical Research Centre of Finland Ltd,University Lecturer,27 Sep 2024
+Matti,Haapala,https://www.linkedin.com/in/mattihaapala,,Various,Freelance Designer,23 Sep 2024
+Laura,Hietala,https://www.linkedin.com/in/laurahietala,,Etra,Business Director,22 Sep 2024
+Saara,Kalliosalo,https://www.linkedin.com/in/saara-kalliosalo-28f18264,,Enfuce Financial Services,QA Engineer,21 Sep 2024
+Anne,Korpimäki,https://www.linkedin.com/in/akorpimaki,,Bolt Technology OÜ,Head of Partnerships EMEA,19 Sep 2024
+Anni,Virtanen,https://www.linkedin.com/in/anni-virtanen-0c4366aa,,Aalto University School of Engineering,Student,16 Sep 2024
+Jukka,Vesterinen,https://www.linkedin.com/in/jvesterinen,,"Betolar, Finland",Finance Director,16 Sep 2024
+Kimmo,Pitkäsalo,https://www.linkedin.com/in/kimmo-pitkasalo-bf365457,,Kemira,"Director, Operations Excellence",10 Sep 2024
+Minna,Laine,https://www.linkedin.com/in/minna-laine,,Sinituote,Quality Engineer,09 Sep 2024
+Kimmo,Harjuaho,https://www.linkedin.com/in/kimmo-harjuaho,,Wunder,Head of Data & AI,05 Sep 2024
+Tuukka,Vainio,https://www.linkedin.com/in/tuukka-vainio,tvainio@example.com,ICEYE Oy,People & Culture Lead,04 Sep 2024
+Johanna,Mustonen,https://www.linkedin.com/in/johanna-mustonen,,Maria 01,Event Producer | ERP | Lean | Helping industrial companies get more out of their people,30 Aug 2024
+Joel,Vuorinen,https://www.linkedin.com/in/joel-vuorinen-260faf10,,Smartly.io,Senior Software Engineer,27 Aug 2024
+Peter,Nyström,https://www.linkedin.com/in/pnystrom,peter.nystrom84@example.com,Kesla,Logistiikkapäällikkö,21 Aug 2024
+Sara,Kiiskinen,https://www.linkedin.com/in/sara-kiiskinen,,Reaktor,SOFTWARE DEVELOPER,17 Aug 2024
+Joni,Keskinen,https://www.linkedin.com/in/joni-keskinen-bd0bf0d5,,Aalto University,Opiskelija,28 Jul 2024
+sara,Huttunen,https://www.linkedin.com/in/sarahuttunen,,Oura,Full Stack Developer,25 Jul 2024
+Kari,Lehtonen,https://www.linkedin.com/in/kari-lehtonen-2520c16e,,Weckman,,16 Jul 2024
+Tanja,Leino,https://www.linkedin.com/in/tanja-leino,,Picosun Ltd,Production Manager,12 Jun 2024
+Kateryna,Tkachenko,https://www.linkedin.com/in/kateryna-tkachenko-9479f938,,Basemark,UX Designer,10 Jun 2024
+Sara,Karlsson,https://www.linkedin.com/in/sara-karlsson-f1e182fd,sara.karlsson@example.com,Solar Foods,VP Engineering,08 Jun 2024
+Pekka,Kiviniemi,https://www.linkedin.com/in/pekkak,,Junction,Head of Events,04 Jun 2024
+Hannu,Koski,https://www.linkedin.com/in/hannu-koski-bd40d04c,,Zalando SE,Partner Manager,29 May 2024
+Anders,Holmström,https://www.linkedin.com/in/anders-holmstrom-70195064,,Yousician,Product Manager,26 May 2024
+Susanna,Rajasalo,https://www.linkedin.com/in/susanna-rajasalo-37848c56,,Paptic,Customer Success Manager,26 May 2024
+Jussi,Pitkäsaari,https://www.linkedin.com/in/jussi-pitkasaari-e2c8bde9,,Tietoevry,Tech Lead,25 May 2024
+Anne,Mononen,https://www.linkedin.com/in/anne-mononen-15ad633a,,Maki.vc,Investment Analyst,23 May 2024
+Tiina,Korpimäki,https://www.linkedin.com/in/tiina-korpimaki-96a363dc,,Tieto,Marketing Specialist,20 May 2024
+Jari,Raatikainen,https://www.linkedin.com/in/jari-raatikainen,,Finnvera,Program Manager,18 May 2024
+Timo,Tuomi,https://www.linkedin.com/in/timo-tuomi,,Muurame,Head of Production,10 May 2024
+Rasmus,Kuusk,https://www.linkedin.com/in/rasmus-kuusk-2e06979d,,ICEYE,Product Designer,07 May 2024
+Anna,Alakangas,https://www.linkedin.com/in/anna-alakangas-6efc638a,,Slush,Event Producer,03 May 2024
+Julien,Moreau,https://www.linkedin.com/in/julien-moreau-c3f3687f,,Klarna,,02 May 2024
+Juho,Toivonen,https://www.linkedin.com/in/juho-toivonen,juhotoivonen@example.com,Solar Foods Oyj,iOS Developer,01 May 2024
+diego,Moretti,https://www.linkedin.com/in/diego-moretti-dab43d5e,,Leadfeeder,,22 Apr 2024
+Julia,Salo,https://www.linkedin.com/in/julia-salo-b545b8b7,,Hanken Entrepreneurship Society,Hallituksen jäsen,21 Apr 2024
+Jani,Nevalainen,https://www.linkedin.com/in/nevalainenjani,,Tietoevry,Software Developer,12 Apr 2024
+Janne,Rajala,https://www.linkedin.com/in/rajalajanne,,Wirepas Oy,Machine Learning Engineer | AI | MES,06 Apr 2024
+Eero,Pöllänen,https://www.linkedin.com/in/eero-pollanen-bcea8aa0,,Lumenkeep,Full-stack Developer,19 Mar 2024
+Krista,Järvikangas,https://www.linkedin.com/in/krista-jarvikangas-0cbf0d9c,,IQM Quantum Computers,Staff Engineer,14 Mar 2024
+Aleksi,Laukkanen,https://www.linkedin.com/in/aleksi-laukkanen-71423101,,University of Vaasa,Doctoral Researcher,10 Mar 2024
+Duc,Vu,https://www.linkedin.com/in/duc-vu-a816859d,,Kone,Product Owner,10 Mar 2024
+Mart,Sepp,https://www.linkedin.com/in/mart-sepp-47351e4b,,Amazon Web Services (AWS),Mechanical Engineer,10 Mar 2024
+Mikko,Kaartinen,https://www.linkedin.com/in/mikko-kaartinen-40fac3c6,,Smartly,Head of Growth 🚀,08 Mar 2024
+Santeri,Salo,https://www.linkedin.com/in/santeri-salo,,VTT,Opiskelija,08 Mar 2024
+Heidi,Heikkilä,https://www.linkedin.com/in/heidi-heikkila-17b6599c,,VTT Technical Research Centre of Finland Ltd,Kauppatieteiden opiskelija,05 Mar 2024
+Iiro,Varis,https://www.linkedin.com/in/iiro-varis-8080e9d2,,Elisa,Prosessi-insinööri,02 Mar 2024
+Kenji,Park,https://www.linkedin.com/in/kenji-park,,Tampere University,Kauppatieteiden opiskelija,01 Mar 2024
+Oskari,Pöllänen,https://www.linkedin.com/in/oskari-pollanen,,Enfuce,Senior Software Engineer,29 Feb 2024
+Riikka,Kivikangas,https://www.linkedin.com/in/riikkakivikangas,,Junction,Board Member,29 Feb 2024
+Niina,Tiainen,https://www.linkedin.com/in/niina-tiainen-561c3f64,niina.tiainen@example.com,Enfuce,Firmware Engineer,21 Feb 2024
+Mikko,Kettunen,https://www.linkedin.com/in/kettunenmikko,,Traficom,Business Advisor,26 Jan 2024
+Antti,Laitinen,https://www.linkedin.com/in/antti-laitinen-743c34a1,,Aalto University,Kauppatieteiden opiskelija,24 Jan 2024
+Niklas,Wallin,https://www.linkedin.com/in/nwallin,,Hacklin Logistics,,24 Jan 2024
+Pekka,Suomalainen,https://www.linkedin.com/in/pekka-suomalainen,,Jatke Oy,,21 Jan 2024
+Hanna,Blomqvist,https://www.linkedin.com/in/hanna-blomqvist-0919dd41,,Aiven.io,Site Reliability Engineer,20 Jan 2024
+Marika,Rantala,https://www.linkedin.com/in/marikarantala,,Wirepas Oy,Software Engineer,20 Jan 2024
+aki,Saarinen,https://www.linkedin.com/in/aki-saarinen,,University of Helsinki,"M.Sc. Student, Industrial Engineering and Management",11 Jan 2024
+Tiina,Rantala,https://www.linkedin.com/in/tiina-rantala,,Wartsila,Sourcing Manager,11 Jan 2024
+Jani,Toivonen,https://www.linkedin.com/in/jani-toivonen-39268550,,HYY,Treasurer,09 Jan 2024
+Claire,Laurent,https://www.linkedin.com/in/claire-laurent-56f454d5,,Google,Senior Software Engineer,03 Jan 2024
+Pertti,Mäkinen,https://www.linkedin.com/in/perttimakinen,,Celonis,,02 Jan 2024
+Ville,Heinonen,https://www.linkedin.com/in/ville-heinonen-524e1568,,Distance Technologies,Software Engineer,02 Jan 2024
+Jukka,Rinne,https://www.linkedin.com/in/jukka-rinne-93c12cb1,,Solita,Business Director,22 Dec 2023
+Lauri,Pietilä,https://www.linkedin.com/in/lauri-pietila-af9f18f9,,Maria 01,Partnerships Manager,22 Dec 2023
+Timo,Piirainen,https://www.linkedin.com/in/timo-piirainen-b5537c56,,Infinited Fiber,Head of Operations,11 Dec 2023
+Vesa,Virtanen,https://www.linkedin.com/in/vvirtanen,,Junnikkala | We are hiring,Purchasing Manager,10 Dec 2023
+Matilda,Holm,https://www.linkedin.com/in/matilda-holm,,Aalto University School of Science,Student,07 Dec 2023
+Tuuli,Pajunen,https://www.linkedin.com/in/tuulipajunen,,Vahterus,Kunnossapitopäällikkö,07 Dec 2023
+Jari,Mäkelä,https://www.linkedin.com/in/jari-makela,,Machinery Oy,Key Account Manager,04 Dec 2023
+Juha,Honkasaari,https://www.linkedin.com/in/juhahonkasaari,,Aiven.io,SOFTWARE ENGINEER,03 Dec 2023
+Alex,Taylor,https://www.linkedin.com/in/alex-taylor-3caff7b5,,Sanoma Media Finland,Global Category Manager,01 Dec 2023
+Elina,Saarela,https://www.linkedin.com/in/elina-saarela-346a56a7,,Posti,Lean Manager,01 Dec 2023
+Magnus,Häggblom,https://www.linkedin.com/in/magnus-haggblom-8d89d60e,,Posti Group Oyj,HR Business Partner,30 Nov 2023
+Yulia,Kovalenko,https://www.linkedin.com/in/yulia-kovalenko-92de0dee,,Basemark,Software Engineer,30 Nov 2023
+Teemu,Leppäaho,https://www.linkedin.com/in/teemu-leppaaho,,Lapuan Kankurit Ltd,Supply Chain Director,28 Nov 2023
+Jukka,Hiltunen,https://www.linkedin.com/in/jukka-hiltunen-8398d416,,Swappie,Staff Engineer,26 Nov 2023
+Katja,Rantaaho,https://www.linkedin.com/in/katja-rantaaho-768b8a18,,MaaS Global Oy,Staff Engineer,25 Nov 2023
+Sara,Sjöberg,https://www.linkedin.com/in/sara-sjoberg,,LUT University,Student,25 Nov 2023
+Toni,Jokiaho,https://www.linkedin.com/in/toni-jokiaho,,Prodeko,Head of Events,25 Nov 2023
+Inka,Salonen,https://www.linkedin.com/in/inka-salonen-38899462,,Oura Health Oy,Android Developer,23 Nov 2023
+Mikael,Karlsson,https://www.linkedin.com/in/mikael-karlsson-549980a6,,Finnvera,Associate,23 Nov 2023
+Janne,Kangas,https://www.linkedin.com/in/janne-kangas,,Fazer,,22 Nov 2023
+Johanna,Lahtimäki,https://www.linkedin.com/in/johanna-lahtimaki,,Nokia,Product Line Manager,22 Nov 2023
+Tuomas,Keihäs,https://www.linkedin.com/in/tuomas-keihas,,Sitra,Rahoitusasiantuntija,20 Nov 2023
+Risto,Haapala,https://www.linkedin.com/in/rhaapala,,Junkkari Oy,Huoltoteknikko,18 Nov 2023
+Sanna,Isojärvi,https://www.linkedin.com/in/sanna-isojarvi-2ebca939,,Vexlum,,17 Nov 2023
+Mika,Leino,https://www.linkedin.com/in/mika-leino,,Oura,Engineering Manager,16 Nov 2023
+Ari,Koskilahti,https://www.linkedin.com/in/ari-koskilahti-3a1d2ab8,,Futurice,Senior Consultant,15 Nov 2023
+Sanna,Järvinen,https://www.linkedin.com/in/sanna-jarvinen-f1c1961b,,Inkubio ry,Head of Corporate Relations | Six Sigma | Lean,15 Nov 2023
+Niina,Koivujärvi,https://www.linkedin.com/in/niinakoivujarvi,,Holvi,Head of Growth 🚀,03 Nov 2023
+Otto,Heikkilä,https://www.linkedin.com/in/oheikkila,,Tilastokeskus,Senior Specialist,30 Oct 2023
+Siim,Rebane,https://www.linkedin.com/in/siim-rebane-f1b5bbe3,,Lumenkeep,Designer,22 Oct 2023
+Tapio,Karhukoski,https://www.linkedin.com/in/tapio-karhukoski,,Netlight,,21 Oct 2023
+Emeka,Okeke,https://www.linkedin.com/in/emeka-okeke,,RELEX,Frontend Developer,20 Oct 2023
+Pekka,Haapavuori,https://www.linkedin.com/in/pekka-haapavuori-e4868d94,pekka.haapavuori@example.com,etra,Myyntiinsinööri,19 Oct 2023
+Annika,Westerlund,https://www.linkedin.com/in/annika-westerlund-b62ff31d,,Aalto University,Doctoral Researcher,17 Oct 2023
+Karthik,Nair,https://www.linkedin.com/in/karthik-nair-54db883b,,Lemonsoft Oyj,Data Scientist,17 Oct 2023
+Mikko,Pitkäkoski,https://www.linkedin.com/in/mikko-pitkakoski,,Oulun yliopisto,Senior Scientist,12 Oct 2023
+Oskari,Pihlajärvi,https://www.linkedin.com/in/oskari-pihlajarvi,,Maki.vc,Customer Manager,12 Oct 2023
+Oskari,Huovinen,https://www.linkedin.com/in/ohuovinen,,Tampereen yliopisto,Opiskelija,11 Oct 2023
+Jenni,Koivukoski,https://www.linkedin.com/in/jenni-koivukoski-8ccca333,jenni.koivukoski@example.com,Hanken School of Economics,,05 Oct 2023
+Timo,Koivusaari,https://www.linkedin.com/in/timo-koivusaari-b70efe86,tkoivusaari@example.com,Aiven,Office Manager | AI | Lean,05 Oct 2023
+Tanel,Tamm,https://www.linkedin.com/in/tanel-tamm-c44d3fb2,,Enfuce,UX Designer,01 Oct 2023
+Saara,Ruuskanen,https://www.linkedin.com/in/saara-ruuskanen-00dee22f,,Oura Health,Software Engineer,13 Sep 2023
+Lukas,Müller,https://www.linkedin.com/in/lukas-muller-de4ee352,,Siemens,Customer Success Manager,12 Sep 2023
+Minna,Pitkäjärvi,https://www.linkedin.com/in/pitkajarviminna,,Smartly.io,Business Development Manager,11 Sep 2023
+Markus,Koski,https://www.linkedin.com/in/markus-koski-3fe02c00,markus.koski@example.com,Upright,Director of Engineering,06 Sep 2023
+Kalle,Vuori,https://www.linkedin.com/in/kalle-vuori-a83bf94b,,Telia,"Senior Director, Digital",03 Sep 2023
+Sophie,Richter,https://www.linkedin.com/in/sophie-richter-4b39e8dc,,Celonis,Staff Engineer,01 Sep 2023
+Michał,Kowalski,https://www.linkedin.com/in/micha-kowalski-335d9590,,Metso Outotec,Head of Procurement,29 Aug 2023
+Anne,Siltanen,https://www.linkedin.com/in/anne-siltanen-27f903c9,,Exove,Senior Consultant,19 Aug 2023
+Marko,Hirvivuori,https://www.linkedin.com/in/markohirvivuori,mhirvivuori@example.com,Kesko Oyj,Projektipäällikkö,18 Aug 2023
+Min-jun,Sato,https://www.linkedin.com/in/min-jun-sato-5cef2a1e,,Volvo Cars,Product Manager,16 Aug 2023
+Annika,Nyström,https://www.linkedin.com/in/annika-nystrom-b8bd3636,,Aalto-yliopisto,Opiskelija,03 Aug 2023
+Lauri,Pihlasalo,https://www.linkedin.com/in/lauri-pihlasalo-e3c5c2ca,,Accenture Oy,Software Developer,31 Jul 2023
+Anne,Kuusimäki,https://www.linkedin.com/in/anne-kuusimaki-9fe96a25,,Basemark,Office Manager,27 Jul 2023
+Kimmo,Eskola,https://www.linkedin.com/in/kimmo-eskola,,Porokylän Leipomo,Commercial Director,26 Jul 2023
+Tommi,Moilanen,https://www.linkedin.com/in/tommi-moilanen-a4ed3812,,Vincit,Junior Developer,19 Jul 2023
+Elias,Pihlakoski,https://www.linkedin.com/in/epihlakoski,elias.pihlakoski@example.com,Sasta | Part of something bigger,Operativ direktör,13 Jul 2023
+Katja,Heikkilä,https://www.linkedin.com/in/katja-heikkila-2b038950,,Metso,Head of Data & Analytics,08 Jul 2023
+Ngozi,Eze,https://www.linkedin.com/in/ngozi-eze,,Aaltoes,Board Member,28 Jun 2023
+Lena,Müller,https://www.linkedin.com/in/lena-muller-eff83626,,Upright Project,Head of Partnerships,13 Jun 2023
+Erik,Ekholm,https://www.linkedin.com/in/erik-ekholm-605c438c,,Haaga-Helia,"M.Sc. Student, Industrial Engineering and Management",01 Jun 2023
+Reetta,Haapavuori,https://www.linkedin.com/in/reetta-haapavuori-54f33537,,Oura,SENIOR PRODUCT MANAGER,25 May 2023
+Marko,Mäntyvuori,https://www.linkedin.com/in/marko-mantyvuori-1154f613,,Digital Workforce,Ohjelmistokehittäjä,22 May 2023
+Pekka,Pekkarinen,https://www.linkedin.com/in/pekka-pekkarinen,,MaaS Global,Engineering Manager,21 May 2023
+Merilin,Sepp,https://www.linkedin.com/in/merilin-sepp,merilinsepp@example.com,Hanken School of Economics,Postdoctoral Researcher,13 May 2023
+Merja,Kivelä,https://www.linkedin.com/in/merja-kivela,,Qvantel,Talent Partner,12 May 2023
+Elina,Lehtilahti,https://www.linkedin.com/in/elina-lehtilahti-cc03544a,,Gofore,,07 May 2023
+Mika,Seppänen,https://www.linkedin.com/in/mika-seppanen-48944419,,City of Helsinki,Erityisasiantuntija,06 May 2023
+Juho,Tirkkonen,https://www.linkedin.com/in/juho-tirkkonen-ca8f68db,,Teerenpeli,Sales Director,05 May 2023
+Malin,Nyström,https://www.linkedin.com/in/malin-nystrom-98be65cc,,VTT,Teaching Assistant,02 May 2023
+Hanna,Kalliokoski,https://www.linkedin.com/in/hannakalliokoski,,XO Boats | We are hiring,Suunnitteluinsinööri,25 Apr 2023
+Lauri,Leino,https://www.linkedin.com/in/lauri-leino-13bdbe87,,Kemira,"Director, R&D",18 Apr 2023
+Lea,Hoffmann,https://www.linkedin.com/in/leahoffmann,,Taiste,Head of Design,18 Apr 2023
+Juha,Jääskeläinen,https://www.linkedin.com/in/juha-jaaskelainen-5966eb9b,,Varsinais-Suomen Kaukokiito,Maintenance Manager,16 Apr 2023
+Lauri,Vainio,https://www.linkedin.com/in/lauri-vainio-d6d9c7b3,,Kone,Data Engineer,09 Apr 2023
+Tanja,Mäki,https://www.linkedin.com/in/tanja-maki-0b28828a,,Aalto University,,05 Apr 2023
+Sini,Koponen,https://www.linkedin.com/in/sini-koponen-f88f6759,,Leipomo Salonen,Työnjohtaja,03 Apr 2023
+Chioma,Adeyemi,https://www.linkedin.com/in/chioma-adeyemi,,Varjo,Software Engineer,31 Mar 2023
+Aki,Paananen,https://www.linkedin.com/in/aki-paananen-f3c2db78,,Tesi,Investment Director,27 Mar 2023
+Natalia,Melnyk,https://www.linkedin.com/in/natalia-melnyk,,Loihde,Partner,27 Mar 2023
+Henri,Leppänen,https://www.linkedin.com/in/henri-leppanen-a36bbc0e,,Vincit Oyj,Ratkaisuarkkitehti,16 Mar 2023
+Aki,Ahovuori,https://www.linkedin.com/in/aki-ahovuori,,Telia,Vastuullisuuspäällikkö,11 Mar 2023
+Johan,Nyberg,https://www.linkedin.com/in/johan-nyberg-73a7c585,,Apple,"Senior Director, Engineering",11 Mar 2023
+Anne,Keskinen,https://www.linkedin.com/in/anne-keskinen-82c1ba34,,Maria 01,,08 Mar 2023
+Jani,Hakala,https://www.linkedin.com/in/hakalajani,,Spinnova Oyj,Product Designer,01 Mar 2023
+Pasi,Rajalahti,https://www.linkedin.com/in/pasi-rajalahti-29ff4b75,,laitex,,26 Feb 2023
+Johanna,Eskola,https://www.linkedin.com/in/johanna-eskola,,Efecte,Site Reliability Engineer,23 Feb 2023
+Outi,Hyttinen,https://www.linkedin.com/in/ohyttinen,outihyttinen@example.com,Wärtsilä,Process Engineer,18 Feb 2023
+Eero,Lampinen,https://www.linkedin.com/in/eero-lampinen,,twoday,Talent Partner,17 Feb 2023
+Emma,Lundqvist,https://www.linkedin.com/in/emma-lundqvist,,Futurice,Business Director,16 Feb 2023
+Lasse,Vartiainen,https://www.linkedin.com/in/lasse-vartiainen,,Lunawood,Operations Manager,05 Feb 2023
+Niko,Aho,https://www.linkedin.com/in/naho,,VTT,Doctoral Researcher,05 Feb 2023
+Tuan,Le,,,Futurice,Myyntijohtaja,24 Jan 2023
+Tommi,Kauppinen,https://www.linkedin.com/in/tommi-kauppinen-2a5c554f,,Distance Technologies,Software Engineer,23 Jan 2023
+Chris,Walker,https://www.linkedin.com/in/cwalker,,Aiven.io,Engineering Manager,15 Jan 2023
+Matti,Mononen,https://www.linkedin.com/in/mmononen,,Traficom,Project Manager,07 Jan 2023
+Teemu,Kokko,https://www.linkedin.com/in/teemu-kokko-9eb869f0,,Fortum Oyj,Supply Chain Manager,06 Jan 2023
+Minna,Koivula,https://www.linkedin.com/in/minna-koivula,,University of Vaasa,Kauppatieteiden opiskelija,04 Jan 2023
+Lars,Pedersen,https://www.linkedin.com/in/lars-pedersen-e59cae15,,Wirepas,VP Engineering,01 Jan 2023
+Kirsi,Marttila,https://www.linkedin.com/in/kirsi-marttila,,Inhan Tehtaat Oy Ab,Tuotekehitysinsinööri,22 Dec 2022
+Salla,Toivonen,https://www.linkedin.com/in/sallatoivonen,sallatoivonen@example.com,Vincit,Lead Consultant,13 Dec 2022
+Katja,Vehviläinen,https://www.linkedin.com/in/katja-vehvilainen-34352459,,Efecte Oyj,Software Engineer,06 Dec 2022
+Pasi,Karhukoski,https://www.linkedin.com/in/pasik,,Reaktor Innovations Oy,Software Developer,06 Dec 2022
+Niko,Kauppinen,https://www.linkedin.com/in/nikokauppinen,,Gasmet Technologies Ltd,HR Manager,05 Dec 2022
+Hanna,Kokkonen,https://www.linkedin.com/in/hanna-kokkonen-b2d26ecc,,Aalto-yliopisto,Student,03 Dec 2022
+Oona,Luoma,https://www.linkedin.com/in/oona-luoma,,VTT,Tutkimusavustaja,03 Dec 2022
+Risto,Pitkänen,https://www.linkedin.com/in/risto-pitkanen-8f6a765d,,Cimcorp,Area Sales Manager,02 Dec 2022
+Andres,Rebane,https://www.linkedin.com/in/andres-rebane-5ac19cba,,Aalto University,UNIVERSITY LECTURER,27 Nov 2022
+Jonas,Blomqvist,https://www.linkedin.com/in/jonas-blomqvist,,Visma Solutions Oy,Account Director,26 Nov 2022
+Katja,Honkanen,https://www.linkedin.com/in/katja-honkanen-3a51fc33,,Tampereen yliopisto,Opiskelija,26 Nov 2022
+Florian,Fischer,https://www.linkedin.com/in/florianf,,Aiven,City Launcher,24 Nov 2022
+Tommi,Kivinen,https://www.linkedin.com/in/tommi-kivinen,,Helsingin yliopisto,Doctoral Researcher,23 Nov 2022
+Laura,Hirvisaari,https://www.linkedin.com/in/laura-hirvisaari-15e06f44,,Fibox,Project Manager,22 Nov 2022
+Beatriz,Ferreira,https://www.linkedin.com/in/beatriz-ferreira-465498aa,,Aaltoes,Volunteer,19 Nov 2022
+Tanja,Laaksoaho,https://www.linkedin.com/in/tanja-laaksoaho,,Wolt,,18 Nov 2022
+Jussi,Manninen,https://www.linkedin.com/in/jussi-manninen-25e4f4be,,IQM Quantum Computers,Full Stack Developer,14 Nov 2022
+Christoffer,Lindström,https://www.linkedin.com/in/christoffer-lindstrom-6148a20b,,Mantsinen Group,Kaupallinen johtaja,07 Nov 2022
+Lars,Berg,https://www.linkedin.com/in/lars-berg,,Klarna,Software Engineer,01 Nov 2022
+Matthew,Smith,https://www.linkedin.com/in/matthew-smith-70da1dbf,,Celonis,Head of Nordics,26 Oct 2022
+Niina,Väänänen,https://www.linkedin.com/in/niina-vaananen-9ea0dc74,,Eficode,Software Developer,24 Oct 2022
+Eeva,Tikkanen,https://www.linkedin.com/in/eeva-tikkanen,,VTT Technical Research Centre of Finland Ltd,Research Scientist,17 Oct 2022
+Antti,Saariniemi,https://www.linkedin.com/in/antti-saariniemi-97de744c,,Athene ry,Yrityssuhdevastaava,12 Oct 2022
+Ilkka,Ylinen,https://www.linkedin.com/in/ilkka-ylinen-f6bccd8e,,Upright Project,Android Developer,11 Oct 2022
+Janne,Kaartinen,https://www.linkedin.com/in/janne-kaartinen-492c5c72,,Lihatukku Harri Tamminen Oy,Head of Production,21 Sep 2022
+Jun,Yang,https://www.linkedin.com/in/jun-yang,,University of Vaasa,Exchange Student,17 Sep 2022
+Lena,Weber,https://www.linkedin.com/in/lena-weber-d56d479a,,Aiven,Frontend Developer,25 Aug 2022
+Joel,,https://www.linkedin.com/in/joel-lehtonen-ae7c30de,,Tesi (Finnish Industry Investment),Asiakkuuspäällikkö,22 Aug 2022
+Anna,Vuori,https://www.linkedin.com/in/anna-vuori-c317f47f,,Itsenäinen ammatinharjoittaja,Interim Manager,13 Aug 2022
+Henri,Väisänen,https://www.linkedin.com/in/henri-vaisanen-775d4c13,,Framery,Full Stack Developer,11 Aug 2022
+Niklas,Andersson,https://www.linkedin.com/in/niklas-andersson-01ee6ec6,,Maria 01,HEAD OF PARTNERSHIPS,10 Jul 2022
+Kaarel,Tamm,https://www.linkedin.com/in/kaarel-tamm-b61c4121,,Kauko,,30 Jun 2022
+Katarzyna,Lewandowski,https://www.linkedin.com/in/katarzyna-lewandowski,,Oura Health Oy,Summer Intern,21 Jun 2022
+Camille,Lefebvre,https://www.linkedin.com/in/camillelefebvre,,Google,Account Executive,17 Jun 2022
+Liis,Tamm,https://www.linkedin.com/in/liistamm,,Bolt Technology OÜ,Senior Software Engineer,13 Jun 2022
+Hanna,Mäenpää,https://www.linkedin.com/in/hanna-maenpaa-eea8d929,,Wolt,Growth Lead,06 Jun 2022
+Ville,Väisänen,https://www.linkedin.com/in/vvaisanen,,UPM-Kymmene,Asiantuntija 🚀,03 Jun 2022
+Kari,Kallio,https://www.linkedin.com/in/kari-kallio-b147b5a1,,Lumoa,Machine Learning Engineer,25 May 2022
+Mika,Mäkipää,https://www.linkedin.com/in/mika-makipaa-ai,mika.makipaa@example.com,RELEX Solutions,Operations Manager,25 May 2022
+Tanja,Mäkinen,https://www.linkedin.com/in/tanja-makinen-15c4beba,,Supercell,Android Developer,23 May 2022
+Piotr,Wójcik,https://www.linkedin.com/in/piotrwojcik,,University of Vaasa,Student,21 May 2022
+David,Brown,https://www.linkedin.com/in/davidbrown,,Vaasan yliopisto,Master's student,20 May 2022
+Atte,Sirviö,https://www.linkedin.com/in/atte-sirvio-842c8c7a,,Vollvo Cars,Senior Software Engineer,18 May 2022
+Sofia,Tiainen,https://www.linkedin.com/in/sofia-tiainen,,Nitor,,12 May 2022
+Kalle,Salo,https://www.linkedin.com/in/kalle-salo,,KONE,Head of Digital Operations,07 May 2022
+Kari,Lahtinen,https://www.linkedin.com/in/kari-lahtinen,,Dinolift,Projektipäällikkö,27 Apr 2022
+Anna,Hiltunen,https://www.linkedin.com/in/anna-hiltunen-66f74c90,,Leipomo Rosten Oy,Tehtaanjohtaja,26 Apr 2022
+Terhi,Nykänen,https://www.linkedin.com/in/terhi-nykanen,,Tietoevry,Senior Software Architect,26 Apr 2022
+Marjo,Laukkanen,https://www.linkedin.com/in/marjolaukkanen,,Nitor Group,Business Analyst,24 Apr 2022
+Oskari,Voutilainen,https://www.linkedin.com/in/oskari-voutilainen-793bc50a,,Wolt Enterprises Oy,Senior Product Manager,18 Apr 2022
+Jenni,Rantaaho,https://www.linkedin.com/in/jenni-rantaaho-9111ee0d,,Nosto Solutions,VP Engineering,16 Apr 2022
+Sebastian,Björklund,https://www.linkedin.com/in/sebastianbjorklund,,twoday,Software Developer,15 Apr 2022
+Seppo,Koskinen,https://www.linkedin.com/in/seppo-koskinen-8b323344,,Atlas Copco,"Director, Product",14 Apr 2022
+Otto,Määttä,https://www.linkedin.com/in/otto-maatta-5f3581b7,,Sis Auto,Development Engineer,13 Apr 2022
+Veera,Kivinen,https://www.linkedin.com/in/veera-kivinen-12a4f045,,IQM Quantum Computers,Customer Success Manager,12 Apr 2022
+Chiara,Fernández,https://www.linkedin.com/in/chiara-fernandez,,Fazer,Automation Specialist,09 Apr 2022
+Mikko,Repo,https://www.linkedin.com/in/mikko-repo,mikko.repo@example.com,Varjo Technologies Oy,Account Executive,07 Apr 2022
+Aleksi,Sirviö,https://www.linkedin.com/in/aleksi-sirvio,,"Specim, Spectral Imaging",Supply Chain Director,05 Apr 2022
+Jari,Hietanen,https://www.linkedin.com/in/jari-hietanen-4df615c5,,Wunder,UX/UI Designer,05 Apr 2022
+Atte,Peltola,https://www.linkedin.com/in/atte-peltola-25546cec,,Framery Oy,Head of Hardware,03 Apr 2022
+Johanna,Peltola,https://www.linkedin.com/in/johanna-peltola-8c8ff240,,Delivery Hero,Software Engineer,02 Apr 2022
+Juho,Hautala,https://www.linkedin.com/in/juho-hautala-3cce8dce,,Lemonsoft,Junior Developer | ERP | Automation | Helping industrial companies get more out of their data,27 Mar 2022
+Kalle,Kivinen,https://www.linkedin.com/in/kalle-kivinen,,Gofore Oyj,,26 Mar 2022
+Erik,Wikström,https://www.linkedin.com/in/erik-wikstrom-f332b047,,Moilas | Part of something bigger,IT Manager,24 Mar 2022
+Anne,Lahtikangas,https://www.linkedin.com/in/anne-lahtikangas-c5dff54d,,ICEYE,PRODUCT DESIGNER,19 Mar 2022
+Janne,Oksanen,https://www.linkedin.com/in/janne-oksanen-bfee304b,,Aaltoes,Yrityssuhdevastaava,19 Mar 2022
+Magnus,Pedersen,https://www.linkedin.com/in/magnus-pedersen-8fa0c3d0,,Sitra,Investment Analyst,16 Mar 2022
+Kimmo,Mikkonen,https://www.linkedin.com/in/kimmo-mikkonen-bd242f18,,Solar Foods,Head of Product,15 Mar 2022
+Mikko,Vuorinen,https://www.linkedin.com/in/mikko-vuorinen-fff201fa,,Finnair Oyj,Key Account Manager,05 Mar 2022
+Outi,Laaksokoski,https://www.linkedin.com/in/outi-laaksokoski,,Slush,Volunteer,03 Mar 2022
+Kaisa,Rissanen,https://www.linkedin.com/in/kaisa-rissanen,,Aalto University School of Business,Kauppatieteiden opiskelija,02 Mar 2022
+Mikael,Johansson,https://www.linkedin.com/in/mikael-johansson-de65f1be,,Superhero Capital,Investment Director,01 Mar 2022
+Timo,Hänninen,https://www.linkedin.com/in/timo-hanninen-2ef33ff1,,Sius Auto,,27 Feb 2022
+Antti,Rautiainen,https://www.linkedin.com/in/antti-rautiainen,,puustelli group,Hankintapäällikkö,20 Feb 2022
+Sophie,Müller,https://www.linkedin.com/in/sophie-muller,,Varjo,,18 Feb 2022
+Ville,Leppälahti,https://www.linkedin.com/in/ville-leppalahti,,Hydroscand,Sales Director,04 Feb 2022
+Mika,Suominen,https://www.linkedin.com/in/mikasuominen,,FiBAN,Investment Director | Python | Python,01 Feb 2022
+Pasi,Mikkonen,https://www.linkedin.com/in/pasi-mikkonen-2f47e439,,Gofore,AI Consultant,30 Jan 2022
+Laura,Niemi,https://www.linkedin.com/in/laura-niemi-288ee3de,,VR Group,Projektipäällikkö,27 Jan 2022
+Elisa,Honkalahti,https://www.linkedin.com/in/elisa-honkalahti-b7603ca4,,Konecranes,Program Manager,19 Jan 2022
+Heikki,Väisänen,https://www.linkedin.com/in/heikki-vaisanen-3eaef000,,Konecranes Finland,Asiantuntija,19 Jan 2022
+Cecilia,Jokinen,https://www.linkedin.com/in/cecilia-jokinen,,Solita,Liiketoimintajohtaja,16 Jan 2022
+Janne,Määttä,https://www.linkedin.com/in/janne-maatta,,Enfuce,Backend Engineer,13 Jan 2022
+Ari,Pekkarinen,https://www.linkedin.com/in/ari-pekkarinen-60e1fe69,,Smartly.io,Account Executive,04 Jan 2022
+Harri,Pesonen,https://www.linkedin.com/in/harri-pesonen,,Hanken School of Economics,Student,26 Dec 2021
+Ida,Sjöblom,https://www.linkedin.com/in/ida-sjoblom-b842612f,,Lifelong learner,Co-founder & CEO,23 Dec 2021
+Kalle,Järvikangas,https://www.linkedin.com/in/kjarvikangas,,Wolt,Staff Engineer,17 Dec 2021
+Kimmo,Manninen,https://www.linkedin.com/in/kimmo-manninen-de86c49e,,Wise,Senior Software Engineer,07 Dec 2021
+Lucas,Pereira,https://www.linkedin.com/in/lucas-pereira-2f3dc6b2,,Smartly.io,,07 Dec 2021
+Sami,Karjalainen,https://www.linkedin.com/in/sami-karjalainen,,Efecte,Software Engineer,07 Dec 2021
+Felix,Richter,https://www.linkedin.com/in/felix-richter,,Swappie Oy,Head of People,06 Dec 2021
+Antti,Koivisto,https://www.linkedin.com/in/antti-koivisto,,Teknologiateollisuus,Projektikoordinaattori,05 Dec 2021
+Atte,Harjukoski,https://www.linkedin.com/in/atte-harjukoski-e252ec9b,,VAROVA,Talousjohtaja,05 Dec 2021
+Juha-Pekka,Lampinen,https://www.linkedin.com/in/juha-pekka-lampinen-eb691944,,Metropolia Ammattikorkeakoulu,Väitöskirjatutkija,05 Dec 2021
+Anna,Haapavuori,https://www.linkedin.com/in/anna-haapavuori-8ee12c0e,anna.haapavuori@example.com,Finnvera,Rahoitusasiantuntija,03 Dec 2021
+Tiina,Saarinen,https://www.linkedin.com/in/tiina-saarinen,,Siili,"Director, AI",02 Dec 2021
+Venla,Koskisaari,https://www.linkedin.com/in/venla-koskisaari,,Between jobs,Taking a break 🌱,02 Dec 2021
+Kadri,Mägi,https://www.linkedin.com/in/kadri-magi-eb0ffb5b,kadri.magi@example.com,Reaktor,,01 Dec 2021
+Henri,Repo,https://www.linkedin.com/in/henri-repo-bf4557cb,,Meru Health,Content Lead,28 Nov 2021
+Jari,Isoniemi,https://www.linkedin.com/in/jari-isoniemi,jari.isoniemi@example.com,Ponsse,Senior Engineer,27 Nov 2021
+Rafael,Oliveira,https://www.linkedin.com/in/rafael-oliveira-23eb874c,,Silo AI,Head of Sales,26 Nov 2021
+Teemu,Kiviaho,https://www.linkedin.com/in/teemu-kiviaho-fbfaa0d5,,KONE,"Director, Global Sourcing",25 Nov 2021
+Ari,Hietala,https://www.linkedin.com/in/ari-hietala-3384864c,,Startup Foundation,Partnerships Manager,24 Nov 2021
+Markus,Laakkonen,https://www.linkedin.com/in/markuslaakkonen,,Netlight,DevOps Engineer,23 Nov 2021
+Timo,Suominen,https://www.linkedin.com/in/timo-suominen,,Tampereen yliopisto,,23 Nov 2021
+Iida,Huovinen,https://www.linkedin.com/in/iida-huovinen,,Kide,Talent Acquisition Partner,20 Nov 2021
+Kati,Heinonen,https://www.linkedin.com/in/kati-heinonen,,Pakkasmarja,Laatuvastaava,20 Nov 2021
+Teemu,Laine,https://www.linkedin.com/in/teemu-laine-1582d4e1,,ICEYE,Android Developer,19 Nov 2021
+Matti,Räsänen,https://www.linkedin.com/in/matti-rasanen,matti.rasanen@example.com,Weckman Steel Ltd,Marketing Manager,18 Nov 2021
+Sami,Leppäsaari,https://www.linkedin.com/in/sami-leppasaari-b6dc4a7c,,Kewatec AluBoat,Project Manager,15 Nov 2021
+Camilla,Söderholm,https://www.linkedin.com/in/camilla-soderholm-10b980aa,camilla.soderholm@example.com,Oma yritys,Konsultti,14 Nov 2021
+Samuli,Salminen,https://www.linkedin.com/in/samuli-salminen-2954d97f,,Futurice,Sales Director,12 Nov 2021
+Mari,Mäntyniemi,https://www.linkedin.com/in/marimantyniemi,,FiBAN,Board Member,08 Nov 2021
+Petri,Leinonen,https://www.linkedin.com/in/petri-leinonen,,Kiantama,Ostaja,08 Nov 2021
+Emmi,Vesterinen,https://www.linkedin.com/in/emmivesterinen,,Marioff Corporation Oy,IT Director,30 Oct 2021
+Veera,Backman,https://www.linkedin.com/in/veera-backman-ba646a3a,,Scania,Software Engineer,20 Oct 2021
+Jani,Tikkanen,https://www.linkedin.com/in/jani-tikkanen-ai,,AMD,Frontend Developer,07 Oct 2021
+Heidi,Rajaniemi,https://www.linkedin.com/in/heidi-rajaniemi-b3b5cd03,,Finnamyl,Key Account Manager,01 Oct 2021
+Heidi,Harjuniemi,https://www.linkedin.com/in/heidi-harjuniemi,,Tesi,Senior Advisor,27 Sep 2021
+Mikko,Pajunen,https://www.linkedin.com/in/mikko-pajunen,,EK,Senior Specialist,27 Sep 2021
+Tuukka,Pirinen,https://www.linkedin.com/in/tuukka-pirinen-c3896bcc,,Aalto University School of Science,Väitöskirjatutkija,20 Sep 2021
+Jouni,Jokisaari,https://www.linkedin.com/in/jouni-jokisaari-c406628e,,"Ex-Nokia, ex-Rovio, now something new",Founder,17 Sep 2021
+Oskar,Pöllänen,https://www.linkedin.com/in/oskar-pollanen-2248150b,,Yousician Oy,Backend Engineer,17 Sep 2021
+Eero,Viitanen,https://www.linkedin.com/in/eero-viitanen-e902d1a0,eero.viitanen70@example.com,Solar Foods,UX Designer,14 Sep 2021
+Mika,Kallunki,https://www.linkedin.com/in/mika-kallunki-fefb132b,,Ericsson AB,Strategy Manager,13 Sep 2021
+Julia,Haapaniemi,https://www.linkedin.com/in/julia-haapaniemi-3,,Nitor Group,Key Account Manager,29 Aug 2021
+Janne,Nevalainen,https://www.linkedin.com/in/jannenevalainen,,Bella-Veneet Oy,Tehtaanjohtaja,09 Aug 2021
+Jari,Ikonen,https://www.linkedin.com/in/ikonenjari,,Solita,Service Designer,05 Aug 2021
+Jari,Rajalahti,https://www.linkedin.com/in/jari-rajalahti,,Labkotec,"Director, Operations",01 Aug 2021
+Ville,Pesonen,https://www.linkedin.com/in/ville-pesonen-fi,,Hanken School of Economics,Yliopistonlehtori,28 Jul 2021
+Markus,Kaartinen,https://www.linkedin.com/in/markus-kaartinen,,Finnair,Supply Chain Manager,12 Jul 2021
+Elisa,Kivisalo,https://www.linkedin.com/in/elisa-kivisalo-14c09284,,Business Finland,Rahoitusasiantuntija,10 Jul 2021
+Juho,Immonen,https://www.linkedin.com/in/juho-immonen,juho.immonen@example.com,PAKKASMARJA,Chief Operating Officer,03 Jul 2021
+Julia,Heinonen,https://www.linkedin.com/in/julia-heinonen,,Kela,Elinkeinoasiamies,25 Jun 2021
+Kati,Rebane,https://www.linkedin.com/in/kati-rebane-a16df7c4,,RELEX Solutions,QA Engineer,12 Jun 2021
+Laura,Saarinen,,,Suomen Punainen Risti,Erityisasiantuntija,07 Jun 2021
+Lauri,Kettunen,https://www.linkedin.com/in/lauri-kettunen,,Futurice,Data Engineer,07 Jun 2021
+Jussi,Mäntysalo,https://www.linkedin.com/in/jussimantysalo,,Solita,,02 Jun 2021
+Jari,Kallio,https://www.linkedin.com/in/jari-kallio,,Halva,,31 May 2021
+Markus,Seppänen,https://www.linkedin.com/in/markus-seppanen,,Oulun Kaukokiito,Production Engineer,30 May 2021
+Jari,Hirvilahti,https://www.linkedin.com/in/jari-hirvilahti-b9913958,,Lapuan Kankurit,Tuotepäällikkö,28 May 2021
+Siddharth,Iyer,https://www.linkedin.com/in/siddharth-iyer-31e6822a,,Epidemic Sound,Software Engineer,28 May 2021
+Iiro,Pitkämäki,https://www.linkedin.com/in/iiro-pitkamaki-55ebbe19,,Nosto Solutions,Head of People,20 May 2021
+Rasmus,Koivusaari,https://www.linkedin.com/in/rasmus-koivusaari-e1a53648,,Jokipiin Pellava,Tuotantojohtaja,19 May 2021
+Tiina,Kalliosalo,https://www.linkedin.com/in/tiina-kalliosalo-437d009e,,Finnvera,Rahoitusasiantuntija 🚀,29 Apr 2021
+Timo,Heinonen,https://www.linkedin.com/in/timo-heinonen-96a80f25,,Posti,Project Engineer,28 Apr 2021
+Laura,Marttila,https://www.linkedin.com/in/laura-marttila,,Sievo,Software Engineer,27 Apr 2021
+Adaeze,Okeke,https://www.linkedin.com/in/adaeze-okeke-28e8b2a6,,Siemens AG,Staff Engineer,08 Apr 2021
+Sara,Niemi,https://www.linkedin.com/in/sara-niemi,,CGI Suomi Oy,Cloud Architect,28 Mar 2021
+Sami,Leppävuori,https://www.linkedin.com/in/sami-leppavuori-97ae3cde,,Efecte,Growth Marketing Manager,26 Mar 2021
+Esa,Karhujärvi,https://www.linkedin.com/in/esa-karhujarvi,,Loihde,Myyntipäällikkö,25 Mar 2021
+Salla,Karhukoski,https://www.linkedin.com/in/salla-karhukoski-c99e2e6d,,Elisa,Supply Chain Manager,23 Mar 2021
+Maria,Laaksokangas,https://www.linkedin.com/in/maria-laaksokangas-ea0a48e4,,Qvantel,,15 Mar 2021
+Julia,Saarela,https://www.linkedin.com/in/julia-saarela-8b5b0a82,,Silo AI,Software Engineer 🚀,09 Mar 2021
+Anne,Siltanen,https://www.linkedin.com/in/annesiltanen,,Maria 01,Head of Events,26 Feb 2021
+Juho,Rantala,https://www.linkedin.com/in/juho-rantala,,Atria Oyj,R&D Manager,02 Feb 2021
+Tiina,Kinnunen,https://www.linkedin.com/in/tiina-kinnunen-e97dc19a,,Visma,Tech Lead,30 Jan 2021
+Omar,Haddad,https://www.linkedin.com/in/omar-haddad-dc4bfe40,,Oura Health Oy,,23 Jan 2021
+Robin,Strömberg,https://www.linkedin.com/in/robin-stromberg,,Kide,Machine Learning Engineer,10 Jan 2021
+Jarkko,Hakala,https://www.linkedin.com/in/jarkko-hakala-016b8618,,Kaso,Laatujohtaja,08 Jan 2021
+jarkko,Salminen,https://www.linkedin.com/in/jarkko-salminen-761a38cb,,Oura Health,Senior Product Manager,07 Jan 2021
+Heidi,Hirvimäki,https://www.linkedin.com/in/heidi-hirvimaki,,Wunder,Project Manager,06 Jan 2021
+Mykola,Shevchenko,https://www.linkedin.com/in/mshevchenko,,Wise,Data Scientist,26 Dec 2020
+Mikko,Saarikangas,https://www.linkedin.com/in/mikko-saarikangas-2498e8ac,,Valio,Senior Engineer,24 Dec 2020
+Sofia,Nurmi,https://www.linkedin.com/in/sofia-nurmi-bdef88b1,,Lammin Betoni Oy,Operations Director,14 Dec 2020
+Kavya,Kumar,https://www.linkedin.com/in/kavya-kumar-54f45419,,Google,"Director, Product",05 Dec 2020
+Markus,Karhukoski,https://www.linkedin.com/in/markus-karhukoski,,Smartly.io,DATA ANALYST,03 Dec 2020
+Miro,Lahtisalo,https://www.linkedin.com/in/miro-lahtisalo-b260eea9,,Wolt,,03 Dec 2020
+Rasmus,Mägi,https://www.linkedin.com/in/rasmus-magi,,Aalto University,Student,03 Dec 2020
+Anna-Maria,Koskikangas,https://www.linkedin.com/in/anna-maria-koskikangas-e83242e1,,Kiuas Accelerator,Startup Advisor,01 Dec 2020
+Jussi,Rissanen,https://www.linkedin.com/in/jrissanen,,Slush,,26 Nov 2020
+Janne,Isovuori,https://www.linkedin.com/in/janne-isovuori,,Smartly.io,Software Engineer,20 Nov 2020
+Ella,Kuusisaari,https://www.linkedin.com/in/ella-kuusisaari-eb813dc8,,Arkta Reponen Oy,,18 Nov 2020
+Juha,Koskisaari,https://www.linkedin.com/in/juha-koskisaari-2e1e7296,juha.koskisaari4@example.com,N26,Product Manager,15 Nov 2020
+Reza,Haddad,https://www.linkedin.com/in/reza-haddad-baffad1b,,Meta,Mechanical Engineer,11 Nov 2020
+Arttu,Mäntysalo,https://www.linkedin.com/in/arttu-mantysalo,,Tampere University,Student,08 Nov 2020
+Vesa,Korpisaari,https://www.linkedin.com/in/vesa-korpisaari-a8fa7a38,,Lifeline Ventures,,03 Nov 2020
+Julia,Haapaaho,https://www.linkedin.com/in/julia-haapaaho-c52022eb,,Futurice Oy,Myyntipäällikkö,02 Nov 2020
+Marco,López,https://www.linkedin.com/in/marco-lopez-fc7b8b27,,Meta,Partner Manager,01 Nov 2020
+Ali,Şahin,https://www.linkedin.com/in/ali-sahin,,CGI Suomi Oy,UX/UI Designer,30 Oct 2020
+Lasse,Korpikangas,https://www.linkedin.com/in/lassekorpikangas,,Vallox Ltd,Controller,23 Oct 2020
+Antti,Karjalainen,https://www.linkedin.com/in/antti-karjalainen-55129cd7,,Kiuas,Head of Partnerships,20 Oct 2020
+Daria,Popova,https://www.linkedin.com/in/dariap,,Visma Finland,Service Designer,19 Oct 2020
+Veeti,Rautakorpi,https://www.linkedin.com/in/veeti-rautakorpi-b6a5149d,,LapWall Ltd,Commercial Director,15 Oct 2020
+Eero,Lehtinen,https://www.linkedin.com/in/eero-lehtinen-ba8c22a3,,Lekatech,Tuotantoinsinööri,14 Oct 2020
+Matti,Korpisaari,https://www.linkedin.com/in/matti-korpisaari-d18dd9f8,,Wolt Enterprises Oy,Senior Software Engineer,12 Oct 2020
+Ville,Alalahti,https://www.linkedin.com/in/ville-alalahti,,Stora Enso,Asiantuntija,02 Oct 2020
+Julia,Parviainen,https://www.linkedin.com/in/julia-parviainen,,Knowit,Project Manager,23 Sep 2020
+Tuomas,Hautala,https://www.linkedin.com/in/thautala,,Wolt,DevOps Engineer,20 Sep 2020
+Maija,Tuomi,https://www.linkedin.com/in/maija-tuomi-hki,,Aalto University School of Engineering,Doctoral Researcher,16 Sep 2020
+Marko,Tiainen,https://www.linkedin.com/in/marko-tiainen-14431cb4,,Reaktor Innovations Oy,Service Designer,11 Sep 2020
+Tanja,Korpikoski,,,Aalto University,Exchange Student,08 Sep 2020
+Niko,Mäntylahti,https://www.linkedin.com/in/niko-mantylahti-c904feda,,RELEX Solutions,Content Lead,26 Aug 2020
+James,Smith,https://www.linkedin.com/in/james-smith-39ad4f8d,,Self-employed,Yrittäjä,19 Aug 2020
+Karthik,Iyer,,,Efecte Oyj,DIRECTOR OF ENGINEERING,16 Aug 2020
+Maksym,Shevchenko,https://www.linkedin.com/in/maksym-shevchenko-aa8aace1,,Databricks,Data Scientist,09 Aug 2020
+Teemu,Vartiainen,https://www.linkedin.com/in/teemu-vartiainen-5b83c316,,Aalto University,Doctoral Researcher,06 Aug 2020
+Aada,Raatikainen,https://www.linkedin.com/in/araatikainen,,Aiven Oy,Engineering Manager,13 Jul 2020
+Yang,Zhao,https://www.linkedin.com/in/yang-zhao,,Konecranes Finland,Business Controller,23 Jun 2020
+Pierre,Laurent,https://www.linkedin.com/in/pierre-laurent-1e79a2e6,,ŌURA,Partnerships Manager,11 Jun 2020
+Riikka,Saarinen,https://www.linkedin.com/in/riikka-saarinen-92b0f0b1,,Wolt,Customer Success Manager,11 Jun 2020
+Mai,Le,https://www.linkedin.com/in/mai-le-28e5a8cb,,,Open to work,05 Jun 2020
+Jari,Laine,https://www.linkedin.com/in/jari-laine,,Sievo,,31 May 2020
+Veeti,Rajakoski,https://www.linkedin.com/in/veeti-rajakoski,,ŌURA,Machine Learning Engineer,27 May 2020
+Tuomas,Puustinen,https://www.linkedin.com/in/tuomas-puustinen-8968d3b7,tuomas.puustinen@example.com,Sargo,,14 May 2020
+Santeri,Kinnunen,https://www.linkedin.com/in/santeri-kinnunen-a120419e,,Between jobs,Looking for new opportunities,27 Apr 2020
+Teemu,Laukkanen,https://www.linkedin.com/in/teemu-laukkanen-369f59a0,,Accenture Oy,Account Director,27 Apr 2020
+Kimmo,Seppänen,https://www.linkedin.com/in/kimmo-seppanen-6eaf352f,,Varjo,Head of Growth 🚀,25 Apr 2020
+Kalle,Korpisalo,https://www.linkedin.com/in/kalle-korpisalo-ff0323d5,,University of Helsinki,Master's student,14 Apr 2020
+Anna,Alanen,https://www.linkedin.com/in/anna-alanen-23a278d9,,Kontiotuote,Suunnitteluinsinööri,12 Apr 2020
+Lasse,Kivivuori,https://www.linkedin.com/in/lasse-kivivuori,,Zoan,Project Manager,31 Mar 2020
+Arttu,Ylönen,https://www.linkedin.com/in/arttuy,,"Hydroscand, Finland",Design Engineer | Industry 4.0 | Automation | Helping industrial companies get more out of their people,30 Mar 2020
+Kari,Leinonen,https://www.linkedin.com/in/kari-leinonen-3639dd31,,Rye Rye | We are hiring,,11 Mar 2020
+Toni,Salminen,https://www.linkedin.com/in/tsalminen,,Oura,Quantum Engineer,26 Feb 2020
+Mikko,Honkajärvi,https://www.linkedin.com/in/mikko-honkajarvi-4ff79fa8,,Outokumpu,Senior Data Scientist,24 Feb 2020
+Minna,Salonen,https://www.linkedin.com/in/minna-salonen-4a23cf1c,,BalticYachts,Automation Engineer,23 Jan 2020
+Juho,Kivikoski,https://www.linkedin.com/in/juho-kivikoski-11e457aa,,NOKIA,Asiantuntija,01 Jan 2020
+Katja,Kärkkäinen,https://www.linkedin.com/in/katja-karkkainen,,Eficode,Principal Consultant,31 Dec 2019
+Mikko,Kangas,https://www.linkedin.com/in/mikkokangas,,Nosto,Backend Engineer,23 Dec 2019
+Petri,Hautala,https://www.linkedin.com/in/petri-hautala-cc7aa475,,Holvi,Head of Product,16 Dec 2019
+Emilia,Reinikainen,https://www.linkedin.com/in/emilia-reinikainen-14,,Futurice,Agile Coach,11 Dec 2019
+Ville,Kettunen,https://www.linkedin.com/in/ville-kettunen-0fe2ae82,,Business Finland,Asiakkuuspäällikkö,07 Dec 2019
+Mikko,Hartikainen,https://www.linkedin.com/in/mikko-hartikainen-97ad7610,,Siili Solutions,Test Automation Engineer,05 Dec 2019
+Antti,Karhusalo,https://www.linkedin.com/in/antti-karhusalo,,Solar Foods Oyj,Sales | SaaS | Nordics,29 Nov 2019
+Jonna,Kiiskinen,https://www.linkedin.com/in/kiiskinenjonna,,Sievo,Software Engineer,25 Nov 2019
+Sofía,Rossi,https://www.linkedin.com/in/sofiar,,Vaadin,Tech Lead,25 Nov 2019
+Arttu,Mäntyniemi,https://www.linkedin.com/in/arttu-mantyniemi-7b9485d0,,Hacklin Logistics,Myyntijohtaja,21 Nov 2019
+Marko,Kivilahti,https://www.linkedin.com/in/marko-kivilahti-edc51fdb,,XO Boats,Project Manager,21 Nov 2019
+Ari,Voutilainen,https://www.linkedin.com/in/ari-voutilainen,,Steerprop,Head of Operations,13 Nov 2019
+Milla,Leppäaho,https://www.linkedin.com/in/milla-leppaaho-89ec2a73,,Oura,Full Stack Developer,12 Nov 2019
+Teemu,Hirvivuori,https://www.linkedin.com/in/teemu-hirvivuori-5a73da07,,Kera Group,ERP Specialist,11 Nov 2019
+Saara,Sillanpää,https://www.linkedin.com/in/saara-sillanpaa-402a5a3c,,Oura,Engineering Manager,16 Oct 2019
+Ben,Davies,https://www.linkedin.com/in/ben-davies-b08cbb03,,UPM,Global Category Manager,14 Oct 2019
+Lukas,Wolf,https://www.linkedin.com/in/lukaswolf,,Business Finland,Senior Advisor,10 Oct 2019
+Henrik,Jensen,https://www.linkedin.com/in/henrik-jensen,,Siemens,Customer Success Manager,06 Oct 2019
+Jukka-Pekka,Kokko,https://www.linkedin.com/in/jukka-pekka-kokko-0a78c237,,Alfons Håkans,Venevalmistaja,04 Oct 2019
+Kalle,Rinne,https://www.linkedin.com/in/kalle-rinne-ae5a3453,kalle.rinne22@example.com,Zoined,iOS Developer,30 Sep 2019
+Jarkko,Palonen,https://www.linkedin.com/in/jarkko-palonen,,Kastelli-talot,Area Sales Manager,29 Sep 2019
+Joonas,Rajavuori,https://www.linkedin.com/in/joonas-rajavuori,,Lifelong learner,Founder,20 Sep 2019
+Ali,Ahmadi,https://www.linkedin.com/in/ali-ahmadi-49b1a93e,,Whim,,13 Sep 2019
+Niko,Peltonen,https://www.linkedin.com/in/niko-peltonen-86e5df9c,niko.peltonen@example.com,City of Helsinki,Erityisasiantuntija,05 Sep 2019
+Eeva,Salminen,https://www.linkedin.com/in/eeva-salminen,,Holvi,DevOps Engineer,30 Aug 2019
+Eetu,Pitkäkoski,https://www.linkedin.com/in/eetupitkakoski,,Hacklin Logistics,Production Manager,16 Aug 2019
+Zahra,Ahmadi,https://www.linkedin.com/in/zahra-ahmadi-42b225da,,Infinited Fiber,Senior Software Engineer,11 Aug 2019
+Omar,Ahmadi,https://www.linkedin.com/in/oahmadi,,Basemark,Senior Software Engineer,10 Aug 2019
+Mika,Uotila,https://www.linkedin.com/in/mika-uotila,,Amerplast Oy,Tuotannonsuunnittelija,01 Aug 2019
+Salla,Järvimäki,https://www.linkedin.com/in/salla-jarvimaki-71f40979,,HUS,,18 Jul 2019
+Marko,Saarikoski,https://www.linkedin.com/in/msaarikoski,,Solar Foods Oyj,,06 Jul 2019
+Tero,Haapalahti,https://www.linkedin.com/in/terohaapalahti,,Vendep Capital,Program Manager,05 Jul 2019
+Divya,Joshi,https://www.linkedin.com/in/divya-joshi-fb5e87e9,divya.joshi90@example.com,Solita,Project Manager,24 Jun 2019
+Jaana,Pihlakangas,https://www.linkedin.com/in/jaana-pihlakangas-145e1c82,,IQM Finland Oy,Software Engineer,25 May 2019
+Pooja,Krishnan,https://www.linkedin.com/in/pkrishnan,,Efecte,Head of Hardware,22 May 2019
+Robin,Grönroos,https://www.linkedin.com/in/robin-gronroos-620414d7,,CGI,Designer,17 May 2019
+Laura,Mäkelä,https://www.linkedin.com/in/laura-makela-b6034ebb,,Lunawood Oy,Operations Director,13 May 2019
+Heikki,Jokinen,https://www.linkedin.com/in/heikkijokinen,,Varte,Vastaava työnjohtaja,11 May 2019
+Laura,Rinne,https://www.linkedin.com/in/laurarinne,,Freelance,Coach | Automation | MES | Helping industrial companies get more out of their data,30 Apr 2019
+Markus,Kivimäki,https://www.linkedin.com/in/markus-kivimaki-a8b5b40e,,Itsenäinen ammatinharjoittaja,Yrittäjä,30 Apr 2019
+Anna-Kaisa,Määttä,https://www.linkedin.com/in/anna-kaisa-maatta-b80b9ec0,,Nitor,DevOps Engineer,28 Apr 2019
+Jouni,Mäki,https://www.linkedin.com/in/jouni-maki-9ead73f7,,Sulapac,Machine Learning Engineer,28 Apr 2019
+Lasse,Halonen,https://www.linkedin.com/in/lasse-halonen-baf322d1,,Fraktio,DevOps Engineer,19 Apr 2019
+Ankit,Kumar,https://www.linkedin.com/in/ankit-kumar-90add9a1,,Swappie,ACCOUNT EXECUTIVE,13 Apr 2019
+Mikael,Suhonen,https://www.linkedin.com/in/mikael-suhonen,,Gofore,Talent Partner,10 Apr 2019
+Iryna,Melnyk,https://www.linkedin.com/in/iryna-melnyk,,Spotify,Software Engineer,04 Apr 2019
+Inka,Nieminen,https://www.linkedin.com/in/inka-nieminen-3d52bdf1,,Business Finland,Investment Director,27 Mar 2019
+Petri,Rinne,https://www.linkedin.com/in/petri-rinne-6eaa1f6d,,AMD Silo AI,Account Executive,23 Mar 2019
+Esa,Alakoski,https://www.linkedin.com/in/esa-alakoski,,Lumenkeep,AI Engineer,21 Mar 2019
+Mart,Rebane,https://www.linkedin.com/in/mart-rebane-b1ae18d1,,Zoined,Senior Software Engineer,17 Mar 2019
+Tanja,Harjujärvi,https://www.linkedin.com/in/tanja-harjujarvi-88f45d41,,Tietoevry,Lead Consultant,17 Mar 2019
+Markus,Mäkelä,https://www.linkedin.com/in/markus-makela,markus.makela@example.com,City of Espoo,Kehittämispäällikkö,12 Mar 2019
+Mohammad,Kaya,https://www.linkedin.com/in/mohammad-kaya-0bb1baec,,Klevu,Machine Learning Engineer,19 Jan 2019
+Kari,Immonen,https://www.linkedin.com/in/kimmonen,,Nokeval,Tuotantoinsinööri,17 Jan 2019
+Antti,Pitkämäki,https://www.linkedin.com/in/antti-pitkamaki-df9dbf46,,Gofore Oyj,Ohjelmistokehittäjä,01 Jan 2019
+Ville,Ojanen,https://www.linkedin.com/in/villeojanen,,Relex,,17 Dec 2018
+Hao,Yang,https://www.linkedin.com/in/hyang,,Delivery Hero,Product Manager,07 Dec 2018
+Marko,Rantasaari,https://www.linkedin.com/in/marko-rantasaari-6cf2d59a,,Valmet,Business Controller,07 Dec 2018
+Thomas,Laurent,https://www.linkedin.com/in/thomas-laurent-95783d3d,,Fortum Oyj,Program Manager,07 Dec 2018
+Miro,Lahtimäki,https://www.linkedin.com/in/mirolahtimaki,,Relex,Software Engineer,06 Dec 2018
+Risto,Honkakangas,https://www.linkedin.com/in/risto-honkakangas,,Siemens AG,Supply Chain Analyst,03 Dec 2018
+Essi,Salmi,https://www.linkedin.com/in/essi-salmi,,Valossa,Sales | SaaS | Nordics,28 Nov 2018
+Reetta,Tanskanen,https://www.linkedin.com/in/reetta-tanskanen-a641499c,,KINNUSEN MYLLY,Liiketoimintajohtaja,24 Nov 2018
+Heikki,Kallio,https://www.linkedin.com/in/hkallio,,JOT Automation Oy,,22 Nov 2018
+Jussi,Harjukoski,https://www.linkedin.com/in/jussi-harjukoski-ca2f795e,,Zoined,Operations Manager,22 Nov 2018
+Oskari,Isokangas,https://www.linkedin.com/in/oskari-isokangas,,Wolt,Data Scientist,21 Nov 2018
+Cecilia,Lindström,https://www.linkedin.com/in/cecilialindstrom,,Klarna,Engineering Manager,19 Nov 2018
+Tuomas,Luukkonen,https://www.linkedin.com/in/tuomas-luukkonen-27b73765,tuomas.luukkonen@example.com,Hydroline,Production Engineer,02 Nov 2018
+Mika,Lahtisaari,https://www.linkedin.com/in/mika-lahtisaari-c6773130,,Lunawood,Director of Manufacturing,14 Oct 2018
+Kimmo,Alasaari,https://www.linkedin.com/in/kalasaari,,Merus Power Oyj,Tekninen johtaja,08 Oct 2018
+Oona,Pitkäniemi,https://www.linkedin.com/in/oona-pitkaniemi,,twoday,Principal Consultant,07 Oct 2018
+Heikki,Saarisalo,https://www.linkedin.com/in/heikki-saarisalo,,Kiantama,Tietohallintojohtaja,25 Sep 2018
+Emilia,Määttä,https://www.linkedin.com/in/emilia-maatta,,Solita Oy,Software Developer,12 Sep 2018
+Aleksi,Kivisalo,https://www.linkedin.com/in/aleksikivisalo,,Sitra,Investment Manager | Six Sigma | Industry 4.0,09 Sep 2018
+Eeva,Honkavuori,https://www.linkedin.com/in/eeva-honkavuori-328936e6,,Wunder,Talent Partner,30 Aug 2018
+Mehmet,Haddad,https://www.linkedin.com/in/mehmet-haddad-0a317582,,Oura,Product Designer,26 Aug 2018
+Tuomas,Kolehmainen,https://www.linkedin.com/in/tuomas-kolehmainen-38,,Vincit,,23 Aug 2018
+Aki,Lehto,https://www.linkedin.com/in/aki-lehto-35d515c7,,Meriaura,IT-päällikkö,09 Aug 2018
+Antti,Saari,https://www.linkedin.com/in/antti-saari,,RELEX,,21 Jun 2018
+Tanel,Rebane,https://www.linkedin.com/in/tanel-rebane-42830783,,Konecranes,Senior Engineer,19 Jun 2018
+Sami,Lehtonen,https://www.linkedin.com/in/slehtonen,,Wolt,Account Executive,10 Jun 2018
+Kalle,Kalliosalo,https://www.linkedin.com/in/kalle-kalliosalo-f39c865a,,Wärtsilä,Software Engineer,12 May 2018
+Mehmet,Hassan,https://www.linkedin.com/in/mhassan,,twoday,SERVICE DESIGNER,02 May 2018
+Jouni,Oksanen,https://www.linkedin.com/in/jouni-oksanen-d4a68ce3,,Fibox,Purchasing Manager,20 Apr 2018
+Sara,"Saari, DI",https://www.linkedin.com/in/sara-saari,,Startup Foundation,Investment Analyst,19 Apr 2018
+Sara,Hämäläinen,https://www.linkedin.com/in/sara-hamalainen,,Wise,Designer,17 Apr 2018
+Tiina,Hiltunen,https://www.linkedin.com/in/tiina-hiltunen,,Bella Boats,ERP Specialist,13 Apr 2018
+Harri,Laaksonen,https://www.linkedin.com/in/harri-laaksonen-ad4a92f7,,Silo AI,Founding Engineer | Supply chain | B2B,11 Apr 2018
+Antti,Alakangas,https://www.linkedin.com/in/antti-alakangas-72104393,,Oura,Firmware Engineer,03 Apr 2018
+Jukka-Pekka,Pietilä,https://www.linkedin.com/in/jukka-pekka-pietila-0386a69f,,Infinited Fiber,HEAD OF PEOPLE,27 Mar 2018
+Petri,Lahtiniemi,https://www.linkedin.com/in/petri-lahtiniemi-e8abeab0,,Skaala IFN | We are hiring,,25 Mar 2018
+Pekka,Korpiniemi,https://www.linkedin.com/in/pekka-korpiniemi-7b511f7f,,Finnvera,Board Member,14 Mar 2018
+Adaeze,Eze (Leppämäki),https://www.linkedin.com/in/adaeze-eze-d8e81c5e,,Elisa Oyj,Viestintäpäällikkö,24 Feb 2018
+Tuomas,Pitkäaho,https://www.linkedin.com/in/tuomas-pitkaaho-11df7389,,Efecte,Customer Success Manager,16 Feb 2018
+Lauri,Hirvilahti,https://www.linkedin.com/in/lhirvilahti,,Enfuce,Software Engineer | Supply chain | Lean,10 Feb 2018
+Julia,Valtonen,https://www.linkedin.com/in/juliavaltonen,,Microsoft,Staff Engineer,03 Jan 2018
+Jesse,Vainio,https://www.linkedin.com/in/jesse-vainio,,Columbia Road Oy,Senior Consultant,21 Dec 2017
+Salla,Kuusisto,https://www.linkedin.com/in/salla-kuusisto,,VR Group,Projektipäällikkö,07 Dec 2017
+Timo,Rajalahti,https://www.linkedin.com/in/timo-rajalahti-4a907fbc,,Loihde,Cloud Architect,05 Dec 2017
+Mika,Laine,https://www.linkedin.com/in/mika-laine-ac78c66b,,IQM Quantum Computers,Full Stack Developer,26 Nov 2017
+Juha,Virtanen,https://www.linkedin.com/in/juha-virtanen-a9b652f7,,Wirepas,Full Stack Developer,03 Nov 2017
+Salla,Seppälä,https://www.linkedin.com/in/salla-seppala-be642d6c,,Helsingin kaupunki,Senior Specialist | B2B | SAP,07 Oct 2017
+Matthew,Wilson,https://www.linkedin.com/in/matthew-wilson-461060ac,,IQM Quantum Computers,Software Engineer,27 Sep 2017
+Joonas,Hyttinen,https://www.linkedin.com/in/joonas-hyttinen-2e8379f6,,Muurame Oy,Sales Director,19 Sep 2017
+Eetu,Hirvonen,https://www.linkedin.com/in/eetu-hirvonen,,OP-ryhmä,Service Manager,31 Aug 2017
+Marjo,Parkkinen,https://www.linkedin.com/in/marjo-parkkinen,,Smartly.io,Senior Product Manager,19 Aug 2017
+Jonna,Rajala,https://www.linkedin.com/in/jonna-rajala,,OP Financial Group,Vastuullisuuspäällikkö,12 Jul 2017
+Anna-Kaisa,Hautala,https://www.linkedin.com/in/anna-kaisa-hautala-fffb2d94,,Wolt,Senior Software Engineer,03 Jul 2017
+Sofia,Nyberg,https://www.linkedin.com/in/snyberg,,Visma Finland,Data Engineer,03 Jul 2017
+Susanna,Kivinen,https://www.linkedin.com/in/susanna-kivinen-cec48bc7,,Kuljetusrinki | Part of something bigger,Finance Director,18 Jun 2017
+Laura,Alanen,https://www.linkedin.com/in/laura-alanen,,Vallox,Service Technician,15 Jun 2017
+Toni,Seppänen,https://www.linkedin.com/in/toni-seppanen-d40ede7c,,,Open to work,02 Jun 2017
+Otto,Hämäläinen,https://www.linkedin.com/in/otto-hamalainen-0f671529,,Kiantama,Production Director,28 May 2017
+Tiina,Hirvonen,https://www.linkedin.com/in/tiina-hirvonen-98edeb8d,,Various,Coach,18 May 2017
+Yang,Yang,https://www.linkedin.com/in/yang-yang-810a356b,,Gofore Oyj,Software Developer,08 May 2017
+Patrik,Strandberg,https://www.linkedin.com/in/patrik-strandberg-2372b46f,,Futurice,Scrum Master,26 Apr 2017
+Minna,Kauppila,https://www.linkedin.com/in/minna-kauppila-25f55a2c,,MaaS Global,,16 Apr 2017
+Alex,Hughes,https://www.linkedin.com/in/alex-hughes-8ec62004,,Aiven Oy,Software Engineer,15 Apr 2017
+Sofia,Suhonen,https://www.linkedin.com/in/sofia-suhonen-39d02a22,,Kauppahuone Harju,ERP Specialist,10 Apr 2017
+Leo,Ahonen,https://www.linkedin.com/in/leo-ahonen-27a3615d,,Supercell,Business Development Manager | Industry 4.0 | Data | Helping industrial companies get more out of their people,09 Apr 2017
+Anastasia,Popova,https://www.linkedin.com/in/anastasia-popova-20,,Starship Technologies,Head of Nordics,18 Mar 2017
+Mikko,Kuusiniemi,https://www.linkedin.com/in/mikko-kuusiniemi-239c9bc9,,Reaktor,Senior Consultant,08 Mar 2017
+Riikka,Laaksovuori,https://www.linkedin.com/in/riikka-laaksovuori-74eaaa4e,,SOK,Project Engineer,05 Mar 2017
+Iida,Korpisalo,https://www.linkedin.com/in/iida-korpisalo,ikorpisalo@example.com,Elinkeinoelämän keskusliitto EK,Analyst,03 Mar 2017
+Jussi,Toivanen,https://www.linkedin.com/in/jussi-toivanen,,Wolt,Android Developer,24 Feb 2017
+Tommi,Hämäläinen,https://www.linkedin.com/in/tommi-hamalainen-ca4f9123,,Suomen Punainen Risti,Project Manager,12 Feb 2017
+Noora,Rajamäki,https://www.linkedin.com/in/noorarajamaki,,Holvi,Business Development Manager,10 Feb 2017
+Katja,Honkanen,https://www.linkedin.com/in/khonkanen,,Aiven Oy,Product Designer,04 Feb 2017
+Li,Zhao,https://www.linkedin.com/in/li-zhao-3831551c,,Salesforce,Partner Manager,07 Jan 2017
+Pertti,Honkavuori,https://www.linkedin.com/in/pertti-honkavuori-2260fe02,,Suomen Punainen Risti,,31 Dec 2016
+Kari,Mustonen,https://www.linkedin.com/in/kari-mustonen-9a54a74c,,Steerprop Oy,Business Controller,19 Dec 2016
+Maija,Kivijärvi,https://www.linkedin.com/in/maijakivijarvi,,,Looking for new opportunities,09 Dec 2016
+Oona,Holopainen,https://www.linkedin.com/in/oona-holopainen-57f62674,,Nitor Group,Konsultti,06 Dec 2016
+Joonas,Seppänen,https://www.linkedin.com/in/joonasseppanen,,Fortum,Program Manager,05 Dec 2016
+Lars,Berg,https://www.linkedin.com/in/lars-berg-a580d11c,,Spinnova Oyj,Growth Lead,04 Dec 2016
+Henna,Tanskanen,https://www.linkedin.com/in/henna-tanskanen-dc7c59b1,,Oura,Backend Engineer,03 Dec 2016
+Jukka,Seppälä,https://www.linkedin.com/in/jukka-seppala-6001ae45,,Smartly.io,,03 Dec 2016
+Anni,Immonen,https://www.linkedin.com/in/anni-immonen,,Freelancer,Hallitusammattilainen,21 Nov 2016
+Niina,Hirvimäki,https://www.linkedin.com/in/niina-hirvimaki-e73a148f,,Kalevala Koru,,20 Nov 2016
+Eero,Mäntykoski,https://www.linkedin.com/in/eero-mantykoski-7e0101ba,,Nordautomation,Varastopäällikkö,17 Nov 2016
+Maria,Hämäläinen,https://www.linkedin.com/in/maria-hamalainen-9326cbaa,,Salesforce,Product Manager,16 Nov 2016
+Heikki,Aho,https://www.linkedin.com/in/heikki-aho-2fb5ca09,,Eficode Oy,Software Developer,09 Nov 2016
+Jesse,Nissinen,https://www.linkedin.com/in/jesse-nissinen-b089067b,,Sargo Oy Ab,Tekninen johtaja,04 Nov 2016
+Ryan,Walker,https://www.linkedin.com/in/ryan-walker-2c6ed4a5,,Smartly.io,Software Engineer,30 Sep 2016
+Seppo ☀️,Kuusikoski,https://www.linkedin.com/in/seppo-kuusikoski-2f97a79a,,Valmet Automation,Viestintäpäällikkö,01 Sep 2016
+Felix,Koch,https://www.linkedin.com/in/felix-koch-dd5ae278,,Wolt,Growth Lead,15 Jul 2016
+Ville,Hakala,https://www.linkedin.com/in/ville-hakala-86417fa6,ville.hakala@example.com,Smartly.io,Principal Engineer,08 Jul 2016
+Laura,Hautala,https://www.linkedin.com/in/laura-hautala,,HUS,Johtava asiantuntija,24 Jun 2016
+Tommi,Jokilahti,https://www.linkedin.com/in/tommi-jokilahti,,Smartly.io,Software Engineer,16 Jun 2016
+Tiina,Savolainen,https://www.linkedin.com/in/tiina-savolainen,,Swappie,Data Scientist,21 May 2016
+Jussi,Järvinen,https://www.linkedin.com/in/jussi-jarvinen-d06c2905,jjarvinen@example.com,Työ- ja elinkeinoministeriö,Project Manager,12 May 2016
+Jari,Seppälä,https://www.linkedin.com/in/jari-seppala,,Digia,Key Account Manager,10 May 2016
+Juho,Korpikangas,https://www.linkedin.com/in/juho-korpikangas,,Freelance,Hallitusammattilainen,10 May 2016
+Lauri,Pesonen,https://www.linkedin.com/in/lauri-pesonen-6f77f8d7,,Lumenkeep,Software Engineer,22 Apr 2016
+Timo,Haapala,https://www.linkedin.com/in/timo-haapala-b4862bac,,Oura,,06 Apr 2016
+Risto,Seppänen,https://www.linkedin.com/in/risto-seppanen,,Business Finland,Investment Manager,29 Mar 2016
+Anna-Kaisa,Korpisalo,https://www.linkedin.com/in/anna-kaisa-korpisalo-0c52fece,,Framery Oy,Summer Intern,06 Mar 2016
+Jari,Rantala,https://www.linkedin.com/in/jari-rantala-cb01423e,jari.rantala88@example.com,Konecranes,Head of Data & Analytics,06 Mar 2016
+Riikka,Kinnunen,https://www.linkedin.com/in/rkinnunen,,ICEYE Oy,Talent Acquisition Partner,25 Feb 2016
+Tiina,Oksanen,https://www.linkedin.com/in/tiinaoksanen,,Valio,Head of Production Planning,01 Feb 2016
+Matilda,Wallin,https://www.linkedin.com/in/matilda-wallin-40fcccac,,Metso,Senior Engineer,25 Jan 2016
+Heidi,Heikkilä,https://www.linkedin.com/in/heidi-heikkila-8fcaacb1,,Futurice,Konsultti,20 Jan 2016
+Jari,Lahtimäki,https://www.linkedin.com/in/lahtimakijari,,Gofore,AI Consultant,04 Jan 2016
+Terhi,Kumpulainen,https://www.linkedin.com/in/tkumpulainen,,Teknoware Oy,Supply Chain Director,05 Dec 2015
+Veli-Matti,Hyttinen,https://www.linkedin.com/in/veli-matti-hyttinen,,Kide.app,Product Manager,04 Dec 2015
+Mohammad,Karimi,https://www.linkedin.com/in/mohammad-karimi-04681ea5,,Konecranes Finland,,18 Nov 2015
+Ville,Kumpulainen,https://www.linkedin.com/in/ville-kumpulainen-8e968815,,Wunder,Partner,17 Nov 2015
+Antti,Karhusalo,https://www.linkedin.com/in/antti-karhusalo-ec65a66c,,Reaktor Innovations Oy,Head of Design,16 Nov 2015
+Valtteri,Vehviläinen,https://www.linkedin.com/in/valtteri-vehvilainen-85cd9802,,Vexlum,,15 Nov 2015
+Heidi,Vesterinen,https://www.linkedin.com/in/heidivesterinen,,Kivikylän Kotipalvaamo | Part of something bigger,,12 Nov 2015
+Maarja,Kask,https://www.linkedin.com/in/maarja-kask-3c671dc5,,Aiven,Head of Product,12 Nov 2015
+Jun,Zhang,https://www.linkedin.com/in/jun-zhang-c41436bd,jun.zhang48@example.com,RELEX Solutions,Head of Marketing,31 Oct 2015
+Jukka,Virtanen,https://www.linkedin.com/in/jukka-virtanen-31d709a7,,Wolt,Data Scientist | Data | Six Sigma,27 Oct 2015
+Joni,Voutilainen,https://www.linkedin.com/in/joni-voutilainen,,Suomen Punainen Risti,Head of Unit,26 Oct 2015
+Tobias,Lundqvist,https://www.linkedin.com/in/tobias-lundqvist-6449031c,,Viking Malt Oy,Leipuri,09 Oct 2015
+Iida,Haapaaho,https://www.linkedin.com/in/iida-haapaaho-556062e7,,Paptic,Growth Marketing Manager,25 Sep 2015
+Jarkko,Mäkinen,https://www.linkedin.com/in/jmakinen,,Maustaja | Since 1972,,20 Sep 2015
+Sofia,Nyström,https://www.linkedin.com/in/sofianystrom,,Laitilan Wirvoitusjuomatehdas | Since 1972,HR Director,02 Sep 2015
+Paula,Anttonen,https://www.linkedin.com/in/paula-anttonen-7f83bb5c,paula.anttonen61@example.com,Wolt,Software Engineer,26 Aug 2015
+Oskari,Laitinen,https://www.linkedin.com/in/oskarilaitinen,,Maria 01,Investment Manager,25 Aug 2015
+Aino,Heikkinen,https://www.linkedin.com/in/aino-heikkinen-0f6de782,,Halti Oy,Export Manager,29 Jun 2015
+Mari,Lehtinen,https://www.linkedin.com/in/mari-lehtinen-0da745ba,mari.lehtinen@example.com,Ericsson,Senior Software Engineer | Python | Data | Helping industrial companies get more out of their people,24 May 2015
+Niina,Huovinen,https://www.linkedin.com/in/niina-huovinen,,Oura,Senior Software Engineer,06 May 2015
+Kirsi,Karhusaari,https://www.linkedin.com/in/kirsi-karhusaari-9be62350,,Meru Health,Customer Success Manager,08 Apr 2015
+Jari,Hämäläinen,https://www.linkedin.com/in/jari-hamalainen,,Nokia Networks,Software Engineer,20 Mar 2015
+Janne,Raatikainen,https://www.linkedin.com/in/janneraatikainen,janne.raatikainen86@example.com,Finnair,Asiantuntija,27 Feb 2015
+Ivan,Kovalenko,https://www.linkedin.com/in/ivan-kovalenko-875ef531,,Jatke Oy,Operations Manager | Lean | ERP,07 Feb 2015
+Teemu,Niemi,https://www.linkedin.com/in/tniemi,,Tevo,Projektipäällikkö,02 Feb 2015
+Oskari,Paananen,https://www.linkedin.com/in/oskari-paananen-afbf1aa6,,Kuusamo Hirsitalot,Myyntijohtaja,31 Jan 2015
+Jaana,Suomalainen,https://www.linkedin.com/in/jaana-suomalainen,,Solita,Account Director,15 Jan 2015

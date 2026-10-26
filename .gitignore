@@ -1,0 +1,20 @@
+node_modules
+.next
+next-env.d.ts
+*.tsbuildinfo
+dist/
+.claude/settings.local.json
+
+# Your data: networks, statuses, the PRH cache and your profile stay on your machine.
+data/sources
+data/state.json
+data/cache/
+data/stress/
+data/profile.json
+config/profile.json
+# Other data folders (DATA_DIR=data-mine).
+data-*/
+
+# Secrets.
+.env*
+!.env.example

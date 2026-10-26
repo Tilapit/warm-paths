@@ -1,0 +1,248 @@
+{
+  "goal": "Find operations and production leaders at Finnish manufacturers, builders and logistics companies, to interview about a planning tool I'm building.",
+  "roles": [
+    "CEO",
+    "COO",
+    "managing director",
+    "toimitusjohtaja",
+    "founder",
+    "operations",
+    "production",
+    "tuotantojohtaja"
+  ],
+  "industries": [
+    {
+      "code": "10-33",
+      "label": "Manufacturing"
+    },
+    {
+      "code": "41-43",
+      "label": "Construction"
+    },
+    {
+      "code": "46",
+      "label": "Wholesale"
+    },
+    {
+      "code": "49-53",
+      "label": "Transport and logistics"
+    },
+    {
+      "code": "4932",
+      "label": "Taxis",
+      "lowerPriority": true
+    },
+    {
+      "code": "01-09",
+      "label": "Agriculture and mining",
+      "lowerPriority": true
+    },
+    {
+      "code": "35-39",
+      "label": "Energy, water and waste",
+      "lowerPriority": true
+    }
+  ],
+  "keywords": [],
+  "excluded": [
+    {
+      "businessId": "1927400-1",
+      "name": "KONE Oyj"
+    },
+    {
+      "businessId": "1891976-0",
+      "name": "KONE Industrial Oy"
+    },
+    {
+      "businessId": "2553019-8",
+      "name": "Valmet Oyj"
+    },
+    {
+      "businessId": "1570314-7",
+      "name": "Valmet Automation Oy"
+    },
+    {
+      "businessId": "0128631-1",
+      "name": "Wärtsilä Oyj Abp"
+    },
+    {
+      "businessId": "1463611-4",
+      "name": "Fortum Oyj"
+    },
+    {
+      "businessId": "1041090-0",
+      "name": "UPM-Kymmene Oyj"
+    },
+    {
+      "businessId": "1039050-8",
+      "name": "Stora Enso Oyj"
+    },
+    {
+      "businessId": "0112038-9",
+      "name": "Nokia Oyj"
+    },
+    {
+      "businessId": "0109862-8",
+      "name": "Kesko Oyj"
+    },
+    {
+      "businessId": "0109823-0",
+      "name": "Kemira Oyj"
+    },
+    {
+      "businessId": "1852302-9",
+      "name": "Neste Oyj"
+    },
+    {
+      "businessId": "0942718-2",
+      "name": "Konecranes Oyj"
+    },
+    {
+      "businessId": "3424222-7",
+      "name": "Kalmar Oyj"
+    },
+    {
+      "businessId": "1927402-8",
+      "name": "Hiab Oyj"
+    },
+    {
+      "businessId": "0934209-0",
+      "name": "Ponsse Oyj"
+    },
+    {
+      "businessId": "0828105-4",
+      "name": "Metso Oyj"
+    },
+    {
+      "businessId": "0215254-2",
+      "name": "Outokumpu Oyj"
+    },
+    {
+      "businessId": "1999212-6",
+      "name": "Orion Oyj"
+    },
+    {
+      "businessId": "0841066-1",
+      "name": "Atria Oyj"
+    },
+    {
+      "businessId": "0111425-3",
+      "name": "HKFoods Oyj"
+    },
+    {
+      "businessId": "0108023-3",
+      "name": "Finnair Oyj"
+    },
+    {
+      "businessId": "1531864-4",
+      "name": "Posti Group Oyj"
+    },
+    {
+      "businessId": "0112650-2",
+      "name": "YIT Oyj"
+    },
+    {
+      "businessId": "0116510-6",
+      "name": "Elisa Oyj"
+    },
+    {
+      "businessId": "0214036-5",
+      "name": "Fiskars Oyj Abp"
+    },
+    {
+      "businessId": "1524361-1",
+      "name": "Sanoma Oyj"
+    },
+    {
+      "businessId": "0101138-5",
+      "name": "Tieto Oyj"
+    },
+    {
+      "businessId": "0763403-0",
+      "name": "ABB Oy"
+    },
+    {
+      "businessId": "0603380-7",
+      "name": "Marioff Corporation Oy"
+    },
+    {
+      "businessId": "2630573-4",
+      "name": "Helen Oy"
+    },
+    {
+      "businessId": "2858394-9",
+      "name": "Nordea Bank Abp"
+    },
+    {
+      "businessId": "0242522-1",
+      "name": "OP Osuuskunta"
+    },
+    {
+      "businessId": "0599101-8",
+      "name": "OP Kiinteistösijoitus Oy"
+    },
+    {
+      "businessId": "1475607-9",
+      "name": "Telia Finland Oyj"
+    },
+    {
+      "businessId": "0114162-2",
+      "name": "Lindex Group Oyj"
+    },
+    {
+      "businessId": "1072894-3",
+      "name": "Fingrid Oyj"
+    },
+    {
+      "businessId": "0124416-2",
+      "name": "Vaisala Oyj"
+    },
+    {
+      "businessId": "3115082-9",
+      "name": "Legrand Finland Oy"
+    },
+    {
+      "businessId": "2828910-9",
+      "name": "Amazon Data Services Finland Oy"
+    },
+    {
+      "businessId": "2871826-8",
+      "name": "Amazon Web Services EMEA SARL, sivuliike Suomessa"
+    },
+    {
+      "businessId": "1000514-7",
+      "name": "JYSK OY"
+    },
+    {
+      "businessId": "1928426-9",
+      "name": "Tokmanni Oy"
+    },
+    {
+      "businessId": "2483212-7",
+      "name": "Tokmanni Group Oyj"
+    },
+    {
+      "businessId": "1523846-8",
+      "name": "Gigantti Oy Ab"
+    },
+    {
+      "businessId": "2474591-2",
+      "name": "Red Bull Finland Oy"
+    },
+    {
+      "businessId": "0114891-2",
+      "name": "Martela Oyj"
+    },
+    {
+      "businessId": "1087288-1",
+      "name": "Martela Palvelut Oy"
+    },
+    {
+      "businessId": "2404400-8",
+      "name": "Reitan Convenience Finland Oy"
+    }
+  ],
+  "ask": "a 20-minute call",
+  "tone": "Friendly and direct. Finnish for Finnish companies, English otherwise.",
+  "signature": "– Alex"
+}
