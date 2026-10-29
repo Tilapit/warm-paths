@@ -705,12 +705,10 @@ const board = fill("board", boardShared);
 
 // ---------- write ----------
 
-// Built from parts so the personal-data guard does not take this file for an export.
-const COLUMNS = ["First Name", "Last Name", "URL", "Email Address", "Company", "Position", "Connected On"].join(",");
 const NOTES = `Notes:
 "When exporting your connection data, you may notice that some of the email addresses are missing. You will only see email addresses for connections who have allowed their connections to see or download their email address using this setting https://www.linkedin.com/psettings/privacy/email. You can learn more here https://www.linkedin.com/help/linkedin/answer/261"
 
-${COLUMNS}
+First Name,Last Name,URL,Email Address,Company,Position,Connected On
 `;
 const q = (v) => (/[",\n\r]/.test(v) || /^\s|\s$/.test(v) ? `"${v.replace(/"/g, '""')}"` : v);
 

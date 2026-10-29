@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
+import { PROFILE } from "./fixtures/profile-urls.ts";
 
 // Everything runs offline against a throwaway data dir.
 const dir = fs.mkdtempSync(path.join(os.tmpdir(), "vnet-"));
@@ -25,7 +26,6 @@ type Resolved = import("../lib/matching.ts").Resolved;
 type PrhCompany = import("../lib/prh.ts").PrhCompany;
 
 const HEAD = 'Notes:\n"When exporting your connection data, you may notice that some of the email addresses are missing."\n\nFirst Name,Last Name,URL,Email Address,Company,Position,Connected On\n';
-const IN = "https://www.linkedin.com/" + "in/";
 const csv = (rows: string[]) => HEAD + rows.join("\n") + "\n";
 const owner = (id: string, name: string): Owner => ({ id, name, file: `${id}.csv`, original: `${id}.csv`, importedAt: "2026-10-24T10:00:00Z", rows: 0, accepted: 0, skipped: 0, noCompany: 0, noUrl: 0, demo: true });
 
@@ -33,15 +33,15 @@ const co = (businessId: string, name: string, tol: string, extra: Partial<PrhCom
 const res = (raw: string, status: Resolved["status"], company?: PrhCompany, foreign = false): Resolved => ({ raw, key: looseKey(raw), status, company, candidates: company ? [company] : [], note: "", by: "rule", foreign });
 
 const YOU = csv([
-  `Laura,Mäkelä,${IN}laura-makela-1a2b3c4d,,Lunawood,Operations Director,12 Apr 2019`,
-  `Mika,Laine,${IN}mika-laine,,Lunawood Oy,Production Planner,01 Mar 2024`,
-  `Mikko,Korhonen,${IN}mikko-korhonen-11,,Reaktor,Software Developer,05 May 2021`,
-  `Mikko,Korhonen,${IN}mikko-korhonen-22,,Hydroline,CFO,05 May 2022`,
+  `Laura,Mäkelä,${PROFILE.lauraMakela1a2b3c4d},,Lunawood,Operations Director,12 Apr 2019`,
+  `Mika,Laine,${PROFILE.mikaLaine},,Lunawood Oy,Production Planner,01 Mar 2024`,
+  `Mikko,Korhonen,${PROFILE.mikkoKorhonen11},,Reaktor,Software Developer,05 May 2021`,
+  `Mikko,Korhonen,${PROFILE.mikkoKorhonen22},,Hydroline,CFO,05 May 2022`,
   'Anna,Virtanen,,,"Kumera Drives Oy","Head of Production, Gearboxes 🚀",10 Oct 2025',
-  `Sara,Holm,${IN}sara-holm,,Spotify AB,Engineer,10 Oct 2025`,
+  `Sara,Holm,${PROFILE.saraHolm},,Spotify AB,Engineer,10 Oct 2025`,
 ]);
 const CO = csv([
-  `Laura,Mäkelä,${IN}Laura-Makela-1a2b3c4d/,,Lunawood,Operations Director,02 Feb 2023`,
+  `Laura,Mäkelä,${PROFILE.lauraMakela1a2b3c4dCased},,Lunawood,Operations Director,02 Feb 2023`,
   "Anna,Virtanen,,,Kumera Drives Oy,\"Head of Production, Gearboxes 🚀\",01 Jan 2020",
 ]);
 
@@ -296,8 +296,8 @@ test("a company marked as not a target takes its people off the list", () => {
 test("at an equal score an Oyj ranks after the rest; a company marked as not a target leaves the radar", () => {
   // Invented people at invented companies, with the same facts but the company form.
   const rows = csv([
-    `Aino,Aalto,${IN}aino-aalto-9f,,Esimerkki Konepaja Oyj,Operations Director,12 Apr 2019`,
-    `Ville,Wirtanen,${IN}ville-wirtanen-9f,,Testi Konepaja Oy,Operations Director,12 Apr 2019`,
+    `Aino,Aalto,${PROFILE.ainoAalto9f},,Esimerkki Konepaja Oyj,Operations Director,12 Apr 2019`,
+    `Ville,Wirtanen,${PROFILE.villeWirtanen9f},,Testi Konepaja Oy,Operations Director,12 Apr 2019`,
   ]);
   const listed = co("3333333-3", "Esimerkki Konepaja Oyj", "28150", { formCode: "17", form: "Public limited company" });
   const r2 = new Map<string, Resolved>([

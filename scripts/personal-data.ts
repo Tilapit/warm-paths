@@ -10,8 +10,8 @@ export type FileInput = { path: string; content: string | Uint8Array };
 /** line is 1-based; 0 means the whole file (a rule on the name). */
 export type Hit = { path: string; line: number; rule: Rule; excerpt: string };
 
-/** Invented data that is meant to be committed. */
-export const EXCLUDED = ["data/demo/", "tests/fixtures/"];
+/** Invented data that is meant to be committed: folders end in "/", the rest are single files. */
+export const EXCLUDED = ["data/demo/", "tests/fixtures/", "scripts/generate-mock-connections.mjs"];
 
 const DATA_FILES = new Set(["profile.json", "state.json"]);
 const EMAIL_FILES = /\.(csv|json|txt)$/i;
@@ -24,7 +24,7 @@ const PROFILE_URL = /linkedin\.com\/in\/[\p{L}\p{N}%_-]+/giu;
 
 const posix = (p: string) => p.replace(/\\/g, "/").replace(/^\.\//, "");
 
-export const isExcluded = (p: string) => EXCLUDED.some((dir) => posix(p).startsWith(dir));
+export const isExcluded = (p: string) => EXCLUDED.some((e) => (e.endsWith("/") ? posix(p).startsWith(e) : posix(p) === e));
 
 /** a*** for a word; keeps nothing past its first character. */
 const maskWord = (s: string) => (s ? `${[...s][0]}***` : "");
@@ -36,10 +36,10 @@ export function maskEmail(email: string): string {
   return `${maskWord(local)}\x40${maskWord(labels[0])}.${labels[labels.length - 1]}`;
 }
 
-/** The first letter of the profile name: .../in/<name> -> .../in/n*** */
+/** The first letter of the profile name: .../in/<name> -> .../in/n*** (no domain, so the excerpt is not a hit itself). */
 export function maskProfileUrl(url: string): string {
   const i = url.toLowerCase().indexOf("/in/") + 4;
-  return url.slice(0, i) + maskWord(url.slice(i));
+  return `.../in/${maskWord(url.slice(i))}`;
 }
 
 const cells = (line: string) =>

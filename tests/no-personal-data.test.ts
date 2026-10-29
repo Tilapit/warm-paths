@@ -6,19 +6,32 @@ import os from "node:os";
 import path from "node:path";
 
 import { findPersonalData, type FileInput } from "../scripts/personal-data.ts";
+import { EMAIL, HEADER, HEADER_REORDERED, PROFILE, PROFILE_ENCODED } from "./fixtures/personal-data.ts";
 
-// Every value here is invented and written with escapes (\x20, \x40, \x2e), so
-// this file does not match the rules it tests.
 const ROOT = path.join(import.meta.dirname, "..");
 const CHECK = path.join(ROOT, "scripts", "check-personal-data.ts");
-const HEADER = "First\x20Name,Last\x20Name,URL,Email\x20Address,Company,Position,Connected\x20On";
-const EMAIL = "aino.kallio\x40konepaja.fi";
-const PROFILE = "https://www.linkedin\x2ecom/in/aino-kallio-3f2a";
 const find = (p: string, content: FileInput["content"]) => findPersonalData([{ path: p, content }]);
 const rules = (p: string, content: FileInput["content"]) => find(p, content).map((h) => h.rule);
 
+// Throwaway repos see none of the machine's git config or the caller's GIT_* variables.
+const ENV = { ...process.env };
+for (const k of Object.keys(ENV)) if (k.startsWith("GIT_")) delete ENV[k];
+Object.assign(ENV, {
+  GIT_CONFIG_GLOBAL: os.devNull,
+  GIT_CONFIG_NOSYSTEM: "1",
+  GIT_AUTHOR_NAME: "Test",
+  GIT_AUTHOR_EMAIL: "test@example.invalid",
+  GIT_COMMITTER_NAME: "Test",
+  GIT_COMMITTER_EMAIL: "test@example.invalid",
+});
 const check = (cwd: string, ...args: string[]) =>
-  spawnSync(process.execPath, ["--experimental-strip-types", "--disable-warning=MODULE_TYPELESS_PACKAGE_JSON", CHECK, ...args], { cwd, encoding: "utf8" });
+  spawnSync(process.execPath, ["--experimental-strip-types", "--disable-warning=MODULE_TYPELESS_PACKAGE_JSON", CHECK, ...args], { cwd, env: ENV, encoding: "utf8" });
+const tmpRepo = (...init: string[]) => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "guard-"));
+  const git = (...args: string[]) => execFileSync("git", args, { cwd: dir, env: ENV }).toString().trim();
+  git("init", "-q", "-b", "main", ...init);
+  return { dir, git, write: (p: string, text: string) => fs.writeFileSync(path.join(dir, p), text) };
+};
 
 test("guard: no tracked file in this repo holds personal data", () => {
   const r = check(ROOT, "--tracked");
@@ -32,33 +45,33 @@ test("guard: the Connections header, whatever the quotes, BOM, case or separator
   assert.deepEqual(rules("a.csv", HEADER.split(",").map((c) => `"${c}"`).join(",")), ["connections-header"]);
   assert.deepEqual(rules("a.txt", HEADER.toUpperCase()), ["connections-header"]);
   assert.deepEqual(rules("a.csv", HEADER.replaceAll(",", ";")), ["connections-header"]);
-  assert.deepEqual(rules("notes.md", "Connected\x20On,Tags,Last\x20Name,First\x20Name"), ["connections-header"]);
+  assert.deepEqual(rules("notes.md", HEADER_REORDERED), ["connections-header"]);
   // Notes lines first and CRLF: the line number is the header's.
   assert.equal(find("a.csv", `Notes:\r\n"..."\r\n\r\n${HEADER}\r\n`)[0].line, 4);
   // UTF-16, as Excel saves "Unicode text".
   const utf16 = Buffer.concat([Buffer.from([0xff, 0xfe]), Buffer.from(HEADER, "utf16le")]);
   assert.deepEqual(rules("a.txt", utf16), ["connections-header"]);
-  assert.deepEqual(rules("a.csv", "Name,Date,Amount\nFirst\x20Name,Last\x20Name"), []);
+  assert.deepEqual(rules("a.csv", "Name,Date,Amount\nFirst Name,Last Name"), []);
 });
 
 test("guard: an email address in .csv, .json and .txt, except reserved example domains", () => {
   for (const ext of ["csv", "json", "txt", "CSV"]) assert.deepEqual(rules(`a.${ext}`, `x,${EMAIL},y`), ["email"], ext);
   for (const ext of ["ts", "md", "mjs"]) assert.deepEqual(rules(`a.${ext}`, EMAIL), [], ext);
   for (const d of ["example.com", "example.org", "example.net", "mail.example.com", "host.invalid", "host.test", "EXAMPLE.COM"])
-    assert.deepEqual(rules("a.csv", `aino\x40${d}`), [], d);
+    assert.deepEqual(rules("a.csv", `aino@${d}`), [], d);
   for (const d of ["notexample.com", "example.co", "example.com.fi", "testing.fi"])
-    assert.deepEqual(rules("a.csv", `aino\x40${d}`), ["email"], d);
+    assert.deepEqual(rules("a.csv", `aino@${d}`), ["email"], d);
   // Package specifiers are not addresses.
-  assert.deepEqual(rules("package-lock.json", '"node_modules/\x40types/node": "next\x4015.5.28"'), []);
+  assert.deepEqual(rules("package-lock.json", '"node_modules/@types/node": "next@15.5.28"'), []);
 });
 
 test("guard: a LinkedIn profile URL in any text file", () => {
   for (const p of ["a.csv", "README.md", "lib/x.ts", "notes"]) assert.deepEqual(rules(p, `see ${PROFILE}.`), ["linkedin-url"], p);
-  assert.deepEqual(rules("a.md", "fi.linkedin\x2ecom/in/aino-k%C3%A4llio"), ["linkedin-url"]);
+  assert.deepEqual(rules("a.md", PROFILE_ENCODED), ["linkedin-url"]);
   // A path with no one in it, and a template, are not profiles.
-  assert.deepEqual(rules("a.ts", "are linkedin\x2ecom/in/ profile URLs"), []);
-  assert.deepEqual(rules("a.ts", "`linkedin\x2ecom/in/${slug}`"), []);
-  assert.deepEqual(rules("a.md", "linkedin\x2ecom/company/konepaja"), []);
+  assert.deepEqual(rules("a.ts", "are linkedin.com/in/ profile URLs"), []);
+  assert.deepEqual(rules("a.ts", "`linkedin.com/in/${slug}`"), []);
+  assert.deepEqual(rules("a.md", "linkedin.com/company/konepaja"), []);
 });
 
 test("guard: profile.json and state.json by name, at any depth, whatever is in them", () => {
@@ -75,12 +88,12 @@ test("guard: binary files by name only", () => {
   assert.deepEqual(rules("data/state.json", binary), ["data-file"]);
 });
 
-test("guard: data/demo/ and tests/fixtures/ are excluded, only at the repo root", () => {
+test("guard: data/demo/, tests/fixtures/ and the mock generator are excluded, nothing else", () => {
   const all = `${HEADER}\n${EMAIL}\n${PROFILE}`;
-  for (const p of ["data/demo/Connections.csv", "data/demo/profile.json", "tests/fixtures/x.csv", "./tests/fixtures/state.json", "data\\demo\\x.csv"])
+  for (const p of ["data/demo/Connections.csv", "data/demo/profile.json", "tests/fixtures/x.csv", "./tests/fixtures/state.json", "data\\demo\\x.csv", "scripts/generate-mock-connections.mjs"])
     assert.deepEqual(rules(p, all), [], p);
-  for (const p of ["other/data/demo/x.csv", "data/demo-mine/x.csv", "tests/fixtures-real/x.csv"])
-    assert.deepEqual(rules(p, all), ["connections-header", "email", "linkedin-url"], p);
+  for (const p of ["other/data/demo/x.csv", "data/demo-mine/x.csv", "tests/fixtures-real/x.csv", "scripts/generate-mock-connections.mjs.csv", "other/scripts/generate-mock-connections.mjs"])
+    assert.ok(rules(p, all).includes("connections-header"), p);
 });
 
 test("guard: excerpts are masked", () => {
@@ -88,13 +101,15 @@ test("guard: excerpts are masked", () => {
   assert.deepEqual(
     hits.map((h) => [h.line, h.rule, h.excerpt]),
     [
-      [1, "connections-header", "first\x20name,last\x20name,url,email\x20address,company,position,connected\x20on,t***"],
-      [2, "email", "a***\x40k***.fi"],
-      [2, "linkedin-url", "linkedin\x2ecom/in/a***"],
+      [1, "connections-header", `${HEADER.toLowerCase()},t***`],
+      [2, "email", "a***@k***.fi"],
+      [2, "linkedin-url", ".../in/a***"],
     ],
   );
   const shown = hits.map((h) => h.excerpt).join(" ");
   for (const secret of ["aino.kallio", "konepaja.fi", "aino-kallio", "Kallio"]) assert.ok(!shown.includes(secret), secret);
+  // A masked excerpt pasted somewhere is not a hit itself.
+  assert.deepEqual(rules("issue.txt", hits.slice(1).map((h) => h.excerpt).join("\n")), []);
 });
 
 test("guard: never matches its own source, the checker, the hooks or this test", () => {
@@ -107,29 +122,71 @@ test("guard: never matches its own source, the checker, the hooks or this test",
 });
 
 test("guard: --staged checks what is staged, lists path:line rule and prints no personal data", () => {
-  const repo = fs.mkdtempSync(path.join(os.tmpdir(), "guard-"));
-  const git = (...args: string[]) => execFileSync("git", args, { cwd: repo });
-  git("init", "-q");
-  fs.writeFileSync(path.join(repo, "notes.md"), "Nothing personal.\n");
+  const { dir, git, write } = tmpRepo();
+  write("notes.md", "Nothing personal.\n");
   git("add", "notes.md");
-  assert.equal(check(repo, "--staged").status, 0);
+  assert.equal(check(dir, "--staged").status, 0);
 
-  fs.mkdirSync(path.join(repo, "export"));
-  fs.writeFileSync(path.join(repo, "export", "Connections.csv"), `${HEADER}\nAino,Kallio,${PROFILE},${EMAIL},Konepaja,CEO,12 Apr 2024\n`);
-  fs.writeFileSync(path.join(repo, "profile.json"), "{}");
+  fs.mkdirSync(path.join(dir, "export"));
+  write("export/Connections.csv", `${HEADER}\nAino,Kallio,${PROFILE},${EMAIL},Konepaja,CEO,12 Apr 2024\n`);
+  write("profile.json", "{}");
   git("add", ".");
   // Only the staged version counts: the file on disk is clean again.
-  fs.writeFileSync(path.join(repo, "export", "Connections.csv"), "cleaned\n");
-  const r = check(repo, "--staged");
+  write("export/Connections.csv", "cleaned\n");
+  const r = check(dir, "--staged");
   assert.equal(r.status, 1);
-  for (const line of ["export/Connections.csv:1 connections-header", "export/Connections.csv:2 email (a***\x40k***.fi)", "export/Connections.csv:2 linkedin-url (linkedin\x2ecom/in/a***)", "profile.json data-file (profile.json)"])
+  for (const line of ["export/Connections.csv:1 connections-header", "export/Connections.csv:2 email (a***@k***.fi)", "export/Connections.csv:2 linkedin-url (.../in/a***)", "profile.json data-file (profile.json)"])
     assert.ok(r.stderr.includes(line), line);
   for (const secret of ["aino.kallio", "aino-kallio", "Kallio"]) assert.ok(!(r.stdout + r.stderr).includes(secret), secret);
 
   // --tracked reads every file git tracks (staged ones too) as it is on disk.
-  const t = check(repo, "--tracked");
+  const t = check(dir, "--tracked");
   assert.equal(t.status, 1);
   assert.ok(t.stderr.includes("profile.json data-file"));
   assert.ok(!t.stderr.includes("export/Connections.csv"));
-  fs.rmSync(repo, { recursive: true, force: true });
+  fs.rmSync(dir, { recursive: true, force: true });
+});
+
+test("guard: the pre-push hook refuses data committed with --no-verify and deleted in a later commit", () => {
+  const remote = tmpRepo("--bare");
+  const { dir, git, write } = tmpRepo();
+  git("config", "core.hooksPath", path.join(ROOT, "scripts", "hooks"));
+  git("remote", "add", "origin", remote.dir);
+  const push = (to: string) => spawnSync("git", ["push", "-q", "origin", `HEAD:${to}`], { cwd: dir, env: ENV, encoding: "utf8" });
+  write("README.md", "Notes.\n");
+  git("add", ".");
+  git("commit", "-qm", "Start");
+  const start = git("rev-parse", "HEAD");
+  assert.equal(push("main").status, 0, "a clean new branch goes through");
+
+  write("notes.txt", `Aino\n${EMAIL}\n`);
+  git("add", "notes.txt");
+  git("commit", "-q", "--no-verify", "-m", "Add notes");
+  const bad = git("rev-parse", "--short=7", "HEAD");
+  git("rm", "-q", "notes.txt");
+  git("commit", "-qm", "Remove notes");
+  assert.equal(check(dir, "--tracked").status, 0, "the tip alone is clean");
+
+  const line = `${bad} notes.txt:2 email (a***@k***.fi)`;
+  const r = push("main");
+  assert.equal(r.status, 1, "refused");
+  assert.ok(r.stderr.includes(line), r.stderr);
+  assert.ok(!r.stderr.includes(EMAIL));
+  assert.equal(remote.git("rev-parse", "main"), start, "nothing was pushed");
+  // A new branch: every commit no remote branch has.
+  const nb = push("feature");
+  assert.equal(nb.status, 1);
+  assert.ok(nb.stderr.includes(line), nb.stderr);
+  // CI runs the same check over a range.
+  const ci = check(dir, "--commits", `${start}..HEAD`);
+  assert.equal(ci.status, 1);
+  assert.ok(ci.stderr.includes(line), ci.stderr);
+
+  // With the commit rewritten away, the push goes through.
+  git("reset", "-q", "--hard", start);
+  write("notes.txt", "Aino\n");
+  git("add", "notes.txt");
+  git("commit", "-qm", "Add notes");
+  assert.equal(push("main").status, 0);
+  for (const d of [dir, remote.dir]) fs.rmSync(d, { recursive: true, force: true });
 });

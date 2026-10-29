@@ -171,13 +171,15 @@ answers only on your machine.
   deleted after 90 days unless you set a status.
 - **Deleting:** Settings → Delete my data, or one network at a time.
 - **Not in git:** `npm install` sets up hooks (`npm run hooks`) that refuse
-  a commit or push holding personal data, and CI checks every push and pull
-  request. They look for a LinkedIn Connections header, email addresses in
-  .csv, .json and .txt files, LinkedIn profile URLs, and any `profile.json`
-  or `state.json` (`data/demo/` and `tests/fixtures/` are invented and
-  skipped). This is a backstop that catches common file shapes, not every
-  piece of personal data: a name and title pasted into a note, a screenshot
-  or a renamed export can get through. Keeping real data outside the repo
+  a commit holding personal data, and a push when any commit in it does, even
+  one a later commit cleaned up. CI checks the files on every push and every
+  commit of a pull request. They look for a LinkedIn Connections header,
+  email addresses in .csv, .json and .txt files, LinkedIn profile URLs, and
+  any `profile.json` or `state.json`. Invented data is skipped: `data/demo/`,
+  `tests/fixtures/` and `scripts/generate-mock-connections.mjs`. This is a
+  backstop that catches common file shapes, not every piece of personal
+  data: a name and title pasted into a note, a screenshot or a renamed
+  export can get through. Keeping real data outside the repo
   (above) is what keeps it out. Run it yourself with
   `npm run check:personal-data`.
 
