@@ -2,6 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
+import { PROFILE } from "./fixtures/profile-urls.ts";
 
 const { parseConnections } = await import("../lib/ingest.ts");
 const { isoDate } = await import("../lib/normalize.ts");
@@ -40,7 +41,7 @@ test("import: reordered and extra columns are read by name", () => {
   assert.equal(records[0].last, "Kallio");
   assert.equal(records[0].company, "Esimerkki Konepaja Oy");
   assert.equal(records[0].position, "Tuotantojohtaja");
-  assert.equal(records[0].url, "https://www.linkedin.com/in/aino-kallio-3f2a");
+  assert.equal(records[0].url, PROFILE.ainoKallio3f2a);
   assert.equal(records[1].connectedOn, "2023-01-03");
 });
 

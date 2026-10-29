@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
+import { PROFILE } from "./fixtures/profile-urls.ts";
 
 // Offline, against a throwaway data dir. Every person is invented.
 const dir = fs.mkdtempSync(path.join(os.tmpdir(), "vnet-react-"));
@@ -28,13 +29,13 @@ const co = (businessId: string, name: string, tol: string): PrhCompany => ({ bus
 const res = (raw: string, company: PrhCompany): Resolved => ({ raw, key: looseKey(raw), status: "verified", company, candidates: [company], note: "", by: "rule", foreign: false });
 
 const YOU = HEAD + [
-  "Laura,Mäkelä,https://www.linkedin.com/in/laura-makela,,Lunawood,Operations Director,12 Apr 2019",
-  "Mika,Laine,https://www.linkedin.com/in/mika-laine,,Lunawood Oy,Production Planner,01 Mar 2024",
-  "Mikko,Korhonen,https://www.linkedin.com/in/mikko-korhonen-11,,Reaktor,Software Developer,05 May 2021",
-  "Anna,Virtanen,https://www.linkedin.com/in/anna-virtanen,,Kumera Drives Oy,Head of Production,10 Oct 2025",
-  "Sara,Holm,https://www.linkedin.com/in/sara-holm,,Spotify AB,Engineer,10 Oct 2025",
+  `Laura,Mäkelä,${PROFILE.lauraMakela},,Lunawood,Operations Director,12 Apr 2019`,
+  `Mika,Laine,${PROFILE.mikaLaine},,Lunawood Oy,Production Planner,01 Mar 2024`,
+  `Mikko,Korhonen,${PROFILE.mikkoKorhonen11},,Reaktor,Software Developer,05 May 2021`,
+  `Anna,Virtanen,${PROFILE.annaVirtanen},,Kumera Drives Oy,Head of Production,10 Oct 2025`,
+  `Sara,Holm,${PROFILE.saraHolm},,Spotify AB,Engineer,10 Oct 2025`,
 ].join("\n");
-const CO = HEAD + ["Mikko,Korhonen,https://www.linkedin.com/in/mikko-korhonen-22,,Hydroline,CFO,05 May 2022"].join("\n");
+const CO = HEAD + [`Mikko,Korhonen,${PROFILE.mikkoKorhonen22},,Hydroline,CFO,05 May 2022`].join("\n");
 const LUNA = co("0606363-5", "Oy Lunawood Ltd", "16239");
 const resolved = new Map<string, Resolved>([
   ["Lunawood", res("Lunawood", LUNA)],

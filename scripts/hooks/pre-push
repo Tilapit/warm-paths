@@ -1,0 +1,4 @@
+#!/bin/sh
+# Refuses a push when any commit in it holds personal data, even if a later
+# commit removed it. Installed by npm install (npm run hooks).
+exec node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON "$(dirname "$0")/../check-personal-data.ts" --pre-push

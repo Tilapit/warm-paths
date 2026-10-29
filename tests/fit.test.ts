@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
+import { PROFILE } from "./fixtures/profile-urls.ts";
 
 // Fit quality on invented people at invented companies: what keeps a fit at
 // Possible, who is never a decision-maker, the funnel, the intro group, the
@@ -171,7 +172,7 @@ test("emails: blanked when stored, column and rows kept, so row numbers do not c
     assert.deepEqual(after.map(({ email, ...r }) => r), before.map(({ email, ...r }) => r), `${f}: everything else the same`);
     assert.equal(out.blanked, before.filter((r) => r.email).length, f);
   }
-  const withEmail = 'Notes:\n"Some emails are missing."\n\nFirst Name,Last Name,URL,Email Address,Company,Position,Connected On\r\nAino,Aalto,https://www.linkedin.com/in/aino-aalto-em,aino@example.com,"Esimerkki, Oy",CEO,01 Mar 2024\r\n';
+  const withEmail = `Notes:\n"Some emails are missing."\n\nFirst Name,Last Name,URL,Email Address,Company,Position,Connected On\r\nAino,Aalto,${PROFILE.ainoAaltoEm},aino@example.com,"Esimerkki, Oy",CEO,01 Mar 2024\r\n`;
   const o = importNetwork("Mail", withEmail);
   const stored = ownerText(o);
   assert.ok(!stored.includes("@example.com"));

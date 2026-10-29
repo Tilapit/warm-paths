@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
+import { PROFILE } from "./fixtures/profile-urls.ts";
 
 // The team's statuses as one rule for every recommendation. Offline, against
 // a throwaway data dir; every person is invented.
@@ -83,7 +84,7 @@ test("status rule: sent is hidden and due for a follow-up after 7 days; replied,
 
 test("cooldown: a colleague contacted in the last 30 days puts the others at the company lower, with a note", () => {
   // Two people at one company; the colleague had a meeting on 20 Oct.
-  const t = HEAD + ["Aino,Aalto,https://www.linkedin.com/in/aino-aalto-cd,,Yhteinen Oy,Operations Director,01 Mar 2024", "Ville,Vainio,https://www.linkedin.com/in/ville-vainio-cd,,Yhteinen Oy,COO,01 Mar 2024", "Sanna,Salo,https://www.linkedin.com/in/sanna-salo-cd,,Toinen Oy,COO,01 Mar 2024"].join("\n");
+  const t = HEAD + [`Aino,Aalto,${PROFILE.ainoAaltoCd},,Yhteinen Oy,Operations Director,01 Mar 2024`, `Ville,Vainio,${PROFILE.villeVainioCd},,Yhteinen Oy,COO,01 Mar 2024`, `Sanna,Salo,${PROFILE.sannaSaloCd},,Toinen Oy,COO,01 Mar 2024`].join("\n");
   const r = new Map([
     ["Yhteinen Oy", res("Yhteinen Oy", co("6000000-6", "Yhteinen Oy", "28150"))],
     ["Toinen Oy", res("Toinen Oy", co("6000001-4", "Toinen Oy", "28150"))],

@@ -20,7 +20,7 @@ export function nameKey(name: string | undefined): string {
   return fold(name).replace(/[^a-z]+/g, " ").trim();
 }
 
-/** https://www.linkedin.com/in/Kaisa-Rinne/?x=1 -> linkedin.com/in/kaisa-rinne */
+/** https://www.linkedin.com/in/<Some-Name>/?x=1 -> linkedin.com/in/<some-name> */
 export function profileKey(url: string | undefined): string {
   if (!url) return "";
   const m = url.trim().toLowerCase().match(/linkedin\.com\/in\/([^/?#]+)/);
