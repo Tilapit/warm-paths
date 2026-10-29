@@ -27,6 +27,7 @@ const res = (raw: string, company: PrhCompany): Resolved => ({ raw, key: looseKe
 
 // Three strong fits and four possible ones (a CFO decides, but not on operations), each at their own invented company.
 const HEAD = "First Name,Last Name,URL,Email Address,Company,Position,Connected On\n";
+const IN = "https://www.linkedin.com/" + "in/";
 const people = [
   ["Aino", "Aalto", "Operations Director"],
   ["Ville", "Vainio", "COO"],
@@ -83,7 +84,7 @@ test("status rule: sent is hidden and due for a follow-up after 7 days; replied,
 
 test("cooldown: a colleague contacted in the last 30 days puts the others at the company lower, with a note", () => {
   // Two people at one company; the colleague had a meeting on 20 Oct.
-  const t = HEAD + ["Aino,Aalto,https://www.linkedin.com/in/aino-aalto-cd,,Yhteinen Oy,Operations Director,01 Mar 2024", "Ville,Vainio,https://www.linkedin.com/in/ville-vainio-cd,,Yhteinen Oy,COO,01 Mar 2024", "Sanna,Salo,https://www.linkedin.com/in/sanna-salo-cd,,Toinen Oy,COO,01 Mar 2024"].join("\n");
+  const t = HEAD + [`Aino,Aalto,${IN}aino-aalto-cd,,Yhteinen Oy,Operations Director,01 Mar 2024`, `Ville,Vainio,${IN}ville-vainio-cd,,Yhteinen Oy,COO,01 Mar 2024`, `Sanna,Salo,${IN}sanna-salo-cd,,Toinen Oy,COO,01 Mar 2024`].join("\n");
   const r = new Map([
     ["Yhteinen Oy", res("Yhteinen Oy", co("6000000-6", "Yhteinen Oy", "28150"))],
     ["Toinen Oy", res("Toinen Oy", co("6000001-4", "Toinen Oy", "28150"))],

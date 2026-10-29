@@ -168,9 +168,15 @@ is the user's own Claude, through the MCP connector and the skill.
     connections from LinkedIn's Member Data Portability API (EU DMA,
     CONNECTIONS only), token in `.env.local` as `LINKEDIN_DMA_TOKEN` (never
     printed, logged or committed). A real import needs `DATA_DIR`.
-- `DATA_DIR` (default `data/`) moves networks, state and the PRH cache, e.g.
-  `DATA_DIR=data-mine` (`data-*/` is gitignored) for real networks next
-  to the demo; its `profile.json` overrides `config/profile.json`.
+- `DATA_DIR` (default `data/`) moves networks, state and the PRH cache.
+  For real networks use an absolute path outside the repo, e.g.
+  `DATA_DIR="$HOME/warm-paths-data"`; its `profile.json` overrides
+  `config/profile.json`.
+- `npm run check:personal-data [-- --staged]`: the personal-data guard
+  (`scripts/personal-data.ts`), also run by the git hooks in
+  `scripts/hooks/` (installed by `npm install`) and in CI. Test data must not
+  look real: build profile URLs, emails and the Connections header from
+  parts, as `tests/no-personal-data.test.ts` does.
 
 ## Design
 

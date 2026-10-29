@@ -1,0 +1,4 @@
+#!/bin/sh
+# Refuses a push while a tracked file holds personal data. Installed by npm install (npm run hooks).
+cd "$(git rev-parse --show-toplevel)" || exit 2
+exec node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-personal-data.ts --tracked

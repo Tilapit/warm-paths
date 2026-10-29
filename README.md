@@ -59,7 +59,20 @@ companies, with an invented profile (`data/demo/profile.json`). It works
 offline: PRH matches and the radar ship as snapshots. `APP_TODAY` freezes
 "today" so the demo reads the same every time.
 
-Then use your own data:
+Then use your own data. Keep it in a folder outside the repo: an absolute
+`DATA_DIR`, for example
+
+```sh
+DATA_DIR="$HOME/warm-paths-data" npm run dev
+```
+
+The default `data/` folder is gitignored, but it still sits inside a public
+repo: one `git add -f`, a changed `.gitignore` or `git clean -x` (which
+deletes ignored files) is enough to publish or lose it, and tools that pack
+or index the whole folder pick it up. Outside the repo, git cannot see it at
+all, and it survives a fresh clone. The networks, statuses, PRH cache and
+your profile all go there. In `.env.local`, write the path out in full: `~`
+is not expanded there.
 
 1. LinkedIn → Settings → Data privacy → Get a copy of your data →
    Connections. LinkedIn emails a zip with `Connections.csv`.
@@ -76,7 +89,7 @@ Optional: `ANTHROPIC_API_KEY` in `.env.local` lets the app itself write the
 "Possible angle" and "Draft here" texts. Without it, templates are used.
 
 Your profile is saved in `config/profile.json` (or `DATA_DIR/profile.json`
-when you run with another data folder, e.g. `DATA_DIR=data-mine`); both are
+when you run with another data folder, as above); `config/profile.json` is
 gitignored. `docs/example-profile.md` shows one.
 
 ## Tell Claude what you're looking for
@@ -157,6 +170,16 @@ answers only on your machine.
   only. Reactors you are not connected to are stored only as pasted and
   deleted after 90 days unless you set a status.
 - **Deleting:** Settings → Delete my data, or one network at a time.
+- **Not in git:** `npm install` sets up hooks (`npm run hooks`) that refuse
+  a commit or push holding personal data, and CI checks every push and pull
+  request. They look for a LinkedIn Connections header, email addresses in
+  .csv, .json and .txt files, LinkedIn profile URLs, and any `profile.json`
+  or `state.json` (`data/demo/` and `tests/fixtures/` are invented and
+  skipped). This is a backstop that catches common file shapes, not every
+  piece of personal data: a name and title pasted into a note, a screenshot
+  or a renamed export can get through. Keeping real data outside the repo
+  (above) is what keeps it out. Run it yourself with
+  `npm run check:personal-data`.
 
 Sources: your LinkedIn Connections export (or LinkedIn's Member Data
 Portability API with your own token, `npm run linkedin:sync`), and PRH YTJ

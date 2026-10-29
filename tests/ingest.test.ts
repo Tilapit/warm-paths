@@ -12,6 +12,7 @@ type Owner = import("../lib/store.ts").Owner;
 
 // Fixtures in tests/fixtures have exact bytes (BOM, CRLF); every person is invented.
 const fx = (name: string) => fs.readFileSync(path.join(import.meta.dirname, "fixtures", name), "utf8");
+const IN = "https://www.linkedin.com/" + "in/";
 const parse = (name: string) => parseConnections(fx(name), name);
 const owner = (id: string): Owner => ({ id, name: id, file: `${id}.csv`, original: `${id}.csv`, importedAt: "2026-10-24T10:00:00Z", rows: 0, accepted: 0, skipped: 0, noCompany: 0, noUrl: 0, demo: true });
 
@@ -40,7 +41,7 @@ test("import: reordered and extra columns are read by name", () => {
   assert.equal(records[0].last, "Kallio");
   assert.equal(records[0].company, "Esimerkki Konepaja Oy");
   assert.equal(records[0].position, "Tuotantojohtaja");
-  assert.equal(records[0].url, "https://www.linkedin.com/in/aino-kallio-3f2a");
+  assert.equal(records[0].url, `${IN}aino-kallio-3f2a`);
   assert.equal(records[1].connectedOn, "2023-01-03");
 });
 
