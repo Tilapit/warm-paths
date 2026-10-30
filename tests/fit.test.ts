@@ -46,6 +46,35 @@ test("titles: students, trainees, board years and event roles never decide", () 
   for (const t of ["International Sales Director", "Head of Operations", "Tuotantojohtaja", "COO"]) assert.equal(analyseTitle(t, DEMO_PROFILE.roles).decisionMaker, true, t);
 });
 
+test("titles: a partner owns the firm; a principal or an investor decides when the profile asks for them", () => {
+  const level = (t: string, roles: string[] = []) => analyseTitle(t, roles).level;
+  for (const t of ["Managing Partner", "General Partner", "Founding Partner at Example Ventures"]) assert.equal(level(t), "exec", t);
+  for (const t of ["Partner", "Partner, Example Capital", "Venture Partner", "Associate Partner", "Partner, Example Law Oy", "Investment Director", "Sijoitusjohtaja"]) {
+    assert.equal(level(t), "director", t);
+    assert.equal(analyseTitle(t, []).decisionMaker, true, t);
+  }
+  // A partner is a role here, not an owner.
+  for (const [t, lv] of [["HR Business Partner", "other"], ["Channel Partner Lead", "manager"], ["Partner Manager", "manager"], ["Partnerships Lead", "manager"], ["Partner Success Specialist", "other"], ["Strategic Partner", "other"]] as const) {
+    assert.equal(level(t), lv, t);
+    assert.equal(analyseTitle(t, ["partner"]).decisionMaker, false, t);
+  }
+  // Manager level: a decision-maker only when the title matches a target role.
+  for (const t of ["Principal", "Principal, Example Ventures", "Angel Investor", "Business Angel", "Pääomasijoittaja", "Riskkapitalinvesterare"]) {
+    assert.equal(level(t), "manager", t);
+    assert.equal(analyseTitle(t, []).decisionMaker, false, `${t}, no roles`);
+  }
+  for (const [t, role] of [["Principal", "principal"], ["Angel Investor", "investor"], ["Pääomasijoittaja", "investor"], ["Riskkapitalinvesterare", "investor"], ["Business Angel", "investor"], ["Partner", "partner"]]) {
+    const r = analyseTitle(t, [role]);
+    assert.equal(r.decisionMaker, true, `${t} for "${role}"`);
+    assert.equal(r.matched, role, t);
+  }
+  // Not an investor's own title.
+  for (const t of ["Principal Engineer", "Principal Consultant", "Investor Relations", "Investor Relations Coordinator", "Investment Analyst", "Associate, Example Ventures"])
+    assert.equal(analyseTitle(t, ["principal", "investor"]).decisionMaker, false, t);
+  // A student stays a student.
+  assert.equal(analyseTitle("Student Partner 2026", ["partner"]).decisionMaker, false);
+});
+
 // One person per rule, each at their own invented company in manufacturing.
 const people = [
   ["Aino", "Aalto", "Esimerkki Konepaja Oy", "Operations Director"], // verified, old: strong
@@ -130,15 +159,28 @@ test("radar: each person we know is a decision-maker or can introduce", () => {
 
 test("profile: plain-language industries map to TOL codes, shown back; unknown words are not guessed", () => {
   const m = mapIndustries(["venture capital", "logistics", "62", "10–33", "underwater basket weaving"]);
-  assert.deepEqual(m.map((x) => ("rules" in x ? x.rules.map((r) => r.code) : "unmapped")), [["6430", "6499", "6630"], ["49-53"], ["62"], ["10-33"], "unmapped"]);
+  assert.deepEqual(m.map((x) => ("rules" in x ? x.rules.map((r) => r.code) : "unmapped")), [["6431", "6499", "6630"], ["49-53"], ["62"], ["10-33"], "unmapped"]);
   assert.equal(industryRule("62010", DEMO_PROFILE), null);
   // No industries and no keywords: any organisation is a target.
   assert.equal(targetRule(EMPTY_PROFILE, "84110", ["Valtio"])?.code, "any");
   // Keywords: a word start in the name, whatever the industry.
-  const vc = { ...EMPTY_PROFILE, industries: [{ code: "6430", label: "Funds" }], keywords: ["ventures", "capital"] };
-  assert.equal(targetRule(vc, "70220", ["Example Ventures Oy"])?.code, "keyword");
-  assert.equal(targetRule(vc, "64300", ["Rahasto Oy"])?.code, "6430");
-  assert.equal(targetRule(vc, "62010", ["Softa Oy"]), null);
+  const vc = { ...EMPTY_PROFILE, industries: [{ code: "6431", label: "Funds" }], keywords: ["ventures", "capital"] };
+  assert.equal(targetRule(vc, "70200", ["Example Ventures Oy"])?.code, "keyword");
+  assert.equal(targetRule(vc, "64310", ["Rahasto Oy"])?.code, "6431");
+  assert.equal(targetRule(vc, "62100", ["Softa Oy"]), null);
+});
+
+test("profile: plain-language industries map to TOL 2025 codes, as PRH gives them", () => {
+  const codes = (input: string) => {
+    const m = mapIndustries([input])[0];
+    return "rules" in m ? m.rules : [];
+  };
+  const profile = (input: string) => ({ ...EMPTY_PROFILE, industries: codes(input) });
+  // TOL 2025 split 6430 into 6431 (funds) and 6432 (trusts and estate accounts),
+  // renumbered 6201 as 6210 and moved vehicle trade (45) into 46, 47 and 95.
+  for (const [input, tol] of [["venture capital", "64310"], ["games", "62100"], ["games", "58210"], ["automotive", "46710"], ["automotive", "47810"], ["automotive", "95310"], ["automotive", "29100"]])
+    assert.ok(industryRule(tol, profile(input)), `${input} covers ${tol}`);
+  assert.equal(industryRule("64320", profile("venture capital")), null, "trusts and estate accounts are not funds");
 });
 
 test("profile: empty by default, partial updates, add and remove, the demo's only for demo networks", async () => {

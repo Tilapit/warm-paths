@@ -114,7 +114,7 @@ profile. With an empty one, it asks:
 >
 > **You:** Yes. Sign as "– Alex".
 >
-> **Claude:** *(set_profile)* Saved. "Venture capital" maps to TOL 6430,
+> **Claude:** *(set_profile)* Saved. "Venture capital" maps to TOL 6431,
 > 6499 and 6630 (funds, other financial services, fund management): check
 > that fits. *(this_week)* Your five for this week: …
 >

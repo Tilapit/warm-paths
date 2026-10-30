@@ -20,7 +20,7 @@ mention it.
    language), organisation keywords, organisations to leave out, the ask,
    tone (including language) and signature. Show it as a short list.
 3. Call `set_profile` only after they confirm. Show the `industries` mapping
-   it returns ("venture capital → TOL 6430, 6499, 6630") and ask them to
+   it returns ("venture capital → TOL 6431, 6499, 6630") and ask them to
    check it; a phrase with no mapping is better as a keyword.
 4. If `source` is `demo`, say it is the invented demo profile and offer to
    set theirs.
