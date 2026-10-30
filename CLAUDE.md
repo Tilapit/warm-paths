@@ -22,6 +22,8 @@ is the user's own Claude, through the MCP connector and the skill.
   the user is looking for. Claude proposes a profile and calls `set_profile`
   only after the user confirms. Plain-language industries are mapped to TOL
   codes (`mapIndustries` in `lib/industry.ts`) and the mapping is shown back.
+  The local model's profile suggestions (below) go into the form only when
+  the user ticks them, and into the profile only when they save.
 
 - **Never fabricate.** No invented connections, reactions, comments, customer
   relationships or company facts. Demo people are invented and labelled as
@@ -72,6 +74,22 @@ is the user's own Claude, through the MCP connector and the skill.
   and the "Draft here" message (both labelled Inferred, `lib/claude.ts`),
   and only when a key is set. Through MCP, Claude picks filters and writes
   text.
+- **Local model (optional, Ollama).** Off unless `OLLAMA_MODEL` is set.
+  - It only talks to this machine: http to 127.x.x.x, ::1 or localhost
+    resolving only there. Anything else in `OLLAMA_URL` is refused before a
+    request. No proxy, no redirects (`lib/ollama.ts`).
+  - It suggests roles, keywords and plain-language industries from the goal
+    (`lib/suggest-profile.ts`). Industries are mapped by `mapIndustries`, never
+    by the model. Names from the networks, organisation names and anything
+    that is not a plain term are left out.
+  - With no Anthropic key, it writes the angle and the draft from the same
+    facts. A text that uses a name, number, link or placeholder not in the
+    facts, or says where a fact came from, is rejected (`lib/model-check.ts`)
+    and the template is shown.
+  - Every reply is checked in code; a wrong shape is asked for once more,
+    then rejected. Thinking is off and temperature 0.
+  - Title classification by the model is designed but not built
+    (`docs/title-classification.md`).
 - **Nothing is sent from the app.** Status buttons (and MCP `set_status`)
   record what the team did.
 - **Statuses are one team-wide rule for every recommendation** (This week,
@@ -90,6 +108,7 @@ is the user's own Claude, through the MCP connector and the skill.
   - Only company names and business IDs go to PRH.
   - One person's role and company facts (never the name), and the user's
     goal, go to Claude.
+  - The local model gets the goal and the same facts, on this machine only.
   - No emails are stored: Email Address values are blanked when a CSV is
     stored (column and rows kept, so row numbers hold).
   - Logs contain ids, not names.
@@ -118,6 +137,10 @@ is the user's own Claude, through the MCP connector and the skill.
 - `lib/profile.ts`: the profile on disk (read, effective with the demo's,
   `applyProfileInput` for the app and `set_profile`).
 - `lib/voice.ts`: message rules, templates and forbidden words.
+- `lib/ollama.ts`: the local model client (local address check, chat, JSON
+  from a reply, status for Settings). `lib/suggest-profile.ts`: profile
+  suggestions and their checks. `lib/model-check.ts`: what a local angle or
+  draft may say.
 - `lib/network.ts`: the merged model:
   - knownBy, and the suggested sender (who connected first)
   - fit, approach
@@ -168,6 +191,9 @@ is the user's own Claude, through the MCP connector and the skill.
     connections from LinkedIn's Member Data Portability API (EU DMA,
     CONNECTIONS only), token in `.env.local` as `LINKEDIN_DMA_TOKEN` (never
     printed, logged or committed). A real import needs `DATA_DIR`.
+- `OLLAMA_MODEL` (e.g. `qwen3.6:35b`) turns the local model on;
+  `OLLAMA_URL` defaults to `http://127.0.0.1:11434` and must be this machine.
+  Tests never call it: they pass a fake transport.
 - `DATA_DIR` (default `data/`) moves networks, state and the PRH cache.
   For real networks use an absolute path outside the repo, e.g.
   `DATA_DIR="$HOME/warm-paths-data"`; its `profile.json` overrides

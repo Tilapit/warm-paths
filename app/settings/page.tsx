@@ -9,6 +9,8 @@ import { DeleteAll, DeleteEngaged, DeleteOwner, MatchReview, ProfileEditor, type
 import { MatchProgress } from "@/components/MatchProgress";
 import { ReactionsPanel } from "@/components/ReactionsPanel";
 import { dmaStatus } from "@/lib/linkedin-dma.ts";
+import { ollamaModel, ollamaStatus } from "@/lib/ollama.ts";
+import { claudeAvailable } from "@/lib/claude.ts";
 
 export const dynamic = "force-dynamic";
 
@@ -54,6 +56,8 @@ export default async function Settings({ searchParams }: { searchParams: Promise
   const token = !!mcpToken();
   // Whether a LinkedIn token is set; the token itself never leaves the server.
   const dma = dmaStatus();
+  // Whether a local model is set and answers. Asked only when OLLAMA_MODEL is set.
+  const local = await ollamaStatus();
   const pct = (n: number, of: number) => `${of ? Math.round((100 * n) / of) : 0}%`;
   return (
     <>
@@ -177,7 +181,7 @@ export default async function Settings({ searchParams }: { searchParams: Promise
           <p className="small muted" style={{ marginBottom: 10, maxWidth: 820 }}>
             What you are looking for, in your own words. It decides who counts as a fit and how messages read. Saved in {net.profileSource === "data" ? "the data folder's profile.json" : "config/profile.json"}; Claude can change it too (get_profile, set_profile).
           </p>
-          <ProfileEditor profile={net.profile} demo={net.profileSource === "demo"} />
+          <ProfileEditor profile={net.profile} demo={net.profileSource === "demo"} localModel={ollamaModel() || undefined} />
         </section>
 
         <section className="section" id="matches">
@@ -225,7 +229,7 @@ export default async function Settings({ searchParams }: { searchParams: Promise
         <details className="section advanced" id="advanced">
           <summary>
             <h2>Advanced</h2>
-            <span className="small muted">Command-line import, the Claude connector and its token.</span>
+            <span className="small muted">Command-line import, the local model, the Claude connector and its token.</span>
           </summary>
           <h3>LinkedIn import from the command line</h3>
           <div className="card stack" id="linkedin" >
@@ -244,6 +248,23 @@ export default async function Settings({ searchParams }: { searchParams: Promise
             ) : null}
             <pre className="code">{`npm run linkedin:sync -- --owner "Name" --dry-run\nDATA_DIR=data-mine npm run linkedin:sync -- --owner "Name"`}</pre>
             <p className="xs faint">The first line only counts what came back; the second imports into data-mine/, next to this demo, and looks the companies up in PRH.</p>
+          </div>
+
+          <h3 id="local-model">Local model</h3>
+          <div className="card stack">
+            <div className="row" style={{ justifyContent: "space-between" }}>
+              <b style={{ fontWeight: 600 }}>Ollama, on this machine</b>
+              <span className={local.enabled && local.ok ? "pill green" : local.enabled ? "pill amber" : "pill"}>{local.enabled ? (local.ok ? `${local.model} answers` : "Set, not answering") : "Off"}</span>
+            </div>
+            <p className="small muted">
+              Optional. A model running in Ollama on this machine can suggest roles, industries and keywords from your goal (Profile above; you choose what to keep), and write the &quot;Possible angle&quot; and &quot;Draft here&quot; texts {claudeAvailable() ? "when no ANTHROPIC_API_KEY is set (one is set now, so Claude writes them)" : "instead of the templates"}. Its text is checked against the facts and replaced by the template when it uses anything else. It never decides who fits or the order. Only an address on this machine is used.
+            </p>
+            {local.enabled ? (
+              <p className="small">
+                {local.model} at {local.url}.{local.error ? <span style={{ color: "var(--amber)" }}> {local.error}</span> : null}
+              </p>
+            ) : null}
+            <pre className="code">{`# .env.local\nOLLAMA_MODEL=qwen3.6:35b\n# OLLAMA_URL=http://127.0.0.1:11434   (the default; only this machine)`}</pre>
           </div>
 
           <h3 id="connector">Claude connector</h3>

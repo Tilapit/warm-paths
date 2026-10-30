@@ -88,6 +88,23 @@ is not expanded there.
 Optional: `ANTHROPIC_API_KEY` in `.env.local` lets the app itself write the
 "Possible angle" and "Draft here" texts. Without it, templates are used.
 
+Optional, and nothing leaves your machine: a model running in
+[Ollama](https://ollama.com) on this machine. Set `OLLAMA_MODEL` in
+`.env.local` (for example `qwen3.6:35b`; `OLLAMA_URL` defaults to
+`http://127.0.0.1:11434`, and any address that is not this machine is
+refused). It can then:
+
+- suggest target roles, industries and organisation keywords in English,
+  Finnish and Swedish from your goal. You tick what to keep, and nothing is
+  saved until you save the profile. Industries are mapped to TOL codes by
+  code, not by the model.
+- write the "Possible angle" and "Draft here" texts when no
+  `ANTHROPIC_API_KEY` is set. A text that uses a name, number or link not in
+  the facts is replaced by the template.
+
+It never decides who fits or the order. Settings → Advanced → Local model
+shows whether it answers. Without `OLLAMA_MODEL`, everything works as above.
+
 Your profile is saved in `config/profile.json` (or `DATA_DIR/profile.json`
 when you run with another data folder, as above); `config/profile.json` is
 gitignored. `docs/example-profile.md` shows one.
@@ -164,7 +181,8 @@ answers only on your machine.
 - **Goes out:** only company names and business IDs, to PRH open data. With
   an API key, one person's role and company facts and your goal go to the
   Claude API; their name is replaced by a placeholder and put back locally,
-  and your signature is added locally.
+  and your signature is added locally. A local model (`OLLAMA_MODEL`) gets your
+  goal and the same facts, but runs on this machine: nothing goes out.
 - **Never:** no scraping, no emails stored (the Email column is blanked on
   import), nothing sent to anyone from the app. People merge by profile URL
   only. Reactors you are not connected to are stored only as pasted and

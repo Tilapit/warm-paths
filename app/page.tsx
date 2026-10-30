@@ -6,6 +6,7 @@ import { MatchProgress } from "@/components/MatchProgress";
 import { FirstRun } from "@/components/FirstRun";
 import { ProfileEditor } from "@/components/SettingsParts";
 import { profileIsEmpty } from "@/lib/industry.ts";
+import { ollamaModel } from "@/lib/ollama.ts";
 import { canIntroduce, engagedNotConnected, followUps, funnel, thisWeek, type FollowUp, type IntroPick, type WeekPick } from "@/lib/queries.ts";
 
 export const dynamic = "force-dynamic";
@@ -24,7 +25,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ p
           A job, investors, customers, advice, speakers for an event: say it in your own words. Your {net.stats.contacts.toLocaleString("en-US")} connections are then ranked for it, by code, on this machine. You can change it any time here or by telling Claude.
         </p>
         <div className="card" style={{ padding: 20 }}>
-          <ProfileEditor profile={net.profile} setup />
+          <ProfileEditor profile={net.profile} setup localModel={ollamaModel() || undefined} />
         </div>
         <p className="small muted" style={{ marginTop: 14 }}>
           An example profile is in docs/example-profile.md. <a href="/?skip=1">Skip: show the network without a profile</a>
