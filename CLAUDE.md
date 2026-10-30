@@ -1,3 +1,5 @@
+Read ~/dev/ROADMAP.md first: goal, global rules, human gates.
+
 # Warm Paths
 
 Generic version of a prototype built for Velho's challenge at the Aaltoes
