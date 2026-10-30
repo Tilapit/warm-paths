@@ -5,7 +5,7 @@ import "./globals.css";
 import { Logo, Nav } from "@/components/Nav";
 import { readOwners } from "@/lib/store.ts";
 import { loadSignals } from "@/lib/signals.ts";
-import { claudeAvailable } from "@/lib/claude.ts";
+import { claudeAvailable, writer } from "@/lib/claude.ts";
 
 export const metadata: Metadata = { title: "Warm Paths", description: "Who in your network could help with what you are looking for, and why." };
 export const dynamic = "force-dynamic";
@@ -14,6 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const owners = readOwners();
   const demo = owners.length > 0 && owners.every((o) => o.demo);
   const signals = loadSignals();
+  const w = writer();
   return (
     <html lang="en" className={GeistSans.variable}>
       <body>
@@ -33,7 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <footer className="foot">
           <span>Data stays on this machine. Only company names go to PRH{claudeAvailable() ? "; one person's role and company facts go to Claude when you open them" : ""}.</span>
           <span>{signals ? `Trade register notices ${signals.start} to ${signals.end}` : "No trade register notices fetched yet"}</span>
-          <span>{claudeAvailable() ? "Angles: Claude" : "Angles: templates (no API key)"}</span>
+          <span>{w === "claude" ? "Angles: Claude" : w === "local" ? "Angles: local model" : "Angles: templates (no API key)"}</span>
         </footer>
       </body>
     </html>

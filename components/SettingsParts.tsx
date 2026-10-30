@@ -74,11 +74,16 @@ function MappingList({ items }: { items: Mapping[] }) {
   );
 }
 
+type Suggestion = { roles: string[]; keywords: string[]; industries: Mapping[]; industryKeywords: string[]; noEmployeesOk: boolean; left: number };
+
 /**
  * The profile in the user's own words. `setup`: the short first-run form, one
  * text box and optional fields. Otherwise every field, for Settings.
+ * `localModel`: the local model's name when one is set; it can then suggest
+ * roles, industries and keywords from the goal, which go into the form only
+ * when the user ticks them, and into the profile only when they save.
  */
-export function ProfileEditor({ profile, setup, demo }: { profile: Profile; setup?: boolean; demo?: boolean }) {
+export function ProfileEditor({ profile, setup, demo, localModel }: { profile: Profile; setup?: boolean; demo?: boolean; localModel?: string }) {
   const router = useRouter();
   const [goal, setGoal] = useState(profile.goal);
   const [roles, setRoles] = useState(profile.roles.join(", "));
@@ -93,6 +98,78 @@ export function ProfileEditor({ profile, setup, demo }: { profile: Profile; setu
   const [employer, setEmployer] = useState(requiresEmployer(profile));
   const [mapping, setMapping] = useState<Mapping[]>([]);
   const [msg, setMsg] = useState("");
+  const [open, setOpen] = useState(false);
+  const [suggestion, setSuggestion] = useState<Suggestion | null>(null);
+  const [picked, setPicked] = useState<Set<string>>(new Set());
+  const [suggesting, setSuggesting] = useState(false);
+  async function suggest() {
+    setSuggesting(true);
+    setMsg("");
+    const r = await fetch("/api/profile/suggest", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ goal }) });
+    const j = await r.json().catch(() => ({ error: "Could not get suggestions." }));
+    setSuggesting(false);
+    if (!r.ok) {
+      setSuggestion(null);
+      return setMsg(j.error ?? "Could not get suggestions.");
+    }
+    const s = j.suggestion as Suggestion;
+    setSuggestion(s);
+    // Nothing ticked: the user picks.
+    setPicked(new Set());
+  }
+  /** Puts the ticked suggestions into the form. Nothing is saved until Save. */
+  function addPicked() {
+    const s = suggestion!;
+    const has = (k: string) => picked.has(k);
+    const join = (cur: string, add: string[]) => {
+      const now = csv(cur);
+      return [...now, ...add.filter((a) => !now.some((c) => c.toLowerCase() === a.toLowerCase()))].join(", ");
+    };
+    setRoles(join(roles, s.roles.filter((x) => has(`role:${x}`))));
+    setKeywords(join(keywords, [...s.keywords, ...s.industryKeywords].filter((x) => has(`kw:${x}`))));
+    setWords(join(words, s.industries.filter((x) => has(`ind:${x.input}`)).map((x) => x.input)));
+    if (has("employer")) setEmployer(false);
+    setSuggestion(null);
+    setOpen(true);
+    setMsg("Added to the form. Check the fields, then save: nothing is saved until you do.");
+  }
+  const tick = (k: string, label: React.ReactNode) => (
+    <label key={k} className="small" style={{ display: "inline-flex", gap: 6, alignItems: "center", marginRight: 14 }}>
+      <input type="checkbox" checked={picked.has(k)} onChange={(e) => setPicked((p) => { const n = new Set(p); if (e.target.checked) n.add(k); else n.delete(k); return n; })} />
+      {label}
+    </label>
+  );
+  const s = suggestion;
+  const empty = s && !s.roles.length && !s.keywords.length && !s.industries.length && !s.industryKeywords.length && !(s.noEmployeesOk && employer);
+  const suggestPanel = s ? (
+    <div className="card stack" style={{ gap: 8 }}>
+      <div className="row" style={{ justifyContent: "space-between" }}>
+        <b style={{ fontWeight: 600 }}>Suggestions</b>
+        <span className="pill inferred">Inferred · local model</span>
+      </div>
+      <p className="xs muted">From your goal only, by {localModel} on this machine, in English, Finnish and Swedish; the translations are the model&apos;s, so check them. Tick what fits: it goes into the form, and nothing is saved until you save the profile.</p>
+      {empty ? <p className="small">No new suggestions: what it proposed is already in your profile.</p> : null}
+      {s.roles.length ? <div><span className="small muted">Roles: </span>{s.roles.map((x) => tick(`role:${x}`, x))}</div> : null}
+      {s.industries.length ? (
+        <div>
+          <span className="small muted">Industries: </span>
+          {s.industries.map((m) => tick(`ind:${m.input}`, <>{m.input} <span className="muted">→ {m.label} (TOL {m.rules!.map((r) => r.code.replace("-", "–")).join(", ")})</span></>))}
+        </div>
+      ) : null}
+      {s.keywords.length ? <div><span className="small muted">Organisation keywords: </span>{s.keywords.map((x) => tick(`kw:${x}`, x))}</div> : null}
+      {s.industryKeywords.length ? <div><span className="small muted">No TOL group, as keywords instead: </span>{s.industryKeywords.map((x) => tick(`kw:${x}`, x))}</div> : null}
+      {s.noEmployeesOk && employer ? <div>{tick("employer", "Turn off \u201cHide companies with no employees\u201d: organisations like these often have none.")}</div> : null}
+      {s.left ? <p className="xs faint">{s.left} left out: not plain terms, a name from your networks, or already in your profile.</p> : null}
+      <div className="row">
+        <button type="button" className="btn small primary" onClick={addPicked} disabled={!picked.size}>
+          Add ticked to the form
+        </button>
+        <button type="button" className="btn small" onClick={() => setSuggestion(null)}>
+          Dismiss
+        </button>
+      </div>
+    </div>
+  ) : null;
   async function save() {
     const body = {
       goal,
@@ -215,8 +292,17 @@ export function ProfileEditor({ profile, setup, demo }: { profile: Profile; setu
         <span>{setup ? "In your own words" : "Goal, in your own words"}</span>
         <textarea value={goal} onChange={(e) => setGoal(e.target.value)} placeholder="Find people at VC funds in Finland. I'm looking for an analyst role." rows={3} />
       </label>
+      {localModel ? (
+        <div className="row" style={{ gap: 8 }}>
+          <button type="button" className="btn small" onClick={suggest} disabled={suggesting || !goal.trim()}>
+            {suggesting ? "Asking the local model…" : "Suggest roles, industries and keywords"}
+          </button>
+          <span className="xs muted">Local model ({localModel}), from your goal only. You choose what to keep.</span>
+        </div>
+      ) : null}
+      {suggestPanel}
       {setup ? (
-        <details>
+        <details open={open} onToggle={(e) => setOpen(e.currentTarget.open)}>
           <summary className="small">More (optional): roles, industries, keywords, the ask, tone</summary>
           <div className="stack" style={{ marginTop: 10 }}>
             {optional}

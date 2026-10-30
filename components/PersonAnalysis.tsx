@@ -20,7 +20,7 @@ const month = (iso: string) => (iso ? `${MON[Number(iso.slice(5, 7)) - 1]} ${iso
 const day = (iso: string) => `${Number(iso.slice(8, 10))} ${MON[Number(iso.slice(5, 7)) - 1]}`;
 const LABEL: Record<string, string> = { to_contact: "To contact", sent: "Sent", replied: "Replied", meeting: "Meeting", not_fit: "Not a fit", snoozed: "Snoozed" };
 
-export type PersonPayload = Analysis & { claude: boolean; savedAngle?: string; owners: { id: string; name: string }[]; prompt: string; meaning: string; statusNote?: string; cooldown?: string };
+export type PersonPayload = Analysis & { writer: "claude" | "local" | "template"; localModel?: string; savedAngle?: string; savedAngleBy?: "claude" | "local"; owners: { id: string; name: string }[]; prompt: string; meaning: string; statusNote?: string; cooldown?: string };
 
 export function PersonAnalysis({ data, onBack, backLabel = "All", standalone }: { data: PersonPayload; onBack?: () => void; backLabel?: string; standalone?: boolean }) {
   const router = useRouter();
@@ -28,9 +28,11 @@ export function PersonAnalysis({ data, onBack, backLabel = "All", standalone }: 
   const [statusBy, setStatusBy] = useState(data.statusBy);
   const [statusAt, setStatusAt] = useState(data.statusAt);
   const [meaning, setMeaning] = useState(data.meaning);
-  const [angle, setAngle] = useState<{ text: string; by: string; error?: string }>(data.savedAngle ? { text: data.savedAngle, by: "claude" } : { text: data.angle.text, by: "template" });
+  const savedAngle = () => (data.savedAngle ? { text: data.savedAngle, by: data.savedAngleBy ?? "claude" } : { text: data.angle.text, by: "template" });
+  const [angle, setAngle] = useState<{ text: string; by: string; error?: string }>(savedAngle);
   const [busy, setBusy] = useState(false);
-  const [draft, setDraft] = useState<{ text?: string; error?: string; busy?: boolean }>({});
+  const [draft, setDraft] = useState<{ text?: string; model?: string; error?: string; note?: string; busy?: boolean }>({});
+  const local = data.localModel ? `the local model (${data.localModel})` : "the local model";
   const shown = useRef(data.id);
   shown.current = data.id;
   const by = data.owners.find((o) => o.id === data.knownBy[0]?.owner)?.name ?? data.owners[0]?.name ?? "You";
@@ -40,9 +42,9 @@ export function PersonAnalysis({ data, onBack, backLabel = "All", standalone }: 
     setStatusBy(data.statusBy);
     setStatusAt(data.statusAt);
     setMeaning(data.meaning);
-    setAngle(data.savedAngle ? { text: data.savedAngle, by: "claude" } : { text: data.angle.text, by: "template" });
+    setAngle(savedAngle());
     setDraft({});
-    if (data.claude && !data.savedAngle && data.fit) {
+    if (data.writer !== "template" && !data.savedAngle && data.fit) {
       let live = true;
       fetch(`/api/people/${data.id}/angle`, { method: "POST" })
         .then((r) => r.json())
@@ -77,7 +79,7 @@ export function PersonAnalysis({ data, onBack, backLabel = "All", standalone }: 
     const j = await r.json().catch(() => ({ error: "Failed" }));
     // Another person may be open by now: their panel must not get this draft.
     if (shown.current !== id) return;
-    setDraft(r.ok ? { text: j.text } : { error: j.error ?? "Failed" });
+    setDraft(r.ok ? { text: j.text, model: j.model, note: j.note } : { error: j.error ?? "Failed" });
   }
 
   const senderOwner = data.sender.ownerName;
@@ -119,7 +121,11 @@ export function PersonAnalysis({ data, onBack, backLabel = "All", standalone }: 
         </div>
         <p className="xs faint" style={{ marginTop: 6 }}>
           Write in Claude copies a prompt to paste into your own Claude, connected to this app (Settings → Connect to Claude); Claude writes the message from the facts below.
-          {data.claude ? " Draft here asks Claude from this app, with the name left out." : " Draft here writes a template with your ask and signature (no API key set)."} Nothing is sent from here: {senderOwner === "You" ? "you send it from your own LinkedIn." : `${senderOwner} sends it from their own LinkedIn.`}
+          {data.writer === "claude"
+            ? " Draft here asks Claude from this app, with the name left out."
+            : data.writer === "local"
+              ? ` Draft here asks ${local} on this machine; a draft that uses anything not in the facts is replaced by the template.`
+              : " Draft here writes a template with your ask and signature (no API key or local model set)."} Nothing is sent from here: {senderOwner === "You" ? "you send it from your own LinkedIn." : `${senderOwner} sends it from their own LinkedIn.`}
         </p>
         {draft.text ? (
           <div className="angle">
@@ -127,11 +133,14 @@ export function PersonAnalysis({ data, onBack, backLabel = "All", standalone }: 
               <span style={{ fontWeight: 600, fontSize: 14 }}>Draft</span>
               <span className="pill inferred">Inferred</span>
             </div>
-            <textarea value={draft.text} onChange={(e) => setDraft({ text: e.target.value })} rows={6} style={{ marginTop: 6 }} aria-label="Draft message" />
+            <textarea value={draft.text} onChange={(e) => setDraft({ ...draft, text: e.target.value })} rows={6} style={{ marginTop: 6 }} aria-label="Draft message" />
             <div className="row" style={{ marginTop: 6, gap: 8 }}>
               <WriteInClaude prompt={draft.text} label="Copy draft" copied="Copied" />
-              <span className="xs muted">Written by Claude from the facts in this panel only. Check it before {senderOwner === "You" ? "you send" : `${senderOwner} sends`} it.</span>
+              <span className="xs muted">
+                {draft.model === "template" ? "The app's template, with your ask and signature." : `Written by ${draft.model?.startsWith("ollama:") ? local : "Claude"} from the facts in this panel only.`} Check it before {senderOwner === "You" ? "you send" : `${senderOwner} sends`} it.
+              </span>
             </div>
+            {draft.note ? <p className="xs muted" style={{ marginTop: 4 }}>{draft.note}</p> : null}
           </div>
         ) : draft.error ? (
           <p className="small" style={{ color: "var(--red)", marginTop: 6 }}>
@@ -206,7 +215,7 @@ export function PersonAnalysis({ data, onBack, backLabel = "All", standalone }: 
         </div>
         <p style={{ margin: "4px 0 0", fontSize: 14 }}>{angle.text}</p>
         <p className="xs muted" style={{ marginTop: 6 }}>
-          Written from the facts above only{angle.by === "claude" ? " by Claude" : " (template)"}. Check before you use it.{angle.error ? ` ${angle.error}.` : ""}
+          Written from the facts above only{angle.by === "claude" ? " by Claude" : angle.by === "local" ? ` by ${local}` : " (template)"}. Check before you use it.{angle.error ? ` ${angle.error.replace(/\.$/, "")}.` : ""}
         </p>
       </div>
 

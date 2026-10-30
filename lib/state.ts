@@ -1,5 +1,5 @@
 // What the team decides in the app, in data/state.json: a status per person, PRH matches picked by hand, reactions pasted in, and
-// angles Claude wrote. Nothing here is ever sent anywhere.
+// angles Claude or the local model wrote. Nothing here is ever sent anywhere.
 import fs from "node:fs";
 import path from "node:path";
 import { dataDir } from "./store.ts";
