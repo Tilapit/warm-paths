@@ -1,4 +1,4 @@
-// Industry groups (readable bands over TOL 2008 codes) and the target profile:
+// Industry groups (readable bands over TOL codes) and the target profile:
 // what the user is looking for, in their own words, and the TOL codes,
 // organisation keywords and titles that follow from it.
 
@@ -146,16 +146,17 @@ export function normaliseProfile(x: unknown): Profile {
 }
 
 /**
- * Plain-language industries and the TOL 2008 codes they mean. The first word
- * list that matches wins; the user sees the mapping and can correct it.
+ * Plain-language industries and the TOL 2025 codes they mean (PRH gives each
+ * company's main line of business in TOL 2025). The first word list that
+ * matches wins; the user sees the mapping and can correct it.
  */
 export const INDUSTRY_WORDS: { words: string[]; label: string; codes: string[]; note?: string }[] = [
-  { words: ["venture capital", "vc", "vc fund", "private equity", "pe fund", "investment fund", "fund management", "asset management", "angel", "pääomasijoit"], label: "Funds and investment", codes: ["6430", "6499", "6630"], note: "6499 also holds some listed groups' parent companies; keywords such as \"ventures\" or \"capital\" catch funds registered elsewhere." },
+  { words: ["venture capital", "vc", "vc fund", "private equity", "pe fund", "investment fund", "fund management", "asset management", "angel", "pääomasijoit"], label: "Funds and investment", codes: ["6431", "6499", "6630"], note: "6499 also holds some listed groups' parent companies; keywords such as \"ventures\" or \"capital\" catch funds registered elsewhere." },
   { words: ["holding"], label: "Holding companies", codes: ["642"] },
   { words: ["bank", "banking", "pankki"], label: "Banking", codes: ["641"] },
   { words: ["insurance", "vakuutus"], label: "Insurance", codes: ["65"] },
   { words: ["finance", "financial", "fintech", "rahoitus"], label: "Finance and insurance", codes: ["64-66"] },
-  { words: ["game", "games", "gaming", "pelit"], label: "Games", codes: ["5821", "6201"] },
+  { words: ["game", "games", "gaming", "pelit"], label: "Games", codes: ["5821", "6210"] },
   { words: ["software", "saas", "it", "tech", "technology", "ohjelmisto"], label: "Software and IT", codes: ["62-63"] },
   { words: ["telecom", "telecommunications", "tele"], label: "Telecommunications", codes: ["61"] },
   { words: ["media", "publishing", "film", "tv", "radio", "kustannus"], label: "Media and publishing", codes: ["58-60"] },
@@ -177,7 +178,7 @@ export const INDUSTRY_WORDS: { words: string[]; label: string; codes: string[]; 
   { words: ["agriculture", "farming", "forestry", "maatalous", "metsätalous"], label: "Agriculture and forestry", codes: ["01-03"] },
   { words: ["metal", "machinery", "machine building", "konepaja", "metalli"], label: "Metal and machinery", codes: ["24-25", "28"] },
   { words: ["electronics", "electrical", "elektroniikka"], label: "Electrical and electronics", codes: ["26-27"] },
-  { words: ["automotive", "vehicles", "autot"], label: "Vehicles", codes: ["29", "45"] },
+  { words: ["automotive", "vehicles", "autot"], label: "Vehicles", codes: ["29", "467", "478", "953"] },
   { words: ["chemicals", "plastics", "kemia", "muovi"], label: "Chemicals and plastics", codes: ["19-22"] },
   { words: ["pharma", "pharmaceutical", "lääke"], label: "Pharmaceuticals", codes: ["21"] },
   { words: ["wood", "paper", "forest industry", "puu", "paperi"], label: "Wood and paper", codes: ["16-17"] },

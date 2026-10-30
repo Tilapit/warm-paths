@@ -12,7 +12,7 @@ Said to Claude: "Find people at VC funds. I'm looking for an analyst role."
   "goal": "Find people at VC funds. I'm looking for an analyst role.",
   "roles": ["partner", "principal", "investment director", "head of talent"],
   "industries": [
-    { "code": "6430", "label": "Funds and investment" },
+    { "code": "6431", "label": "Funds and investment" },
     { "code": "6499", "label": "Funds and investment" },
     { "code": "6630", "label": "Funds and investment" }
   ],
@@ -27,8 +27,8 @@ Said to Claude: "Find people at VC funds. I'm looking for an analyst role."
 | Field | What it does |
 | --- | --- |
 | `goal` | Your words. Shown on the Network page, given to Claude for messages and angles. |
-| `roles` | Titles that matter. A senior title (director, head of, C-level) that matches one is a Strong fit; any director or C-level title is at least Possible; a manager title counts only when it matches. Empty: any senior title is Strong. |
-| `industries` | TOL 2008 codes: a range of two-digit divisions (`10-33`) or a prefix (`6430`). Plain language ("venture capital") is mapped when you set it, and the mapping is shown so you can check it. Empty: any industry. |
+| `roles` | Titles that matter. A senior title (director, head of, partner, C-level) that matches one is a Strong fit; any director, partner or C-level title is at least Possible; a manager, principal or investor title counts only when it matches. Empty: any senior title is Strong. |
+| `industries` | TOL 2025 codes, as PRH gives them: a range of two-digit divisions (`10-33`) or a prefix (`6431`). Plain language ("venture capital") is mapped when you set it, and the mapping is shown so you can check it. Empty: any industry. |
 | `keywords` | A word at the start of a word in an organisation's name makes it a target, whatever its industry ("ventures" matches "Example Ventures Oy"). Also finds organisations not in PRH, as Possible at most. |
 | `excluded` | Organisations that are not a target: a PRH business ID or a name. |
 | `ask` | The one ask in every message. |

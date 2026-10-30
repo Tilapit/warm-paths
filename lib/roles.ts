@@ -28,10 +28,20 @@ const has = (title: string, re: RegExp) => re.test(title);
 const NOT_JOHTAJA = new Set(["tyonjohtaja", "puheenjohtaja", "varapuheenjohtaja"]);
 const hasJohtaja = (x: string) => x.split(" ").some((w) => w.endsWith("johtaja") && !NOT_JOHTAJA.has(w));
 
+// "Partner" alone owns the firm (a fund, a law or consulting firm);
+// "business partner", "partner manager" and the like are roles, not owners.
+const NOT_BEFORE_PARTNER = "business|channel|hr|people|finance|financial|it|technology|tech|strategic|alliance|alliances|sales|solution|solutions|delivery|learning|talent|marketing|customer|trading|knowledge|program|service|services|cloud|integration|reseller|ecosystem|commercial|implementation|account";
+const NOT_AFTER_PARTNER = "manager|management|success|marketing|sales|relations|program|programs|ecosystem|development|lead|alliances|account|accounts|engagement|enablement|onboarding|operations|network|integrations|solutions|support|specialist|coordinator|executive|channel";
+const PARTNER = `(?<!(?:${NOT_BEFORE_PARTNER}) )partners?(?! (?:${NOT_AFTER_PARTNER}) )`;
+// An investor's own titles: they decide when the profile asks for them, like a manager.
+// "Principal Engineer" and "Investor Relations" are not.
+const INVESTOR = "principal(?! (?:engineer|consultant|scientist|architect|designer|developer|product|software|data|analyst|specialist|researcher|research|lecturer|investigator|program|technical|solutions|ux|security|cloud|counsel) )|investors?(?! relations )|business angel|bisnesenkeli|[a-z]*sijoittaja|[a-z]*investerare";
+
 function level(x: string): Level {
   if (has(x, / (vice president|vp|svp|evp) /)) return "director";
-  if (has(x, / (ceo|coo|cfo|cto|cio|cdo|cmo|chro|cpo|toimitusjohtaja|varatoimitusjohtaja|vd|managing director|general manager|president|founder|co founder|cofounder|(?<!(product|process|service|business|system|data|content) )owner(?! relations)|omistaja|yrittaja|operatiivinen johtaja|operativ direktor|deputy ceo) /)) return "exec";
+  if (has(x, / (ceo|coo|cfo|cto|cio|cdo|cmo|chro|cpo|toimitusjohtaja|varatoimitusjohtaja|vd|managing director|general manager|president|founder|co founder|cofounder|(?<!(product|process|service|business|system|data|content) )owner(?! relations)|omistaja|yrittaja|operatiivinen johtaja|operativ direktor|deputy ceo|managing partner|general partner|founding partner) /)) return "exec";
   if (has(x, / chief [a-z ]*officer /)) return "exec";
+  if (has(x, new RegExp(` ${PARTNER} `))) return "director";
   if (has(x, / (board member|board professional|hallituksen jasen|hallituksen puheenjohtaja|chairman|chair of the board|styrelseledamot|styrelseordforande) /)) return "board";
   if (has(x, / (director|[a-z]*direktor|head of|head) /) || hasJohtaja(x)) {
     // "Head Brewer" is a craft title, not head of a function.
@@ -39,6 +49,7 @@ function level(x: string): Level {
     return "director";
   }
   if (has(x, / (manager|[a-z]*paallikko|[a-z]*chef|lead|leader|esimies|supervisor|superintendent) /)) return "manager";
+  if (has(x, new RegExp(` (?:${INVESTOR}) `))) return "manager";
   return "other";
 }
 
@@ -66,6 +77,8 @@ const SYNONYMS: Record<string, string[]> = {
   operations: ["operations", "operational", "operatiivinen", "operativ"],
   director: ["director", "[a-z]*direktor"],
   "managing director": ["managing director", "toimitusjohtaja", "vd"],
+  partner: [PARTNER],
+  investor: ["investors?(?! relations )", "business angel", "bisnesenkeli", "[a-z]*sijoittaja", "[a-z]*investerare"],
 };
 
 const JUNIOR = / (assistant|avustaja|intern|internship|trainee|harjoittelija|worker|[a-z]*tyontekija|operator|coordinator|[a-z]*koordinaattori|specialist|[a-z]*asiantuntija|planner|[a-z]*suunnittelija|engineer|[a-z]*insinoori|student|opiskelija|analyst|technician|[a-z]*teknikko|junior|summer) /;
