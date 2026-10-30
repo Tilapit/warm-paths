@@ -35,15 +35,16 @@ const dataDir = path.resolve(process.env.DATA_DIR || "data");
 
 console.log(`LinkedIn Member Data Portability API: CONNECTIONS only, Linkedin-Version 202312.${dry ? " Dry run: nothing is stored." : ` Importing into ${dataDir} as "${owner}".`}`);
 let fetched: Awaited<ReturnType<typeof fetchConnections>>;
+const pageRows: number[] = [];
 try {
-  fetched = await fetchConnections({ token: token!, onPage: (n, rows) => process.stdout.write(`\rPage ${n}: ${rows} rows`) });
+  fetched = await fetchConnections({ token: token!, onPage: (n, rows) => (pageRows.push(rows), process.stdout.write(`\rPage ${n}: ${rows} rows`)) });
 } catch (e) {
   process.stdout.write("\n");
   stop(e instanceof DmaError ? e.message : `Could not reach LinkedIn: ${e instanceof Error ? e.message : String(e)}`);
 }
 process.stdout.write("\n");
 const { connections, coverage } = toConnections(fetched!.rows);
-console.log(`${fetched!.pages} page${fetched!.pages === 1 ? "" : "s"}${fetched!.retries ? `, ${fetched!.retries} polite retries` : ""}.`);
+console.log(`${fetched!.pages} page${fetched!.pages === 1 ? "" : "s"}${pageRows.length > 1 ? ` (${pageRows.join(" + ")} rows)` : ""}${fetched!.retries ? `, ${fetched!.retries} polite retries` : ""}.`);
 for (const line of coverageLines(coverage)) console.log(line);
 if (dry) {
   console.log("Dry run: nothing stored. Without --dry-run (and with DATA_DIR set) these are imported.");

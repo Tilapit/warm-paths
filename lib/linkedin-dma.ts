@@ -8,7 +8,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { sourcesDir } from "./store.ts";
-import { isoDate } from "./normalize.ts";
+import { isoDate, profileKey } from "./normalize.ts";
 
 export const DMA_URL = "https://api.linkedin.com/rest/memberSnapshotData";
 /** The only version this endpoint accepts; any other fails with 426 NONEXISTENT_VERSION. */
@@ -118,7 +118,12 @@ function dateText(v: unknown): string {
 }
 
 export type Coverage = {
+  /** Connections kept: one per person. */
   rows: number;
+  /** Rows LinkedIn sent across all pages, repeats included. */
+  fetched: number;
+  /** Rows that repeated a person already on an earlier page; kept once. */
+  repeats: number;
   /** Per field: rows with a value. */
   first: number;
   last: number;
@@ -136,11 +141,19 @@ export type Coverage = {
   otherKeys: string[];
 };
 
+/**
+ * LinkedIn's pages overlap: each can hold most of the same people again, so
+ * concatenated pages count people two or three times. People are kept once,
+ * by profile URL (the same key the network merges by), with the row from the
+ * latest page. A row without a profile URL is a repeat only when every field
+ * is identical; a name alone never merges two people.
+ */
 export function toConnections(rows: Row[]): { connections: DmaConnection[]; coverage: Coverage } {
-  const cov: Coverage = { rows: rows.length, first: 0, last: 0, url: 0, profileUrl: 0, company: 0, position: 0, connectedOn: 0, connectedOnDates: 0, emailsDropped: 0, otherKeys: [] };
   const other = new Set<string>();
-  const connections = rows.map((r) => {
+  const people = new Map<string, { c: DmaConnection; email: boolean }>();
+  for (const r of rows) {
     const c: DmaConnection = { first: "", last: "", url: "", company: "", position: "", connectedOn: "" };
+    let email = false;
     for (const [k, v] of Object.entries(r)) {
       const field = KEY_OF.get(fold(k));
       if (!field) {
@@ -148,17 +161,23 @@ export function toConnections(rows: Row[]): { connections: DmaConnection[]; cove
         continue;
       }
       if (field === "email") {
-        if (text(v)) cov.emailsDropped++;
+        if (text(v)) email = true;
         continue;
       }
       if (!c[field]) c[field] = field === "connectedOn" ? dateText(v) : text(v);
     }
+    const key = profileKey(c.url) || `row:${JSON.stringify(c)}`;
+    // Set keeps the first position and takes the latest page's values.
+    people.set(key, { c, email: email || !!people.get(key)?.email });
+  }
+  const connections = [...people.values()].map((p) => p.c);
+  const cov: Coverage = { rows: connections.length, fetched: rows.length, repeats: rows.length - connections.length, first: 0, last: 0, url: 0, profileUrl: 0, company: 0, position: 0, connectedOn: 0, connectedOnDates: 0, emailsDropped: 0, otherKeys: [...other].sort() };
+  for (const { c, email } of people.values()) {
     for (const f of ["first", "last", "url", "company", "position", "connectedOn"] as const) if (c[f]) cov[f]++;
     if (/linkedin\.com\/in\//i.test(c.url)) cov.profileUrl++;
     if (isoDate(c.connectedOn)) cov.connectedOnDates++;
-    return c;
-  });
-  cov.otherKeys = [...other].sort();
+    if (email) cov.emailsDropped++;
+  }
   return { connections, coverage: cov };
 }
 
@@ -176,7 +195,10 @@ const pct = (n: number, of: number) => (of ? `${Math.round((1000 * n) / of) / 10
 export function coverageLines(c: Coverage): string[] {
   const row = (label: string, n: number, note = "") => `  ${label.padEnd(14)} ${n.toLocaleString("en-US").padStart(7)}  ${pct(n, c.rows).padStart(6)}${note}`;
   return [
-    `${c.rows.toLocaleString("en-US")} connections came back. Fields with a value:`,
+    ...(c.repeats
+      ? [`${c.fetched.toLocaleString("en-US")} rows came back; ${c.repeats.toLocaleString("en-US")} repeated people already on an earlier page and are kept once.`]
+      : []),
+    `${c.rows.toLocaleString("en-US")} connections. Fields with a value:`,
     row("First Name", c.first),
     row("Last Name", c.last),
     row("URL", c.url, c.url !== c.profileUrl ? `  (${c.profileUrl.toLocaleString("en-US")} are linkedin.com/in/ profile URLs)` : ""),

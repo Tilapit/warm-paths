@@ -84,7 +84,7 @@ test("linkedin: retries 429 and 5xx politely, stops on 401 with a clear message 
 test("linkedin: rows map into the Connections.csv model, emails dropped, and the coverage says which fields came back", async () => {
   const pages = [fx("dma-connections-page-0.json"), fx("dma-connections-page-1.json")].map((b) => JSON.parse(b).elements[0].snapshotData).flat();
   const { connections, coverage } = toConnections(pages);
-  assert.deepEqual(coverage, { rows: 4, first: 4, last: 4, url: 3, profileUrl: 3, company: 3, position: 4, connectedOn: 3, connectedOnDates: 3, emailsDropped: 1, otherKeys: ["Note"] });
+  assert.deepEqual(coverage, { rows: 4, fetched: 4, repeats: 0, first: 4, last: 4, url: 3, profileUrl: 3, company: 3, position: 4, connectedOn: 3, connectedOnDates: 3, emailsDropped: 1, otherKeys: ["Note"] });
   const csv = toCsv(connections);
   assert.ok(!/@|Email/.test(csv), "no email anywhere");
   // The same parser as an uploaded Connections.csv reads it, quotes and all.
@@ -114,4 +114,41 @@ test("linkedin: rows map into the Connections.csv model, emails dropped, and the
   assert.deepEqual([st.connected, st.expires, st.lastSync?.coverage.rows], [true, "2026-12-24", 4]);
   assert.ok(!JSON.stringify(st).includes(TOKEN), "the status never carries the token");
   delete process.env.LINKEDIN_DMA_TOKEN;
+});
+
+test("linkedin: overlapping pages are kept once per person, so the import counts people, not rows", async () => {
+  // LinkedIn's pages overlap: on a real sync, pages of 780, 775 and 797 rows
+  // held 797 people. Here: three pages, ten rows, four people.
+  const [a, b, noUrl] = JSON.parse(fx("dma-connections-page-0.json")).elements[0].snapshotData;
+  const [d] = JSON.parse(fx("dma-connections-page-1.json")).elements[0].snapshotData;
+  const moved = { ...b, Position: "Logistics Director" };
+  const page = (start: number, rows: object[], last = false) => ({
+    status: 200,
+    body: JSON.stringify({
+      paging: { start, count: 10, total: 3, links: last ? [] : [{ type: "application/json", rel: "next", href: `/rest/memberSnapshotData?q=criteria&domain=CONNECTIONS&start=${start + 1}` }] },
+      elements: [{ snapshotDomain: "CONNECTIONS", snapshotData: rows }],
+    }),
+  });
+  const f = fake([page(0, [a, b, noUrl]), page(1, [a, b, d]), page(2, [a, moved, noUrl, d], true), { status: 404, body: fx("dma-no-data.json") }]);
+  const r = await fetchConnections({ token: TOKEN, fetch: f.fetch, sleep: noWait });
+  assert.equal(r.pages, 3);
+  assert.equal(r.rows.length, 10, "every page is fetched");
+
+  const { connections, coverage } = toConnections(r.rows);
+  assert.equal(connections.length, 4);
+  assert.deepEqual([coverage.rows, coverage.fetched, coverage.repeats], [4, 10, 6]);
+  assert.deepEqual([coverage.url, coverage.profileUrl, coverage.emailsDropped], [3, 3, 1], "coverage counts people, not rows");
+  assert.equal(connections[1].position, "Logistics Director", "the latest page's row wins, in the first page's place");
+  assert.match(coverageLines(coverage).join("\n"), /10 rows came back; 6 repeated people already on an earlier page and are kept once\./);
+
+  // A row without a profile URL is a repeat only when every field is the same.
+  const twin = toConnections([noUrl, { ...noUrl, Company: "Another Oy" }, noUrl]);
+  assert.equal(twin.connections.length, 2);
+
+  // What the sync imports is what the app shows.
+  const o = importNetwork("Friend", toCsv(connections), { original: "LinkedIn API (CONNECTIONS)" });
+  assert.deepEqual([o.rows, o.accepted], [4, 4]);
+  const { loadNetwork } = await import("../lib/network.ts");
+  const net = await loadNetwork();
+  assert.equal(net.stats.contacts, 4);
 });
